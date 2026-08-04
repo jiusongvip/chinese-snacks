@@ -1,0 +1,71 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Nav from "../components/Nav.astro";
+import Footer from "../components/Footer.astro";
+import authors from "../data/authors.json";
+---
+
+<BaseLayout title="About ChineseSnacks | Chinese Snacks Travel Guide" description="About ChineseSnacks - practical street food guides verified by locals in Beijing, Chengdu, Xi'an, Shanghai, Guangzhou, and Chongqing.">
+  <Nav />
+  <div class="min-h-[100dvh] pt-24 pb-20 px-6">
+    <div class="max-w-[1400px] mx-auto w-full pt-16">
+      <p class="text-sm font-medium tracking-wide uppercase text-accent mb-3">About</p>
+      <h1 class="text-4xl md:text-6xl font-black tracking-tighter mb-12">About ChineseSnacks</h1>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+        {authors.map(author => (
+          <div class="bg-white rounded-2xl border border-border p-8">
+            <div class="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center text-2xl font-black text-accent mb-4">{author.name[0]}</div>
+            <h2 class="font-bold text-xl mb-1">{author.name}</h2>
+            <p class="text-sm text-ink-muted mb-1">{author.nameZh}</p>
+            <p class="text-xs font-medium text-accent mb-3">{author.role}</p>
+            <p class="text-sm text-ink-muted leading-relaxed mb-3">{author.bio}</p>
+            <div class="flex flex-wrap gap-1">
+              {author.expertise.map(e => (
+                <span class="text-xs px-2 py-0.5 rounded-full bg-surface-alt text-ink-muted">{e}</span>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
+        <div class="space-y-6 text-ink-muted leading-relaxed">
+          <p class="text-lg text-ink">ChineseSnacks was built because every "Chinese snacks" search result failed us.</p>
+          <p>Mei, David, and Lina searched together. They found listicles with no prices. Recipe blogs that assumed a kitchen. Amazon links when standing on a street corner in Chengdu, hungry.</p>
+          <p>Nobody was answering the three questions that matter when you're actually in China: <strong class="text-ink">Where exactly? How much? How do I order?</strong></p>
+          <p>So they built the tool they wished existed. Every snack on this site comes from someone who ate it recently, at a specific stall, for a verifiable price. No guesswork.</p>
+        </div>
+        <div class="bg-white rounded-2xl border border-border p-8 space-y-6">
+          <h2 class="text-lg font-bold text-ink">How We Verify</h2>
+          <div class="space-y-4 text-sm text-ink-muted">
+            <div class="flex gap-3">
+              <span class="text-lg flex-shrink-0">📍</span>
+              <p>Each snack street was visited in person by at least one named team member. Coordinates are exact, not scraped from a map. David has walked every Beijing street on this site.</p>
+            </div>
+            <div class="flex gap-3">
+              <span class="text-lg flex-shrink-0">👥</span>
+              <p>Snack recommendations are cross-checked with local residents in each city. In Chengdu, Mei's network of former colleagues and food vendors reviews every entry.</p>
+            </div>
+            <div class="flex gap-3">
+              <span class="text-lg flex-shrink-0">💰</span>
+              <p>Prices are updated seasonally. We note when a stall has tourist pricing vs. local pricing, and we tell you the difference.</p>
+            </div>
+            <div class="flex gap-3">
+              <span class="text-lg flex-shrink-0">🔄</span>
+              <p>We revisit listings quarterly. If a street closes or a stall moves, we update within 30 days. This page was last refreshed August 2026.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="max-w-[65ch] space-y-6 text-ink-muted leading-relaxed border-t border-border pt-12">
+        <h2 class="text-xl font-bold text-ink">Our Promise</h2>
+        <p>No sponsored placements. No affiliate links masquerading as recommendations. If we say a snack is good, it's because Mei, David, or Lina ate it and said so — usually more than once.</p>
+        <p>ChineseSnacks is independently run by three people who genuinely love Chinese street food. No marketing department. No SEO-driven content strategy. Just frustration with travel content that treats food like a museum exhibit instead of something you're supposed to eat.</p>
+        <p>If you find an error — a closed stall, a wrong price, a phrase that got you blank stares — tell us. We'll fix it and credit you.</p>
+      </div>
+    </div>
+  </div>
+  <Footer />
+</BaseLayout>

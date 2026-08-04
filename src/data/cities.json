@@ -1,0 +1,68 @@
+[
+  {
+    "id": "beijing",
+    "name": "Beijing",
+    "nameZh": "北京",
+    "snackCount": 4,
+    "bestSeason": "Autumn / Winter",
+    "topSnackStreet": "Wangfujing Snack Street",
+    "description": "The capital's snack scene spans imperial court delicacies to hearty northern street food. Winter is peak season for tanghulu and roasted sweet potatoes.",
+        "seoDescription": "From jianbing to tanghulu, explore the best Beijing street snacks. Discover hutong food culture and Wangfujing snack guide with prices. ChineseSnacks.",
+    "foodCulture": "Beijing's snack culture is a tale of two cities: the imperial and the street. For centuries, the Forbidden City's kitchens produced elaborate palace pastries and delicate dim sum that commoners never tasted. Meanwhile, the city's hutong alleys developed their own food economy — itinerant vendors selling jianbing at dawn, roasted sweet potatoes in winter, and tanghulu whenever the temperature dropped. The two worlds rarely overlapped, but together they created Beijing's distinct snack identity: hearty, wheat-based, built for cold weather. The influence of Mongolian and Manchu cuisine is felt in the city's love of lamb and fermented bean pastes. Today, Beijing's old snack streets like Guijie preserve this history, while modern chains try (and mostly fail) to replicate the magic of a hutong breakfast cart at 7 AM."
+  },
+  {
+    "id": "chengdu",
+    "name": "Chengdu",
+    "nameZh": "成都",
+    "snackCount": 7,
+    "bestSeason": "Year-round",
+    "topSnackStreet": "Jinli Ancient Street",
+    "description": "Sichuan's culinary capital. Chengdu snacks are defined by mala (numbing-spicy) flavors. The city was named a UNESCO City of Gastronomy for good reason.",
+        "seoDescription": "Explore Chengdu's mala street food — dan dan noodles, chuan chuan and more. UNESCO City of Gastronomy snack guide with prices. ChineseSnacks.",
+    "foodCulture": "Chengdu's street food culture is inseparable from the city's personality: slow, sociable, and unafraid of intensity. This is a city where people measure a restaurant by its chili oil, not its decor. The UNESCO City of Gastronomy designation in 2010 formalized what locals always knew — that Chengdu's food culture is one of the world's great culinary traditions. The secret isn't just the famous mala (numbing-spicy) flavor; it's the philosophy of balancing extreme sensations. Every spicy dish has a cooling counterpart (bingfen after hot pot, pickled vegetables alongside chili oil wontons). Chengdu's famous 'tea house culture' means snacking isn't rushed — people spend hours nursing a cup of jasmine tea and grazing through small plates. The city has over 150,000 restaurants, roughly one for every 100 residents. It's not an exaggeration to say you could eat at a different place every meal for the rest of your life and never run out."
+  },
+  {
+    "id": "xian",
+    "name": "Xi'an",
+    "nameZh": "西安",
+    "snackCount": 4,
+    "bestSeason": "Year-round",
+    "topSnackStreet": "Muslim Quarter",
+    "description": "The ancient Silk Road city where Chinese and Central Asian food cultures collide. Heavy on lamb, cumin, and wheat-based snacks.",
+        "seoDescription": "Discover Xi'an's Muslim Quarter snacks — roujiamo, yangrou paomo and more. Ancient Silk Road food culture guide with prices. ChineseSnacks.",
+    "foodCulture": "Xi'an's snack culture is the direct result of its geography. As the eastern terminus of the Silk Road, the city absorbed food traditions from Persia, Central Asia, and the Middle East over 2,000 years of continuous trade. The Muslim Quarter — a community descended from Persian and Arab merchants who settled here during the Tang Dynasty — is the living museum of this culinary fusion. Xi'an snacks are defined by their Silk Road DNA: heavy use of cumin (introduced from Central Asia), lamb (the protein of the steppes), and wheat-based breads (the staple of both Chinese and Central Asian diets). Even the city's famous hand-pulled noodles trace their technique to Muslim noodle-makers who adapted Chinese methods. Unlike the delicate snacks of Shanghai or the complex sauces of Chengdu, Xi'an food is direct, aromatic, and built for eating with your hands on a cold evening in an ancient alley."
+  },
+  {
+    "id": "shanghai",
+    "name": "Shanghai",
+    "nameZh": "上海",
+    "snackCount": 3,
+    "bestSeason": "Year-round",
+    "topSnackStreet": "Yunnan Road",
+    "description": "Shanghai's snack culture is refined and delicate: soup dumplings, pan-fried buns, and sweet pastries influenced by nearby Jiangsu and Zhejiang cuisines.",
+        "seoDescription": "Shanghai's refined snack culture: xiaolongbao, shengjianbao and sweet pastries. Yunnan Road food guide with prices and tips. ChineseSnacks.",
+    "foodCulture": "Shanghai's snack culture reflects the city's identity as China's most cosmopolitan metropolis — refined, slightly sweet, and perpetually in conversation with outside influences. The city's signature snacks (xiaolongbao, shengjian bao, scallion pancakes) share a common philosophy: take a simple concept and execute it with obsessive precision. Shanghai doesn't do spicy or funky; it does subtle and layered. The sweetness in the city's soy-braised dishes comes from the Jiangsu-Zhejiang culinary tradition, while the breakfast culture owes a debt to both British colonial teatime habits and traditional Chinese morning markets. Shanghai's snack streets are unusual in China — many are permanent structures rather than night-market pop-ups — and some shops on Yunnan Road and Sichuan Road have been in continuous operation for over a century. The city's 'nongtang' (lane-house) neighborhoods historically had their own micro snack economies, with vendors specializing in single items passed down through families."
+  },
+  {
+    "id": "guangzhou",
+    "name": "Guangzhou",
+    "nameZh": "广州",
+    "snackCount": 4,
+    "bestSeason": "Year-round",
+    "topSnackStreet": "Shangxiajiu Pedestrian Street",
+    "description": "The birthplace of dim sum. Guangzhou's snack culture revolves around bite-sized steamed, fried, and baked treats served morning to night.",
+        "seoDescription": "Guangzhou: birthplace of dim sum. Explore har gow, char siu bao and Cantonese snack culture. Shangxiajiu food guide with prices. ChineseSnacks.",
+    "foodCulture": "If any city can claim to have invented snacking as a lifestyle, it's Guangzhou. The Cantonese tradition of 'yum cha' (drinking tea) — which evolved into dim sum — began in Guangzhou's tea houses during the Qing Dynasty. The concept was simple but revolutionary: serve small, exquisite bites alongside tea so customers could graze for hours while socializing. From this, an entire cuisine of bite-sized delicacies emerged: steamed, fried, baked, and wrapped in translucent rice flour skins. Guangzhou's position as a major port meant ingredients flooded in from across Asia and Europe, enriching the dim sum repertoire. The city's snack culture has a rhythm: morning dim sum with family, afternoon egg tarts from a bakery, late-night cheong fun from a street stall. Guangzhou residents consume snacks throughout the day in a way that makes formal meals almost optional. The test of a Cantonese chef's skill has always been their har gow — if the pleats aren't exactly right and the wrapper isn't translucent, nothing else on the cart will be either."
+  },
+  {
+    "id": "chongqing",
+    "name": "Chongqing",
+    "nameZh": "重庆",
+    "snackCount": 4,
+    "bestSeason": "Year-round",
+    "topSnackStreet": "Jiefangbei / Bayi Road",
+    "description": "Chengdu's bolder, spicier sibling. Chongqing snacks are intensely hot, numbing, and served in the city's dramatic hillside night markets.",
+        "seoDescription": "Chongqing's intensely spicy snack scene: xiao mian, hot pot and mala culture. Hillside night market food guide with prices and tips. ChineseSnacks.",
+    "foodCulture": "Chongqing's snack culture is the wilder, louder sibling of Chengdu's. Where Chengdu food is complex and balanced, Chongqing food is an assault — hotter, oilier, and unapologetically extreme. The city's geography shaped its food: built on steep hills at the confluence of the Yangtze and Jialing rivers, Chongqing was historically a working-class port city where dock workers needed cheap, fast, and intensely caloric food. The city's signature xiao mian (small noodles) costs less than $2 and takes three minutes to prepare — the perfect meal for a dock worker between shifts. The fog and humidity that blanket Chongqing much of the year gave rise to the belief that spicy food drives out dampness (a concept in traditional Chinese medicine), and the city's cooks took this idea to its logical extreme. Chongqing hot pot — the city's most famous export — is deliberately spicier and oilier than the Chengdu version, and asking for 'less spicy' at a Chongqing restaurant will earn you a look of genuine confusion. The city's night markets, built into its dramatic hillside geography, are among the most visually spectacular places to eat street food anywhere in China."
+  }
+]

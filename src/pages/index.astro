@@ -1,0 +1,144 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Nav from "../components/Nav.astro";
+import Hero from "../components/Hero.astro";
+import SnackCard from "../components/SnackCard.astro";
+import CityCard from "../components/CityCard.astro";
+import PhraseSheet from "../components/PhraseSheet.astro";
+import SeasonalCalendar from "../components/SeasonalCalendar.astro";
+import SnackQuiz from "../components/SnackQuiz.astro";
+import FAQ from "../components/FAQ.astro";
+import Footer from "../components/Footer.astro";
+import snacks from "../data/snacks.json";
+import cities from "../data/cities.json";
+
+const featuredSnacks = snacks.slice(0, 9);
+const cityMap = Object.fromEntries(cities.map(c => [c.id, c.name]));
+---
+
+<BaseLayout
+  title="Chinese Snacks: The Complete Guide to Street Food & Classics | ChineseSnacks"
+  description="Discover 22 iconic Chinese snacks with prices, taste guides, and where to eat them. From Beijing jianbing to Sichuan chuan chuan — plus packaged snacks you can buy online or bring home."
+>
+  <Nav />
+  <Hero />
+  <SnackQuiz />
+
+  <!-- Must-Try Snacks -->
+  <section class="py-24 px-6 bg-surface">
+    <div class="max-w-[1400px] mx-auto w-full">
+      <p class="text-sm font-medium tracking-wide uppercase text-accent mb-3">Must-Try Snacks</p>
+      <h2 class="text-3xl md:text-4xl font-black tracking-tighter mb-4">Must-Try Chinese Snacks</h2>
+      <p class="text-ink-muted max-w-[55ch] mb-12">Twelve iconic Chinese snacks every traveler should know. Each comes with where to eat, what to pay, and how to order.</p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {featuredSnacks.map(snack => (
+          <SnackCard snack={snack} cityName={cityMap[snack.bestCity] || snack.bestCity} />
+        ))}
+      </div>
+
+      <div class="mt-8 text-center">
+        <a href="/snacks" class="inline-flex items-center gap-2 text-accent font-medium text-sm hover:underline">
+          View all {snacks.length} snacks
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 256 256" fill="currentColor"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Packaged Chinese Snacks -->
+  <section class="py-24 px-6 bg-surface">
+    <div class="max-w-[1400px] mx-auto w-full">
+      <p class="text-sm font-medium tracking-wide uppercase text-accent mb-3">Packaged Snacks</p>
+      <h2 class="text-3xl md:text-4xl font-black tracking-tighter mb-4">Chinese Snacks You Can Buy Online or Bring Home</h2>
+      <p class="text-ink-muted max-w-[55ch] mb-12">Not traveling to China? Many classic Chinese snacks are available in Asian grocery stores, online marketplaces, or as souvenirs. Here are the most popular ones to look for.</p>
+
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+        <div class="bg-white rounded-xl border border-border p-5 text-center hover:border-accent/30 hover:shadow-sm transition-all">
+          <span class="text-4xl block mb-3">🍬</span>
+          <h3 class="font-bold text-sm text-ink mb-1">White Rabbit Candy</h3>
+          <p class="text-xs text-ink-muted leading-relaxed">bái tù nǎi táng</p>
+          <p class="text-[11px] text-ink-muted mt-2">Creamy milk chews wrapped in edible rice paper. The most famous Chinese candy worldwide.</p>
+          <span class="inline-block mt-2 text-[10px] px-2 py-0.5 rounded-full bg-amber-100 text-amber-700 font-medium">buy online</span>
+        </div>
+        <div class="bg-white rounded-xl border border-border p-5 text-center hover:border-accent/30 hover:shadow-sm transition-all">
+          <span class="text-4xl block mb-3">🍘</span>
+          <h3 class="font-bold text-sm text-ink mb-1">Shrimp Chips</h3>
+          <p class="text-xs text-ink-muted leading-relaxed">xiā tiáo</p>
+          <p class="text-[11px] text-ink-muted mt-2">Puffy, crispy prawn crackers that dissolve on your tongue. Available in spicy and original.</p>
+          <span class="inline-block mt-2 text-[10px] px-2 py-0.5 rounded-full bg-amber-100 text-amber-700 font-medium">buy online</span>
+        </div>
+        <div class="bg-white rounded-xl border border-border p-5 text-center hover:border-accent/30 hover:shadow-sm transition-all">
+          <span class="text-4xl block mb-3">🍐</span>
+          <h3 class="font-bold text-sm text-ink mb-1">Haw Flakes</h3>
+          <p class="text-xs text-ink-muted leading-relaxed">shān zhā piàn</p>
+          <p class="text-[11px] text-ink-muted mt-2">Discs of pressed hawthorn fruit — sweet-tart and nostalgic. A lunchbox staple for generations.</p>
+          <span class="inline-block mt-2 text-[10px] px-2 py-0.5 rounded-full bg-amber-100 text-amber-700 font-medium">buy online</span>
+        </div>
+        <div class="bg-white rounded-xl border border-border p-5 text-center hover:border-accent/30 hover:shadow-sm transition-all">
+          <span class="text-4xl block mb-3">🌻</span>
+          <h3 class="font-bold text-sm text-ink mb-1">Sunflower Seeds</h3>
+          <p class="text-xs text-ink-muted leading-relaxed">guā zǐ</p>
+          <p class="text-[11px] text-ink-muted mt-2">Roasted and seasoned sunflower seeds. The quintessential Chinese road trip and movie-night snack.</p>
+          <span class="inline-block mt-2 text-[10px] px-2 py-0.5 rounded-full bg-amber-100 text-amber-700 font-medium">buy online</span>
+        </div>
+        <div class="bg-white rounded-xl border border-border p-5 text-center hover:border-accent/30 hover:shadow-sm transition-all">
+          <span class="text-4xl block mb-3">🥠</span>
+          <h3 class="font-bold text-sm text-ink mb-1">Sesame Balls</h3>
+          <p class="text-xs text-ink-muted leading-relaxed">jiān duī / má tuán</p>
+          <p class="text-[11px] text-ink-muted mt-2">Fried glutinous rice balls coated in sesame seeds, filled with sweet red bean paste. Find them fresh or frozen.</p>
+          <span class="inline-block mt-2 text-[10px] px-2 py-0.5 rounded-full bg-blue-100 text-blue-700 font-medium">fresh best</span>
+        </div>
+        <div class="bg-white rounded-xl border border-border p-5 text-center hover:border-accent/30 hover:shadow-sm transition-all">
+          <span class="text-4xl block mb-3">🍪</span>
+          <h3 class="font-bold text-sm text-ink mb-1">Walnut Cookies</h3>
+          <p class="text-xs text-ink-muted leading-relaxed">hé táo sū</p>
+          <p class="text-[11px] text-ink-muted mt-2">Crumbly, buttery shortbread packed with chopped walnuts. A classic Chinese bakery staple sold in tins.</p>
+          <span class="inline-block mt-2 text-[10px] px-2 py-0.5 rounded-full bg-amber-100 text-amber-700 font-medium">buy online</span>
+        </div>
+      </div>
+
+      <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/snacks" class="inline-flex items-center gap-2 text-accent font-medium text-sm hover:underline">
+          Browse all street snacks &rarr;
+        </a>
+        <a href="/bring-home" class="inline-flex items-center gap-2 text-accent font-medium text-sm hover:underline">
+          Customs &amp; packing guide for travelers &rarr;
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cities -->
+  <section id="cities" class="py-24 px-6 bg-surface-alt">
+    <div class="max-w-[1400px] mx-auto w-full">
+      <p class="text-sm font-medium tracking-wide uppercase text-accent mb-3">By City</p>
+      <h2 class="text-3xl md:text-4xl font-black tracking-tighter mb-4">Snacks by City</h2>
+      <p class="text-ink-muted max-w-[55ch] mb-12">Each city has its own snack culture — Chengdu is a <a href="https://en.unesco.org/creative-cities/chengdu" rel="external nofollow" class="text-accent hover:underline">UNESCO City of Gastronomy</a>. Pick your destination to see what's waiting.</p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {cities.map(city => (
+          <CityCard city={city} />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <PhraseSheet />
+  <SeasonalCalendar />
+  <FAQ />
+  <Footer />
+</BaseLayout>
+
+<!-- BreadcrumbList Schema -->
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+    "@type": "ListItem",
+    "position": 1,
+    "name": "ChineseSnacks",
+    "item": `${Astro.site?.origin || "https://chinese-snacks.com"}/`
+  }]
+})}>
+</script>

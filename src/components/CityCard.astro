@@ -1,0 +1,38 @@
+---
+interface Props {
+  city: {
+    id: string;
+    name: string;
+    nameZh: string;
+    snackCount: number;
+    bestSeason: string;
+    topSnackStreet: string;
+    description: string;
+  };
+}
+
+const { city } = Astro.props;
+---
+
+<a href={`/cities/${city.id}`} class="group block bg-white rounded-xl border border-border overflow-hidden hover:shadow-md hover:border-accent/30 transition-all duration-200 active:scale-[0.98]">
+  <div class="aspect-[16/10] bg-surface-alt flex items-center justify-center relative overflow-hidden">
+    <img src={`/images/${city.id}.webp`} alt={`${city.name} street food and snack stalls`} class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-400" width="800" height="500" loading="lazy" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent z-10"></div>
+    <div class="absolute bottom-4 left-4 z-20">
+      <h3 class="font-bold text-xl text-white tracking-tight">{city.name}</h3>
+      <p class="text-xs text-white/80">{city.nameZh}</p>
+    </div>
+  </div>
+  <div class="p-5">
+    <p class="text-sm text-ink-muted leading-relaxed mb-4 line-clamp-3">{city.description}</p>
+    <div class="flex items-center justify-between text-xs text-ink-muted">
+      <div class="flex items-center gap-4">
+        <span class="flex items-center gap-1">
+          <span class="font-semibold text-ink">{city.snackCount}</span> snacks
+        </span>
+        <span>{city.bestSeason}</span>
+      </div>
+      <span class="text-accent font-medium group-hover:underline">Explore &rarr;</span>
+    </div>
+  </div>
+</a>

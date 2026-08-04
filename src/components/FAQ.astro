@@ -1,0 +1,49 @@
+---
+const faqs = [
+  { q: "What are the most popular Chinese snacks?", a: "The most iconic Chinese snacks include jianbing (savory breakfast crepe), xiaolongbao (soup dumplings), roujiamo (Chinese hamburger from Xi'an), tanghulu (candied hawthorn on a stick), chuan chuan (Sichuan skewers in spicy broth), and shengjian bao (pan-fried pork buns). Packaged favorites like White Rabbit candy and shrimp chips are also widely recognized." },
+  { q: "What are Chinese snacks made of?", a: "Chinese snacks use diverse ingredients depending on the region: wheat flour (noodles, dumpling wrappers, flatbreads), rice flour (rice noodle rolls, bingfen jelly), pork and lamb (fillings and skewers), soybeans (tofu, fermented bean paste), Sichuan peppercorns and chili (for mala flavor), and seasonal fruits (tanghulu, dried snacks). Many snacks combine sweet, savory, spicy, and numbing flavors in a single dish." },
+  { q: "Where can I buy Chinese snacks outside of China?", a: "Most major cities have Asian grocery stores (99 Ranch, H Mart, T&T) that stock popular packaged Chinese snacks like White Rabbit candy, shrimp chips, and haw flakes. Online marketplaces like Weee!, Yamibuy, and Amazon also carry a wide selection. For fresh snacks like soup dumplings, look for Chinese restaurants or frozen dumpling sections in Asian supermarkets." },
+  { q: "Is Chinese street food safe for travelers?", a: "Generally yes, especially when you follow basic rules: eat where locals eat, choose stalls with high turnover, avoid raw ingredients from street vendors, and stick to cooked-to-order items. Millions of travelers eat street food daily without issues." },
+  { q: "How much cash should I carry for street food?", a: "Most snack stalls now accept WeChat Pay and Alipay, which foreigners can set up. For backup, carry 200-300 RMB ($30-45) in small bills. Individual snacks rarely exceed 20 RMB." },
+  { q: "Can I eat Chinese snacks as a vegetarian?", a: "Yes, but you need to know what to look for. Liangpi (cold noodles), bingfen (ice jelly), many tofu-based snacks, and baocai (pickled vegetables) are naturally vegetarian. Learn to say 'wo chi su' (I eat vegetarian)." },
+  { q: "Do I need to tip at snack stalls?", a: "No. Tipping culture does not exist in China and might confuse vendors. Just pay the listed price." },
+  { q: "What if I have food allergies?", a: "Communicate clearly. Most common allergens in Chinese snacks are peanuts, sesame, wheat, and soy. Carry a translated allergy card. Some snacks can be customized." },
+  { q: "Can I bring Chinese snacks home through customs?", a: "Packaged, commercially sealed snacks are generally fine. Fresh produce, meat products, and homemade items are usually prohibited. Check your country's specific import regulations." },
+];
+---
+
+<section class="py-24 px-6 bg-surface-alt">
+  <div class="max-w-[1400px] mx-auto w-full">
+    <p class="text-sm font-medium tracking-wide uppercase text-accent mb-3">Common Questions</p>
+    <h2 class="text-3xl md:text-4xl font-black tracking-tighter mb-12">Frequently Asked Questions</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-[960px]">
+      {faqs.map(faq => (
+        <details class="group bg-white rounded-xl border border-border overflow-hidden">
+          <summary class="p-5 cursor-pointer font-medium text-sm text-ink flex items-center justify-between select-none">
+            {faq.q}
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 256 256" fill="currentColor" class="text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-3">
+              <path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80a8,8,0,0,1,11.32-11.32L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"/>
+            </svg>
+          </summary>
+          <div class="px-5 pb-5 text-sm text-ink-muted leading-relaxed">{faq.a}</div>
+        </details>
+      ))}
+    </div>
+  </div>
+</section>
+
+<!-- FAQPage Schema -->
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(faq => ({
+    "@type": "Question",
+    "name": faq.q,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": faq.a
+    }
+  }))
+})}>
+</script>

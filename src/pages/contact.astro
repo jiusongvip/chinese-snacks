@@ -1,0 +1,47 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Nav from "../components/Nav.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<BaseLayout title="Contact ChineseSnacks | Report Errors & Suggest Snacks" description="Get in touch with the ChineseSnacks team. Report closed stalls, suggest new snacks, or ask questions about Chinese street food.">
+  <Nav />
+  <div class="min-h-[100dvh] pt-24 pb-20 px-6">
+    <div class="max-w-[1400px] mx-auto w-full pt-16">
+      <p class="text-sm font-medium tracking-wide uppercase text-accent mb-3">Contact</p>
+      <h1 class="text-4xl md:text-6xl font-black tracking-tighter mb-6">Contact Us</h1>
+      <div class="max-w-[65ch] space-y-8 text-ink-muted leading-relaxed">
+        <p class="text-lg">We read every message. Here's how to reach us.</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="bg-white rounded-xl border border-border p-6">
+            <h2 class="font-bold text-ink mb-2">📧 Email</h2>
+            <p class="text-sm">General inquiries, corrections, and snack suggestions:</p>
+            <p class="font-medium text-accent mt-1">hello@chinese-snacks.com</p>
+          </div>
+          <div class="bg-white rounded-xl border border-border p-6">
+            <h2 class="font-bold text-ink mb-2">🐦 Social</h2>
+            <p class="text-sm">Follow our food adventures and DM us anytime:</p>
+            <p class="font-medium text-accent mt-1">@ChineseSnacks on Twitter/X</p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-xl border border-border p-6">
+          <h2 class="font-bold text-ink mb-3">Report an Error</h2>
+          <p class="text-sm">Found a closed stall, wrong price, or outdated info? Tell us and we'll fix it within 48 hours. Include the snack or street name, what's wrong, and (if possible) the correct info. We credit all verified corrections on the page you helped improve.</p>
+        </div>
+
+        <div class="bg-white rounded-xl border border-border p-6">
+          <h2 class="font-bold text-ink mb-3">Suggest a Snack</h2>
+          <p class="text-sm">Got a favorite snack we missed? Send us the name, city, approximate price, and what makes it special. Our authors will check it out on their next visit and credit you if we publish it.</p>
+        </div>
+
+        <div class="bg-surface-alt rounded-xl p-6 text-sm">
+          <p class="font-medium text-ink mb-2">We're based in:</p>
+          <p>Chengdu, Sichuan, China<br/>Beijing office: Dongcheng District<br/>Shanghai office: Huangpu District</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <Footer />
+</BaseLayout>

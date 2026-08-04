@@ -1,0 +1,48 @@
+---
+import snacks from "../data/snacks.json";
+---
+<link rel="preload" as="image" href="/images/hero.webp" />
+
+<section class="min-h-[100dvh] flex flex-col justify-center pt-24 pb-20 px-6">
+  <div class="max-w-[1400px] mx-auto w-full grid md:grid-cols-2 gap-12 items-center">
+    <div class="max-w-[540px]">
+      <p class="text-sm font-medium tracking-wide uppercase text-accent mb-4">
+        The Complete Guide
+      </p>
+      <h1 class="text-4xl md:text-6xl font-black tracking-tighter leading-[1.05] mb-6">
+        Chinese Snacks
+        <span class="text-accent">—</span>
+        From Street Stalls to Your Table
+      </h1>
+      <p class="text-lg text-ink-muted leading-relaxed max-w-[55ch] mb-8">
+        Discover 22 iconic Chinese snacks — what they taste like, where to find 
+        them, how much they cost, and which ones you can bring home. For travelers 
+        planning a trip or anyone curious about Chinese food beyond takeout.
+      </p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <a href="/snacks" class="group block bg-white rounded-xl border border-border p-5 hover:border-accent/40 hover:shadow-md transition-all duration-200 active:scale-[0.98]">
+          <span class="text-2xl mb-2 block">🥟</span>
+          <h3 class="font-bold text-sm text-ink mb-1 group-hover:text-accent transition-colors">Just Browsing?</h3>
+          <p class="text-xs text-ink-muted leading-relaxed">See all 22 Chinese snacks with prices, photos, and honest taste descriptions.</p>
+          <span class="inline-flex items-center gap-1 text-xs font-medium text-accent mt-3">Browse All Snacks &rarr;</span>
+        </a>
+        <a href="#cities" class="group block bg-white rounded-xl border border-border p-5 hover:border-accent/40 hover:shadow-md transition-all duration-200 active:scale-[0.98]">
+          <span class="text-2xl mb-2 block">🌏</span>
+          <h3 class="font-bold text-sm text-ink mb-1 group-hover:text-accent transition-colors">Planning a Trip?</h3>
+          <p class="text-xs text-ink-muted leading-relaxed">Browse snacks by city, compare what each destination offers, and plan your food itinerary.</p>
+          <span class="inline-flex items-center gap-1 text-xs font-medium text-accent mt-3">Browse by City &rarr;</span>
+        </a>
+        <a href="#quiz" class="group block bg-white rounded-xl border border-border p-5 hover:border-accent/40 hover:shadow-md transition-all duration-200 active:scale-[0.98]">
+          <span class="text-2xl mb-2 block">📍</span>
+          <h3 class="font-bold text-sm text-ink mb-1 group-hover:text-accent transition-colors">In China Now?</h3>
+          <p class="text-xs text-ink-muted leading-relaxed">Find the nearest snack street, get prices, and learn the phrases you need right now.</p>
+          <span class="inline-flex items-center gap-1 text-xs font-medium text-accent mt-3">Find a Snack &rarr;</span>
+        </a>
+      </div>
+    </div>
+    <div class="relative aspect-[4/3] rounded-2xl overflow-hidden bg-surface-alt">
+      <img src="/images/hero.webp" alt="Chinese street food market at dusk with steaming dumplings and red lanterns" class="absolute inset-0 w-full h-full object-cover" width="1200" height="900" loading="eager" />
+      <div class="absolute inset-0 bg-gradient-to-br from-accent/30 to-transparent/20 z-10"></div>
+    </div>
+  </div>
+</section>

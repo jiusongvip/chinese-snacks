@@ -1,0 +1,47 @@
+---
+const phrases = [
+  { en: "I'll have this one", zh: "我要这个", pinyin: "wǒ yào zhè ge" },
+  { en: "No spicy", zh: "不要辣", pinyin: "bú yào là" },
+  { en: "How much?", zh: "多少钱", pinyin: "duō shǎo qián" },
+  { en: "Delicious!", zh: "好吃", pinyin: "hǎo chī" },
+  { en: "Check please", zh: "买单", pinyin: "mǎi dān" },
+];
+---
+
+<section class="py-24 px-6 bg-surface-alt">
+  <div class="max-w-[1400px] mx-auto w-full">
+    <p class="text-sm font-medium tracking-wide uppercase text-accent mb-3">Language Help</p>
+    <h2 class="text-3xl md:text-4xl font-black tracking-tighter mb-4">5 Phrases That Will Save You</h2>
+    <p class="text-ink-muted max-w-[55ch] mb-12">No Mandarin required. These five phrases will get you through any snack stall in China.</p>
+
+    <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
+      {phrases.map(phrase => (
+        <div class="bg-white rounded-xl border border-border p-5 hover:border-accent/30 hover:shadow-sm transition-all">
+          <p class="text-sm font-bold text-ink mb-1">{phrase.en}</p>
+          <p class="text-xl font-black text-accent mb-1 tracking-tight">{phrase.zh}</p>
+          <p class="text-xs text-ink-muted mb-2">{phrase.pinyin}</p>
+          <button class="speak-btn inline-flex items-center gap-1 text-xs font-medium text-accent hover:text-accent-dark transition-colors" data-text={phrase.zh} data-lang="zh-CN">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 256 256" fill="currentColor"><path d="M155.51,24.81a8,8,0,0,0-8.42.88L77.25,80H32A16,16,0,0,0,16,96v64a16,16,0,0,0,16,16H77.25l69.84,54.31A8,8,0,0,0,160,224V32A8,8,0,0,0,155.51,24.81ZM144,207.64l-59.09-45.95A8,8,0,0,0,80,160H32V96H80a8,8,0,0,0,4.91-1.69L144,48.36Z"/></svg>
+            Listen
+          </button>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<script>
+  document.querySelectorAll(".speak-btn").forEach(function(btn) {
+    btn.addEventListener("click", function() {
+      var text = this.getAttribute("data-text");
+      var lang = this.getAttribute("data-lang");
+      if ("speechSynthesis" in window) {
+        window.speechSynthesis.cancel();
+        var utterance = new SpeechSynthesisUtterance(text);
+        utterance.lang = lang;
+        utterance.rate = 0.85;
+        window.speechSynthesis.speak(utterance);
+      }
+    });
+  });
+</script>

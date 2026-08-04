@@ -1,0 +1,109 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  ogImage?: string;
+  canonicalURL?: string;
+  schemaType?: string;
+  noindex?: boolean;
+}
+
+const { title, description, ogImage = "/images/hero.webp", canonicalURL, schemaType, noindex = false } = Astro.props;
+const siteUrl = Astro.site?.origin || "https://chinese-snacks.com";
+const pageUrl = canonicalURL ? `${siteUrl}${canonicalURL}` : new URL(Astro.url.pathname, siteUrl).href;
+const siteName = "ChineseSnacks";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    {!noindex && <link rel="canonical" href={pageUrl} />}
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="robots" content={noindex ? "noindex, follow" : "index, follow"} />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={pageUrl} />
+    <meta property="og:image" content={ogImage.startsWith("http") ? ogImage : `${siteUrl}${ogImage}`} />
+    <meta property="og:site_name" content={siteName} />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage.startsWith("http") ? ogImage : `${siteUrl}${ogImage}`} />
+
+    <!-- Schema.org -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": schemaType || "WebPage",
+      "name": title,
+      "description": description,
+      "url": pageUrl
+    })}>
+    </script>
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": siteName,
+      "url": siteUrl,
+      "description": "Practical Chinese street food guides with prices, ordering phrases, and honest recommendations verified by locals."
+    })}>
+    </script>
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": siteName,
+      "url": siteUrl,
+      "description": "Practical Chinese street food guides with prices, ordering phrases, and honest recommendations verified by locals.",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": `${siteUrl}/snacks?q={search_term_string}`,
+        "query-input": "required name=search_term_string"
+      }
+    })}>
+    </script>
+    <script type="application/ld+json" set:html={JSON.stringify([
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Mei Chen",
+        "jobTitle": "Founder & Lead Guide",
+        "description": "Born in Chengdu, spent 8 years eating through China's back alleys and night markets. Former food writer for Chengdu Evening News.",
+        "url": `${siteUrl}/about`,
+        "knowsAbout": ["Sichuan cuisine", "night markets", "street food history"]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "David Liu",
+        "jobTitle": "Northern China Editor",
+        "description": "Beijing native and former tour guide who has led food tours through the hutongs since 2018.",
+        "url": `${siteUrl}/about`,
+        "knowsAbout": ["Beijing cuisine", "halal street food", "northern Chinese snacks"]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Lina Zhou",
+        "jobTitle": "Shanghai & East China Editor",
+        "description": "Shanghai-based food photographer and dim sum obsessive. Her work has appeared in That's Shanghai and SmartShanghai.",
+        "url": `${siteUrl}/about`,
+        "knowsAbout": ["Shanghai cuisine", "dim sum", "food photography"]
+      }
+    ])}>
+    </script>
+
+    <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" />
+  </head>
+  <body class="bg-surface text-ink antialiased">
+    <slot />
+  </body>
+</html>

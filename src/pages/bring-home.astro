@@ -1,0 +1,57 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Nav from "../components/Nav.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<BaseLayout title="Can You Bring Chinese Snacks Home? | ChineseSnacks" description="Customs rules for USA, UK & Australia, packaging tips, and the best Chinese snacks to bring home from your trip to China.">
+  <Nav />
+  <div class="min-h-[100dvh] pt-24 pb-20 px-6">
+    <div class="max-w-[1400px] mx-auto w-full pt-16">
+      <p class="text-sm font-medium tracking-wide uppercase text-accent mb-3">Practical Guide</p>
+      <h1 class="text-4xl md:text-6xl font-black tracking-tighter mb-6">Bringing Chinese Snacks Home</h1>
+      <div class="max-w-[65ch] space-y-6 text-ink-muted leading-relaxed">
+        <p class="text-lg">You had amazing snacks in China and want to bring some home. Here's what you need to know about customs, packaging, and the best items to pack.</p>
+        
+        <h2 class="text-xl font-bold text-ink mt-8">Customs Rules (USA)</h2>
+        <p>Commercially packaged and sealed snacks are generally allowed. Fresh produce, meat products, and homemade items are prohibited. Always declare food items on your customs form.</p>
+        
+        <h2 class="text-xl font-bold text-ink mt-8">Customs Rules (UK)</h2>
+        <p>Packaged snacks are fine. Meat and dairy products from non-EU countries face restrictions. Check the UK government website before traveling.</p>
+        
+        <h2 class="text-xl font-bold text-ink mt-8">Customs Rules (Australia)</h2>
+        <p>Australia has some of the strictest biosecurity laws. Most packaged snacks are okay if commercially sealed, but declare everything. Homemade items are almost never allowed.</p>
+        
+        <h2 class="text-xl font-bold text-ink mt-8">Best Snacks to Bring Home</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="bg-white rounded-xl border border-border p-5">
+            <h3 class="font-bold text-ink mb-1">Mooncakes</h3>
+            <p class="text-xs text-ink-muted">Vacuum-sealed, travel well, and are uniquely Chinese. Buy at bakeries, not street stalls.</p>
+          </div>
+          <div class="bg-white rounded-xl border border-border p-5">
+            <h3 class="font-bold text-ink mb-1">Dried Fruits &amp; Nuts</h3>
+            <p class="text-xs text-ink-muted">Dried hawthorn, candied ginger, and spiced walnuts are lightweight and customs-friendly.</p>
+          </div>
+          <div class="bg-white rounded-xl border border-border p-5">
+            <h3 class="font-bold text-ink mb-1">Tea</h3>
+            <p class="text-xs text-ink-muted">Chinese tea is universally allowed through customs. Jasmine, oolong, and pu'er are excellent gifts.</p>
+          </div>
+          <div class="bg-white rounded-xl border border-border p-5">
+            <h3 class="font-bold text-ink mb-1">Sesame Snacks</h3>
+            <p class="text-xs text-ink-muted">Sesame brittle, sesame balls, and sesame candy bars are sealed, stable, and delicious.</p>
+          </div>
+        </div>
+        
+        <h2 class="text-xl font-bold text-ink mt-8">Tips</h2>
+        <ul class="space-y-3 list-disc pl-5">
+          <li>Always choose vacuum-sealed, commercially packaged snacks — avoid anything from open-air markets</li>
+          <li>Keep original packaging — customs officers want to see labels</li>
+          <li>Pack snacks in checked luggage, not carry-on (liquids and gels rules apply)</li>
+          <li>Declare everything on arrival — failing to declare is worse than having something confiscated</li>
+          <li>Buy at supermarkets (Carrefour, Hema, Yonghui) for the most customs-friendly packaging</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <Footer />
+</BaseLayout>

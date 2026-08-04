@@ -1,0 +1,19 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Nav from "../components/Nav.astro";
+import Footer from "../components/Footer.astro";
+import SnackMap from "../components/SnackMap.astro";
+---
+
+<BaseLayout title="Chinese Snack Streets Directory | ChineseSnacks" description="Complete directory of China's best snack streets and night markets. Find where to eat in Beijing, Chengdu, Xi'an, Shanghai and more.">
+  <Nav />
+  <div class="min-h-[100dvh] pt-24">
+    <div class="max-w-[1400px] mx-auto w-full pt-16 px-6">
+      <p class="text-sm font-medium tracking-wide uppercase text-accent mb-3">Snack Streets</p>
+      <h1 class="text-4xl md:text-6xl font-black tracking-tighter mb-4">China's Best Snack Streets</h1>
+      <p class="text-lg text-ink-muted max-w-[55ch] mb-2">A curated directory of the best snack streets and night markets across Chinese cities.</p>
+    </div>
+  </div>
+  <SnackMap />
+  <Footer />
+</BaseLayout>

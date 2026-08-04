@@ -1,0 +1,24 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Nav from "../../components/Nav.astro";
+import Footer from "../../components/Footer.astro";
+import CityCard from "../../components/CityCard.astro";
+import cities from "../../data/cities.json";
+---
+
+<BaseLayout title="Chinese Snacks by City | ChineseSnacks" description="Find the best Chinese street snacks in Beijing, Chengdu, Xi'an, Shanghai, Guangzhou, and Chongqing. City-by-city guide with prices.">
+  <Nav />
+  <div class="min-h-[100dvh] pt-24 pb-20 px-6">
+    <div class="max-w-[1400px] mx-auto w-full pt-16">
+      <p class="text-sm font-medium tracking-wide uppercase text-accent mb-3">By City</p>
+      <h1 class="text-4xl md:text-6xl font-black tracking-tighter mb-4">Chinese Snacks by City</h1>
+      <p class="text-lg text-ink-muted max-w-[65ch] mb-12">Every Chinese city has its own snack culture. Pick your destination and discover what the locals eat.</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {cities.map(city => (
+          <CityCard city={city} />
+        ))}
+      </div>
+    </div>
+  </div>
+  <Footer />
+</BaseLayout>

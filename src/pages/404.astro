@@ -1,0 +1,25 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Nav from "../components/Nav.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<BaseLayout title="Page Not Found — Explore Chinese Snacks by City | ChineseSnacks" description="The page you're looking for doesn't exist. Explore Chinese snacks by city, browse our snack directory, or start from the homepage." noindex>
+  <Nav />
+  <div class="min-h-[100dvh] flex flex-col items-center justify-center pt-24 pb-20 px-6 text-center">
+    <p class="text-7xl md:text-9xl font-black text-accent/20 mb-4">404</p>
+    <h1 class="text-3xl md:text-4xl font-black tracking-tighter mb-4">This Snack Doesn't Exist</h1>
+    <p class="text-lg text-ink-muted max-w-[45ch] mb-8">
+      Looks like you wandered down an alley that doesn't have a food stall. Let's get you back to the good stuff.
+    </p>
+    <div class="flex flex-wrap gap-4 justify-center">
+      <a href="/" class="inline-flex items-center gap-2 bg-accent text-white px-6 py-3 rounded-full font-medium text-sm hover:bg-accent-dark transition-colors">
+        &larr; Back to Homepage
+      </a>
+      <a href="/snacks" class="inline-flex items-center gap-2 bg-white border border-border px-6 py-3 rounded-full font-medium text-sm hover:border-accent/40 transition-all">
+        Browse All Snacks
+      </a>
+    </div>
+  </div>
+  <Footer />
+</BaseLayout>

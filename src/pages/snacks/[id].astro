@@ -1,0 +1,185 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Nav from "../../components/Nav.astro";
+import Footer from "../../components/Footer.astro";
+import snacks from "../../data/snacks.json";
+import cities from "../../data/cities.json";
+
+export function getStaticPaths() {
+  return snacks.map(s => ({ params: { id: s.id } }));
+}
+
+const { id } = Astro.params;
+const snack = snacks.find(s => s.id === id);
+if (!snack) return Astro.redirect("/");
+
+const cityMap = Object.fromEntries(cities.map(c => [c.id, c]));
+const usdMin = (snack.priceMin / 7).toFixed(1);
+const usdMax = (snack.priceMax / 7).toFixed(1);
+const cityNames = snack.bestCities.map(cid => cityMap[cid]?.name || cid).join(", ");
+const difficultyColors: Record<string, string> = { easy: "bg-green-100 text-green-800", medium: "bg-yellow-100 text-yellow-800", hard: "bg-red-100 text-red-800" };
+---
+
+<BaseLayout title={`${snack.nameEn} (${snack.nameZh}) - Chinese Snack Guide | ChineseSnacks`} description={`${snack.description.substring(0, 45)} ${snack.taste} ¥${snack.priceMin}-¥${snack.priceMax} in ${cityNames}.`}>
+  <Nav />
+  <div class="min-h-[100dvh] pt-24 pb-20 px-6">
+    <div class="max-w-[1400px] mx-auto w-full pt-16">
+      <div class="grid md:grid-cols-5 gap-8">
+          <!-- Breadcrumb -->
+          <nav class="flex items-center gap-1.5 text-xs text-ink-muted mb-6" aria-label="Breadcrumb">
+            <a href="/" class="hover:text-accent transition-colors">Home</a>
+            <span class="text-ink-muted/40">/</span>
+            <a href="/snacks" class="hover:text-accent transition-colors">Snacks</a>
+            <span class="text-ink-muted/40">/</span>
+            <span class="text-ink">{snack.nameEn}</span>
+          </nav>
+        <div class="md:col-span-3">
+          <p class="text-sm font-medium tracking-wide uppercase text-accent mb-3">{snack.tags.join(" · ")}</p>
+          <h1 class="text-4xl md:text-6xl font-black tracking-tighter mb-2">{snack.nameEn}</h1>
+          <p class="text-2xl text-ink-muted mb-6">{snack.nameZh} &middot; <span class="italic">{snack.namePinyin}</span></p>
+
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="text-xs px-3 py-1 rounded-full {difficultyColors[snack.difficulty]} font-medium capitalize">{snack.difficulty}</span>
+            {snack.isSpicy && <span class="text-xs px-3 py-1 rounded-full bg-red-100 text-red-700 font-medium">Spicy</span>}
+            {snack.isVegetarian && <span class="text-xs px-3 py-1 rounded-full bg-green-100 text-green-700 font-medium">Vegetarian</span>}
+            {snack.isHalal && <span class="text-xs px-3 py-1 rounded-full bg-blue-100 text-blue-700 font-medium">Halal</span>}
+            {snack.isGlutenFree && <span class="text-xs px-3 py-1 rounded-full bg-purple-100 text-purple-700 font-medium">Gluten-Free</span>}
+          </div>
+
+         <div class="prose prose-lg max-w-none text-ink-muted leading-relaxed mb-8">
+           <p class="text-lg">{snack.description}</p>
+         </div>
+
+          <div class="bg-white rounded-xl border border-border p-6 mb-10">
+            <h2 class="font-bold text-lg text-ink mb-2">Where to Find the Best {snack.nameEn}</h2>
+            <p class="text-ink-muted text-sm leading-relaxed">{snack.whereBest}</p>
+          </div>
+
+          {snack.origin && (
+            <div class="mb-10">
+              <h2 class="font-bold text-lg text-ink mb-3">The Story Behind {snack.nameEn}</h2>
+              <p class="text-ink-muted text-sm leading-relaxed">{snack.origin}</p>
+            </div>
+          )}
+
+          {snack.howToEat && (
+            <div class="bg-surface-alt rounded-xl p-6 mb-10">
+              <h2 class="font-bold text-lg text-ink mb-2">How to Eat It Like a Local</h2>
+              <p class="text-ink-muted text-sm leading-relaxed">{snack.howToEat}</p>
+            </div>
+          )}
+
+          <div class="grid grid-cols-2 gap-4 mb-10">
+            <div class="bg-surface-alt rounded-xl p-5">
+              <p class="text-xs text-ink-muted uppercase tracking-wide mb-1">Price Range</p>
+              <p class="text-2xl font-black text-accent">&yen;{snack.priceMin}&ndash;{snack.priceMax}</p>
+            </div>
+            <div class="bg-surface-alt rounded-xl p-5">
+              <p class="text-xs text-ink-muted uppercase tracking-wide mb-1">Best Found In</p>
+              <p class="text-2xl font-black text-ink">{cityNames}</p>
+            </div>
+          </div>
+
+          <!-- FAQ Section -->
+          {snack.faq && snack.faq.length > 0 && (
+            <section class="mb-10" id="faq">
+              <h2 class="font-bold text-xl text-ink mb-6">Frequently Asked Questions About {snack.nameEn}</h2>
+              <div class="space-y-4">
+                {snack.faq.map((item: any) => (
+                  <details class="bg-white rounded-xl border border-border p-5 group">
+                    <summary class="font-semibold text-ink text-sm cursor-pointer list-none flex items-center justify-between">
+                      {item.q}
+                    </summary>
+                    <p class="text-ink-muted text-sm leading-relaxed mt-3 pt-3 border-t border-border">{item.a}</p>
+                  </details>
+                ))}
+              </div>
+            </section>
+          )}
+
+          <!-- Related Snacks -->
+          {snack.relatedSnacks && snack.relatedSnacks.length > 0 && (
+            <section class="mb-10">
+              <h2 class="font-bold text-xl text-ink mb-6">You Might Also Like</h2>
+              <div class="grid grid-cols-2 gap-4">
+                {snack.relatedSnacks.map((rid: string) => {
+                  const related = snacks.find((s: any) => s.id === rid);
+                  if (!related) return null;
+                  return (
+                    <a href={`/snacks/${related.id}`} class="block bg-white rounded-xl border border-border p-4 hover:shadow-md hover:border-accent/30 transition-all">
+                      <p class="font-semibold text-sm text-ink mb-1">{related.nameEn}</p>
+                      <p class="text-xs text-ink-muted mb-2">{related.nameZh} {related.namePinyin}</p>
+                      <p class="text-xs text-ink-muted line-clamp-2">{related.taste}</p>
+                    </a>
+                  );
+                })}
+              </div>
+            </section>
+          )}
+        </div>
+
+        <aside class="md:col-span-2">
+          <div class="bg-surface-alt rounded-2xl p-8 sticky top-24">
+            <div class="aspect-[4/3] rounded-xl overflow-hidden mb-6">
+              {snack.image ? (
+                <img src={snack.image} alt={snack.nameEn} class="w-full h-full object-cover" />
+              ) : (
+                <div class="w-full h-full bg-white flex items-center justify-center text-7xl">
+                  {snack.tags.includes("dessert") ? "🍡" : snack.isSpicy ? "🍜" : snack.tags.includes("breakfast") ? "🥞" : "🥟"}
+                </div>
+              )}
+            </div>
+            <h3 class="font-bold text-xl mb-2">What It Tastes Like</h3>
+            <p class="text-ink-muted text-sm leading-relaxed mb-6">{snack.taste}</p>
+            <h3 class="font-bold text-xl mb-2">Cities</h3>
+            <div class="space-y-2 mb-6">
+              {snack.bestCities.map(cid => (
+                <a href={`/cities/${cid}`} class="block text-sm text-accent hover:underline">{cityMap[cid]?.name || cid}</a>
+              ))}
+            </div>
+            <a href={`/cities/${snack.bestCity}`} class="inline-flex items-center gap-2 w-full justify-center bg-accent text-white px-6 py-3 rounded-full font-medium text-sm hover:bg-accent-dark transition-colors active:scale-[0.98]">
+              View {cityMap[snack.bestCity]?.name || snack.bestCity} Guide
+            </a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+  <Footer />
+
+<div id="vendor-overlay" class="fixed inset-0 z-[100] bg-black/95 flex flex-col items-center justify-center hidden">
+  <button onclick="document.getElementById('vendor-overlay').classList.add('hidden')" class="absolute top-6 right-6 text-white/60 hover:text-white text-sm flex items-center gap-2 z-20">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 256 256" fill="currentColor"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"/></svg> Close
+  </button>
+  <div style="background-image:url({snack.image})" class="absolute inset-0 bg-cover bg-center opacity-30"></div>
+  <div class="relative z-10 text-center px-6 max-w-md w-full">
+    <p class="text-white/50 text-xs uppercase tracking-widest mb-4">Show This to the Vendor</p>
+    <p class="text-5xl md:text-7xl font-black text-white tracking-wider mb-3">{snack.nameZh}</p>
+    <p class="text-white/60 text-xl mb-1 italic">{snack.namePinyin}</p>
+    <p class="text-white/50 text-sm mb-8">{snack.nameEn}</p>
+    <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 mb-8">
+      <p class="text-white/50 text-xs uppercase tracking-wide mb-3">You should pay around</p>
+      <p class="text-3xl font-black text-white">&yen;{snack.priceMin}&ndash;{snack.priceMax}</p>
+      <p class="text-sm text-white/50 mt-1">~{usdMin}&ndash;{usdMax}</p>
+    </div>
+    <p class="text-white/40 text-xs">Tip: Hold your phone flat. The vendor just needs to see the name and price.</p>
+  </div>
+</div>
+
+<!-- FAQ Schema -->
+{snack.faq && snack.faq.length > 0 && (
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": snack.faq.map((item: any) => ({
+      "@type": "Question",
+      "name": item.q,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": item.a
+      }
+    }))
+  })}>
+  </script>
+)}
+</BaseLayout>

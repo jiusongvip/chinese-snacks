@@ -1,0 +1,135 @@
+---
+import snacks from "../data/snacks.json";
+import cities from "../data/cities.json";
+
+const cityMap = Object.fromEntries(cities.map(c => [c.id, c.name]));
+---
+
+<section id="quiz" class="py-24 px-6 bg-surface">
+  <div class="max-w-[800px] mx-auto">
+    <p class="text-sm font-medium tracking-wide uppercase text-accent mb-3 text-center">Snack Finder</p>
+    <h2 class="text-3xl md:text-4xl font-black tracking-tighter mb-4 text-center">Which Chinese Snack Should You Try?</h2>
+    <p class="text-ink-muted max-w-[55ch] mb-12 text-center mx-auto">Answer three quick questions and we&apos;ll find the perfect snack for you.</p>
+    <div id="quiz-container" class="bg-white rounded-2xl border border-border p-8 md:p-12">
+      <div id="step-1" class="quiz-step">
+        <p class="text-xs font-medium text-ink-muted uppercase tracking-wide mb-2">Question 1 of 3</p>
+        <h3 class="text-xl font-bold mb-6">Where are you visiting?</h3>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+          {cities.map(city => (
+            <button class="quiz-city-btn text-left p-4 rounded-xl border border-border hover:border-accent/40 hover:bg-accent/5 transition-all font-medium" data-city={city.id}>
+              <span class="block text-sm font-bold text-ink">{city.name}</span>
+              <span class="block text-xs text-ink-muted mt-0.5">{city.nameZh}</span>
+            </button>
+          ))}
+        </div>
+      </div>
+      <div id="step-2" class="quiz-step" style="display:none;">
+        <p class="text-xs font-medium text-ink-muted uppercase tracking-wide mb-2">Question 2 of 3</p>
+        <h3 class="text-xl font-bold mb-6">What&apos;s your flavor mood?</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+          <button class="quiz-flavor-btn text-left p-4 rounded-xl border border-border hover:border-accent/40 hover:bg-accent/5 transition-all" data-flavor="spicy">
+            <span class="block text-lg mb-1">🌶️</span>
+            <span class="block text-sm font-bold text-ink">Bring the heat</span>
+            <span class="block text-xs text-ink-muted mt-0.5">Spicy, numbing, bold Sichuan-style</span>
+          </button>
+          <button class="quiz-flavor-btn text-left p-4 rounded-xl border border-border hover:border-accent/40 hover:bg-accent/5 transition-all" data-flavor="savory">
+            <span class="block text-lg mb-1">🥟</span>
+            <span class="block text-sm font-bold text-ink">Savory &amp; comforting</span>
+            <span class="block text-xs text-ink-muted mt-0.5">Dumplings, noodles, classic flavors</span>
+          </button>
+          <button class="quiz-flavor-btn text-left p-4 rounded-xl border border-border hover:border-accent/40 hover:bg-accent/5 transition-all" data-flavor="sweet">
+            <span class="block text-lg mb-1">🍡</span>
+            <span class="block text-sm font-bold text-ink">Something sweet</span>
+            <span class="block text-xs text-ink-muted mt-0.5">Desserts, candied fruit, ice treats</span>
+          </button>
+          <button class="quiz-flavor-btn text-left p-4 rounded-xl border border-border hover:border-accent/40 hover:bg-accent/5 transition-all" data-flavor="any">
+            <span class="block text-lg mb-1">🎲</span>
+            <span class="block text-sm font-bold text-ink">Surprise me</span>
+            <span class="block text-xs text-ink-muted mt-0.5">I&apos;m open to anything</span>
+          </button>
+        </div>
+      </div>
+      <div id="step-3" class="quiz-step" style="display:none;">
+        <p class="text-xs font-medium text-ink-muted uppercase tracking-wide mb-2">Question 3 of 3</p>
+        <h3 class="text-xl font-bold mb-6">How do you want to eat?</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+          <button class="quiz-style-btn text-left p-4 rounded-xl border border-border hover:border-accent/40 hover:bg-accent/5 transition-all" data-style="street">
+            <span class="block text-lg mb-1">🚶</span>
+            <span class="block text-sm font-bold text-ink">Street stall, standing up</span>
+            <span class="block text-xs text-ink-muted mt-0.5">Quick, cheap, authentic street food</span>
+          </button>
+          <button class="quiz-style-btn text-left p-4 rounded-xl border border-border hover:border-accent/40 hover:bg-accent/5 transition-all" data-style="sitdown">
+            <span class="block text-lg mb-1">🍽️</span>
+            <span class="block text-sm font-bold text-ink">Sit down, take your time</span>
+            <span class="block text-xs text-ink-muted mt-0.5">Restaurant or tea house experience</span>
+          </button>
+          <button class="quiz-style-btn text-left p-4 rounded-xl border border-border hover:border-accent/40 hover:bg-accent/5 transition-all" data-style="adventurous">
+            <span class="block text-lg mb-1">🔥</span>
+            <span class="block text-sm font-bold text-ink">Adventurous &amp; local</span>
+            <span class="block text-xs text-ink-muted mt-0.5">What locals actually eat</span>
+          </button>
+          <button class="quiz-style-btn text-left p-4 rounded-xl border border-border hover:border-accent/40 hover:bg-accent/5 transition-all" data-style="safe">
+            <span class="block text-lg mb-1">🛡️</span>
+            <span class="block text-sm font-bold text-ink">Safe &amp; familiar</span>
+            <span class="block text-xs text-ink-muted mt-0.5">Easy to order, universally liked</span>
+          </button>
+        </div>
+      </div>
+      <div id="step-results" class="quiz-step" style="display:none;"></div>
+    </div>
+  </div>
+</section>
+
+<script type="application/json" id="quiz-snacks-data">[{"id":"jianbing","nameEn":"Jianbing","nameZh":"煎饼","namePinyin":"jiān bǐng","taste":"Savory, crispy, with a satisfying chew from the egg and crunchy wonton cracker inside.","bestCity":"beijing","bestCities":["beijing","tianjin"],"difficulty":"easy","priceMin":5,"priceMax":15,"tags":["street-food","breakfast"],"isVegetarian":false,"isHalal":false,"isSpicy":false,"isGlutenFree":false,"seasonStart":"1","seasonEnd":"12","description":"China's most famous breakfast crepe. A thin batter is spread on a hot griddle, an egg cracked on top, then folded around crispy wonton crackers, scallions, and a smear of fermented bean paste.","image":"/images/snacks/jianbing.webp","whereBest":"Wangfujing Snack Street (Dongcheng District) — look for the stalls with long morning queues. Also excellent near universities in Haidian District."},{"id":"tanghulu","nameEn":"Tanghulu","nameZh":"糖葫芦","namePinyin":"táng hú lú","taste":"Sweet hard candy shell giving way to tart fruit. The classic hawthorn version is intensely sour-sweet.","bestCity":"beijing","bestCities":["beijing","harbin"],"difficulty":"easy","priceMin":5,"priceMax":15,"tags":["dessert","winter"],"isVegetarian":true,"isHalal":true,"isSpicy":false,"isGlutenFree":true,"seasonStart":"10","seasonEnd":"3","description":"Skewered fruit dipped in hardened sugar syrup. The classic version uses hawthorn berries, but modern variations include strawberries, grapes, and even cherry tomatoes.","image":null,"whereBest":"Wangfujing Snack Street and Nanluoguxiang (Dongcheng District) — sold from street carts throughout winter. Best quality at the vendors near Houhai Lake."},{"id":"xiaolongbao","nameEn":"Xiaolongbao","nameZh":"小笼包","namePinyin":"xiǎo lóng bāo","taste":"Thin-skinned dumplings filled with hot savory broth and pork. Burst-in-your-mouth rich and satisfying.","bestCity":"shanghai","bestCities":["shanghai","nanjing","wuxi"],"difficulty":"easy","priceMin":15,"priceMax":40,"tags":["steamed","classic"],"isVegetarian":false,"isHalal":false,"isSpicy":false,"isGlutenFree":false,"seasonStart":"1","seasonEnd":"12","description":"Steamed soup dumplings from Shanghai. Each dumpling contains minced pork and a cube of aspic that melts into hot broth during steaming. The art is eating them without burning your tongue.","image":null,"whereBest":"Yunnan Road Food Street — Jia Jia Tang Bao and Fu Chun are Shanghai institutions. Also excellent around Yu Garden in Huangpu District."},{"id":"chuanchuan","nameEn":"Chuan Chuan","nameZh":"串串","namePinyin":"chuàn chuàn","taste":"Spicy, numbing Sichuan peppercorn heat. Each skewer soaks up the chili oil broth for a layered, intense kick.","bestCity":"chengdu","bestCities":["chengdu","chongqing"],"difficulty":"medium","priceMin":0.5,"priceMax":3,"tags":["spicy","street-food","dinner"],"isVegetarian":false,"isHalal":false,"isSpicy":true,"isGlutenFree":true,"seasonStart":"1","seasonEnd":"12","description":"Skewers of meat, vegetables, and tofu cooked in a boiling pot of spicy Sichuan broth. You pick your skewers, they're cooked fresh, and you pay by the stick.","image":"/images/snacks/chuanchuan.webp","whereBest":"Jinli Ancient Street for a tourist-friendly intro. For the real deal, head to Jianshe Road Night Market (Chenghua District) where locals eat."},{"id":"roujiamo","nameEn":"Roujiamo","nameZh":"肉夹馍","namePinyin":"ròu jiā mó","taste":"Rich, slow-braised pork in a crispy-chewy flatbread. Deeply savory with warm spices like star anise and cinnamon.","bestCity":"xian","bestCities":["xian"],"difficulty":"easy","priceMin":8,"priceMax":20,"tags":["street-food","classic","lunch"],"isVegetarian":false,"isHalal":false,"isSpicy":false,"isGlutenFree":false,"seasonStart":"1","seasonEnd":"12","description":"Often called the Chinese hamburger. Shredded pork belly braised for hours in soy sauce and spices, stuffed into a freshly baked flatbread. Xi'an's signature street food.","image":null,"whereBest":"Muslim Quarter (Huimin Street) — every other stall sells it, but Fan Ji on Zhubashi Street has been doing it since 1925. Get the 'lao tong' (aged marinade) version."},{"id":"shengjianbao","nameEn":"Shengjian Bao","nameZh":"生煎包","namePinyin":"shēng jiān bāo","taste":"Pan-fried bottom is crispy golden, top is soft and fluffy. Inside: juicy pork filling with hot broth.","bestCity":"shanghai","bestCities":["shanghai"],"difficulty":"easy","priceMin":10,"priceMax":25,"tags":["street-food","classic","breakfast"],"isVegetarian":false,"isHalal":false,"isSpicy":false,"isGlutenFree":false,"seasonStart":"1","seasonEnd":"12","description":"Shanghai's pan-fried pork buns. Unlike steamed xiaolongbao, shengjian bao are fried in a large flat pan, giving them a crispy bottom while the top stays pillowy soft.","image":"/images/snacks/shengjianbao.webp","whereBest":"Yunnan Road Food Street — Yang's Fry Dumplings is the most famous. Also excellent at Da Hu Chun on Sichuan Road."},{"id":"mala-tang","nameEn":"Mala Tang","nameZh":"麻辣烫","namePinyin":"má là tàng","taste":"Numbing and spicy broth customized to your heat tolerance. Choose your ingredients, they cook them in a single pot.","bestCity":"chengdu","bestCities":["chengdu","chongqing"],"difficulty":"medium","priceMin":15,"priceMax":40,"tags":["spicy","dinner","custom"],"isVegetarian":true,"isHalal":false,"isSpicy":true,"isGlutenFree":true,"seasonStart":"1","seasonEnd":"12","description":"DIY hot pot in a bowl. Pick your ingredients from a refrigerated display, hand them to the cook, and they're boiled in spicy mala broth. A solo diner's best friend.","image":"/images/snacks/malatang.webp","whereBest":"Jianshe Road Night Market (Chenghua District, Chengdu) has the best concentration of stalls. In Chongqing, head to Jiefangbei / Bayi Road for late-night mala tang."},{"id":"baocai","nameEn":"Baocai / Pickled Vegetables","nameZh":"泡菜","namePinyin":"pào cài","taste":"Crunchy, sour, mildly spicy pickled vegetables. A refreshing palate cleanser between heavier dishes.","bestCity":"chengdu","bestCities":["chengdu"],"difficulty":"easy","priceMin":2,"priceMax":8,"tags":["side","cold"],"isVegetarian":true,"isHalal":true,"isSpicy":false,"isGlutenFree":true,"seasonStart":"1","seasonEnd":"12","description":"Sichuan-style pickled vegetables served as a free side dish in many restaurants. Cabbage, radish, and carrots pickled in a brine with Sichuan peppercorns and chili.","image":null,"whereBest":"Free side dish at nearly every Sichuan restaurant. For the best, go to Jinli Ancient Street where some stalls sell specialty pickled vegetables by weight."},{"id":"liangpi","nameEn":"Liangpi","nameZh":"凉皮","namePinyin":"liáng pí","taste":"Cold, slippery noodles in a tangy sesame-vinegar dressing. Refreshing with a gentle heat from chili oil.","bestCity":"xian","bestCities":["xian"],"difficulty":"easy","priceMin":8,"priceMax":18,"tags":["cold","summer","vegetarian"],"isVegetarian":true,"isHalal":true,"isSpicy":false,"isGlutenFree":false,"seasonStart":"4","seasonEnd":"10","description":"Cold skin noodles from Xi'an. Made from wheat or rice starch, these translucent wide noodles are tossed with cucumber, bean sprouts, chili oil, vinegar, and sesame paste.","image":null,"whereBest":"Muslim Quarter in Xi'an — Wei Jia Liangpi on Dapiyuan Street is legendary. Best eaten at lunch when the noodles are freshest."},{"id":"dan-dan-mian","nameEn":"Dan Dan Noodles","nameZh":"担担面","namePinyin":"dàn dàn miàn","taste":"Intensely savory with a deep sesame-tahini richness, cut by sharp chili heat and numbing peppercorns.","bestCity":"chengdu","bestCities":["chengdu"],"difficulty":"medium","priceMin":10,"priceMax":25,"tags":["spicy","noodles","classic"],"isVegetarian":false,"isHalal":false,"isSpicy":true,"isGlutenFree":false,"seasonStart":"1","seasonEnd":"12","description":"Chengdu's iconic noodle dish. Thin wheat noodles topped with a sauce of sesame paste, chili oil, Sichuan pepper, minced pork, and preserved vegetables.","image":"/images/snacks/dandannoodles.webp","whereBest":"Jinli Ancient Street for a classic version. Chen Mapo Tofu restaurant on Qingyang Street serves an excellent dan dan mian alongside their famous mapo tofu."},{"id":"bingfen","nameEn":"Bingfen","nameZh":"冰粉","namePinyin":"bīng fěn","taste":"Jelly-like ice noodles floating in brown sugar syrup with crushed nuts, raisins, and sesame. Cooling and lightly sweet.","bestCity":"chengdu","bestCities":["chengdu","chongqing"],"difficulty":"easy","priceMin":5,"priceMax":12,"tags":["dessert","summer","cold"],"isVegetarian":true,"isHalal":true,"isSpicy":false,"isGlutenFree":true,"seasonStart":"5","seasonEnd":"9","description":"Ice jelly is the perfect counterpoint to Sichuan hot pot. The translucent jelly noodles made from the ice plant seed are drowned in brown sugar syrup and topped with crushed peanuts, raisins, and sesame seeds.","image":null,"whereBest":"Jinli Ancient Street and around Sichuan University (Wuhou District) — stalls pop up everywhere in summer. Look for the brown sugar syrup version with crushed nuts."},{"id":"yangrou-chuan","nameEn":"Lamb Skewers","nameZh":"羊肉串","namePinyin":"yáng ròu chuàn","taste":"Smoky, cumin-heavy grilled lamb with a charred exterior and tender interior. The cumin aroma hits you before the taste.","bestCity":"xian","bestCities":["xian","beijing"],"difficulty":"easy","priceMin":3,"priceMax":8,"tags":["street-food","halal","dinner"],"isVegetarian":false,"isHalal":true,"isSpicy":false,"isGlutenFree":true,"seasonStart":"1","seasonEnd":"12","description":"Xinjiang-style cumin lamb skewers grilled over charcoal. The Muslim Quarter in Xi'an is famous for these. Each skewer is generously dusted with cumin, chili, and salt.","image":"/images/snacks/yangrouchuan.webp","whereBest":"Muslim Quarter in Xi'an — the stretch near the Drum Tower has the highest concentration. Follow the cumin scent. In Beijing, Guijie (Ghost Street) is the spot."}]</script>
+<script type="application/json" id="quiz-citymap-data">{"beijing":"Beijing","chengdu":"Chengdu","xian":"Xi'an","shanghai":"Shanghai","guangzhou":"Guangzhou","chongqing":"Chongqing"}</script>
+<script is:inline>
+var snacksData=JSON.parse(document.getElementById("quiz-snacks-data").textContent);
+var cityMapData=JSON.parse(document.getElementById("quiz-citymap-data").textContent);
+var answers={city:"",flavor:"",style:""};
+function showStep(id){document.querySelectorAll(".quiz-step").forEach(function(el){el.style.display="none";});var s=document.getElementById(id);if(s)s.style.display="";}
+function sel(e,sel){var b=e.currentTarget.parentElement.querySelectorAll(sel);b.forEach(function(x){x.classList.remove("border-accent","bg-accent/5","ring-2","ring-accent/30");});e.currentTarget.classList.add("border-accent","bg-accent/5","ring-2","ring-accent/30");}
+document.querySelectorAll(".quiz-city-btn").forEach(function(b){b.addEventListener("click",function(e){sel(e,".quiz-city-btn");answers.city=this.getAttribute("data-city");showStep("step-2");});});
+document.querySelectorAll(".quiz-flavor-btn").forEach(function(b){b.addEventListener("click",function(e){sel(e,".quiz-flavor-btn");answers.flavor=this.getAttribute("data-flavor");showStep("step-3");});});
+document.querySelectorAll(".quiz-style-btn").forEach(function(b){b.addEventListener("click",function(e){sel(e,".quiz-style-btn");answers.style=this.getAttribute("data-style");showResults();});});
+function e4(s){if(s.tags&&s.tags.indexOf("dessert")>=0)return"\u{1F36D}";if(s.isSpicy)return"\u{1F35C}";if(s.tags&&s.tags.indexOf("breakfast")>=0)return"\u{1F95E}";return"\u{1F95F}";}
+function showResults(){
+var sc=snacksData.filter(function(s){return!answers.city||s.bestCities.indexOf(answers.city)>=0;}).map(function(s){var v=0;
+if(s.bestCities.indexOf(answers.city)>=0)v+=30;
+if(answers.flavor==="spicy"&&s.isSpicy)v+=25;
+if(answers.flavor==="sweet"&&s.tags&&s.tags.indexOf("dessert")>=0)v+=25;
+if(answers.flavor==="savory"&&!s.isSpicy&&(!s.tags||s.tags.indexOf("dessert")<0))v+=25;
+if(answers.flavor==="any")v+=20;
+if(answers.style==="street"&&s.tags&&s.tags.indexOf("street-food")>=0)v+=20;
+if(answers.style==="adventurous"&&s.difficulty==="medium")v+=20;
+if(answers.style==="safe"&&s.difficulty==="easy")v+=20;
+if(answers.style==="sitdown"&&s.tags&&s.tags.indexOf("classic")>=0)v+=15;
+if(s.image)v+=5;
+return{id:s.id,nEn:s.nameEn,nZh:s.nameZh,nPy:s.namePinyin,taste:s.taste,bc:s.bestCity,pMin:s.priceMin,pMax:s.priceMax,tags:s.tags,spicy:s.isSpicy,diff:s.difficulty,img:s.image,score:v};});
+if(sc.length===0)sc=snacksData.map(function(s){return{id:s.id,nEn:s.nameEn,nZh:s.nameZh,nPy:s.namePinyin,taste:s.taste,bc:s.bestCity,pMin:s.priceMin,pMax:s.priceMax,tags:s.tags,spicy:s.isSpicy,diff:s.difficulty,img:s.image,score:10};});
+sc.sort(function(a,b){return b.score-a.score;});var top=sc.slice(0,3);
+var cn=answers.city?(cityMapData[answers.city]||answers.city):"any city";
+var h="";
+h+='<p class="text-xs font-medium text-ink-muted uppercase tracking-wide mb-2">Your Results</p>';
+h+='<h3 class="text-xl font-bold mb-1">You should try...</h3>';
+h+='<p class="text-sm text-ink-muted mb-8">Based on visiting '+cn+' and your preferences.</p>';
+h+='<div class="space-y-4 mb-8">';
+top.forEach(function(s,i){
+var badge=i===0?'<span class="text-xs px-1.5 py-0.5 rounded-full bg-accent text-white font-bold mr-2">Best Match</span>':"";
+var img=s.img?'<img src="'+s.img+'" alt="'+s.nEn+'" class="w-full h-full object-cover" />':'<span class="text-2xl">'+e4(s)+'</span>';
+h+='<a href="/snacks/'+s.id+'" class="flex gap-4 p-4 rounded-xl border border-border hover:border-accent/40 hover:shadow-sm transition-all group items-center">';
+h+='<div class="w-16 h-16 rounded-lg bg-surface-alt flex-shrink-0 overflow-hidden flex items-center justify-center">'+img+'</div>';
+h+='<div class="flex-1 min-w-0">';
+h+='<div class="flex items-center gap-2 mb-0.5">'+badge+'<span class="font-bold text-ink">'+s.nEn+'</span></div>';
+h+='<p class="text-sm text-ink-muted">'+s.nZh+' &middot; '+s.nPy+'</p>';
+h+='<p class="text-xs text-ink-muted mt-1 line-clamp-1">'+s.taste+'</p>';
+h+='<div class="flex items-center gap-3 mt-1 text-xs text-ink-muted">';
+h+='<span>Best in '+(cityMapData[s.bc]||s.bc)+'</span>';
+h+='<span class="font-semibold text-ink">&yen;'+s.pMin+'&ndash;'+s.pMax+'</span>';
+h+='</div></div>';
+h+='<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 256 256" fill="currentColor" class="text-ink-muted flex-shrink-0"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"/></svg>';
+h+='</a>';
+});
+h+='</div><div class="flex gap-3 justify-center"><button onclick="showStep(\'step-1\');resetQ();" class="text-sm font-medium text-accent hover:underline">Try Again</button><a href="/snacks" class="inline-flex items-center gap-1 text-sm font-medium text-accent hover:underline">Browse All Snacks &rarr;</a></div>';
+document.getElementById("step-results").innerHTML=h;showStep("step-results");}
+function resetQ(){answers={city:"",flavor:"",style:""};document.querySelectorAll(".quiz-city-btn,.quiz-flavor-btn,.quiz-style-btn").forEach(function(b){b.classList.remove("border-accent","bg-accent/5","ring-2","ring-accent/30");});}
+</script>

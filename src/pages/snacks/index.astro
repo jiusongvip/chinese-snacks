@@ -1,0 +1,157 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Nav from "../../components/Nav.astro";
+import SnackCard from "../../components/SnackCard.astro";
+import Footer from "../../components/Footer.astro";
+import snacks from "../../data/snacks.json";
+import cities from "../../data/cities.json";
+
+const cityMap = Object.fromEntries(cities.map(c => [c.id, c]));
+const allTags = [...new Set(snacks.flatMap(s => s.tags))].sort();
+---
+
+<BaseLayout
+  title="All Chinese Snacks — Complete Guide with Prices | ChineseSnacks"
+  description="Browse all Chinese street snacks with prices, taste descriptions, and where to eat them. Filter by city, flavor, and dietary needs."
+>
+  <Nav />
+  <div class="min-h-[100dvh] pt-24 pb-20 px-6">
+    <div class="max-w-[1400px] mx-auto w-full pt-16">
+      <p class="text-sm font-medium tracking-wide uppercase text-accent mb-3">All Snacks</p>
+      <h1 class="text-4xl md:text-6xl font-black tracking-tighter mb-4">Complete Snack Directory</h1>
+      <p class="text-ink-muted max-w-[55ch] mb-12">Twenty iconic Chinese snacks. Filter by city, flavor, dietary needs, or search by name.</p>
+
+      <!-- Filters -->
+      <div id="snack-filters" class="mb-10 space-y-4">
+        <!-- Search -->
+        <div class="relative max-w-md">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 256 256" fill="currentColor" class="absolute left-4 top-1/2 -translate-y-1/2 text-ink-muted"><path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"/></svg>
+          <input type="text" id="snack-search" placeholder="Search snacks..." class="w-full pl-11 pr-4 py-3 rounded-xl border border-border bg-white text-sm focus:outline-none focus:border-accent/50 focus:ring-2 focus:ring-accent/10 transition-all" />
+        </div>
+
+        <!-- City Filter -->
+        <div class="flex flex-wrap gap-2" id="city-filter">
+          <button class="filter-city-btn px-4 py-2 rounded-full text-sm font-medium border border-border hover:border-accent/40 hover:bg-accent/5 transition-all border-accent bg-accent/5 ring-2 ring-accent/30" data-city="all">All Cities</button>
+          {cities.map(city => (
+            <button class="filter-city-btn px-4 py-2 rounded-full text-sm font-medium border border-border hover:border-accent/40 hover:bg-accent/5 transition-all" data-city={city.id}>{city.name}</button>
+          ))}
+        </div>
+
+        <!-- Tag & Dietary Filters -->
+        <div class="flex flex-wrap gap-2">
+          <button class="filter-diet-btn px-3 py-1.5 rounded-full text-xs font-medium border border-border hover:border-red-100 hover:bg-red-50 transition-all" data-filter="spicy">🌶️ Spicy</button>
+          <button class="filter-diet-btn px-3 py-1.5 rounded-full text-xs font-medium border border-border hover:border-green-100 hover:bg-green-50 transition-all" data-filter="vegetarian">🥬 Vegetarian</button>
+          <button class="filter-diet-btn px-3 py-1.5 rounded-full text-xs font-medium border border-border hover:border-blue-100 hover:bg-blue-50 transition-all" data-filter="halal">☪️ Halal</button>
+          <button class="filter-diet-btn px-3 py-1.5 rounded-full text-xs font-medium border border-border hover:border-purple-100 hover:bg-purple-50 transition-all" data-filter="glutenfree">🌾 Gluten-Free</button>
+          <button class="filter-diet-btn px-3 py-1.5 rounded-full text-xs font-medium border border-border hover:border-yellow-100 hover:bg-yellow-50 transition-all" data-filter="dessert">🍡 Dessert</button>
+          <button class="filter-diet-btn px-3 py-1.5 rounded-full text-xs font-medium border border-border hover:border-ink/10 hover:bg-surface transition-all" data-filter="breakfast">🥞 Breakfast</button>
+        </div>
+
+        <button id="filter-reset" class="text-xs font-medium text-accent hover:underline hidden">Clear all filters</button>
+        <p id="no-results" class="text-ink-muted text-sm hidden">No snacks match your filters. Try broadening your search.</p>
+      </div>
+
+      <!-- Snack Grid -->
+      <div id="snack-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {snacks.map(snack => (
+          <div class="snack-card-item" data-city={snack.bestCities.join(",")} data-tags={snack.tags.join(",")} data-spicy={snack.isSpicy ? "1" : "0"} data-vegetarian={snack.isVegetarian ? "1" : "0"} data-halal={snack.isHalal ? "1" : "0"} data-glutenfree={snack.isGlutenFree ? "1" : "0"} data-difficulty={snack.difficulty}>
+            <SnackCard snack={snack} cityName={cityMap[snack.bestCity]?.name || snack.bestCity} />
+          </div>
+        ))}
+      </div>
+
+      <p id="snack-count" class="text-sm text-ink-muted mt-8 text-center">Showing all {snacks.length} snacks</p>
+    </div>
+  </div>
+  <Footer />
+</BaseLayout>
+
+<script>
+  const search = document.getElementById("snack-search");
+  const cityBtns = document.querySelectorAll(".filter-city-btn");
+  const dietBtns = document.querySelectorAll(".filter-diet-btn");
+  const resetBtn = document.getElementById("filter-reset");
+  const noResults = document.getElementById("no-results");
+  const snackCount = document.getElementById("snack-count");
+  const cards = document.querySelectorAll(".snack-card-item");
+
+  let activeCity = "all";
+  let activeDiets = new Set();
+
+  function updateFilters() {
+    let visible = 0;
+    const query = search.value.toLowerCase();
+
+    cards.forEach(card => {
+      const cityData = card.getAttribute("data-city") || "";
+      const tagsData = card.getAttribute("data-tags") || "";
+      const nameEl = card.querySelector("h3");
+      const nameText = nameEl ? nameEl.textContent.toLowerCase() : "";
+
+      // City filter
+      let cityMatch = activeCity === "all" || cityData.split(",").includes(activeCity);
+
+      // Diet filter
+      let dietMatch = true;
+      if (activeDiets.has("spicy")) dietMatch = card.getAttribute("data-spicy") === "1";
+      if (activeDiets.has("vegetarian")) dietMatch = dietMatch && card.getAttribute("data-vegetarian") === "1";
+      if (activeDiets.has("halal")) dietMatch = dietMatch && card.getAttribute("data-halal") === "1";
+      if (activeDiets.has("glutenfree")) dietMatch = dietMatch && card.getAttribute("data-glutenfree") === "1";
+      if (activeDiets.has("dessert")) dietMatch = dietMatch && tagsData.split(",").includes("dessert");
+      if (activeDiets.has("breakfast")) dietMatch = dietMatch && tagsData.split(",").includes("breakfast");
+
+      // Search filter
+      let searchMatch = !query || nameText.includes(query) || tagsData.includes(query);
+
+      if (cityMatch && dietMatch && searchMatch) {
+        card.style.display = "";
+        visible++;
+      } else {
+        card.style.display = "none";
+      }
+    });
+
+    snackCount.textContent = `Showing ${visible} of ${cards.length} snacks`;
+    noResults.classList.toggle("hidden", visible > 0);
+    resetBtn.classList.toggle("hidden", activeCity === "all" && activeDiets.size === 0 && !query);
+  }
+
+  search.addEventListener("input", updateFilters);
+
+  cityBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
+      cityBtns.forEach(b => b.classList.remove("border-accent", "bg-accent/5", "ring-2", "ring-accent/30"));
+      btn.classList.add("border-accent", "bg-accent/5", "ring-2", "ring-accent/30");
+      activeCity = btn.getAttribute("data-city");
+      updateFilters();
+    });
+  });
+
+  dietBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
+      const filter = btn.getAttribute("data-filter");
+      if (activeDiets.has(filter)) {
+        activeDiets.delete(filter);
+        btn.classList.remove("border-accent", "bg-accent/5", "ring-2", "ring-accent/30");
+      } else {
+        activeDiets.add(filter);
+        btn.classList.add("border-accent", "bg-accent/5", "ring-2", "ring-accent/30");
+      }
+      updateFilters();
+    });
+  });
+
+  resetBtn.addEventListener("click", () => {
+    activeCity = "all";
+    activeDiets.clear();
+    search.value = "";
+    cityBtns.forEach(b => {
+      b.classList.remove("border-accent", "bg-accent/5", "ring-2", "ring-accent/30");
+      if (b.getAttribute("data-city") === "all") {
+        b.classList.add("border-accent", "bg-accent/5", "ring-2", "ring-accent/30");
+      }
+    });
+    dietBtns.forEach(b => b.classList.remove("border-accent", "bg-accent/5", "ring-2", "ring-accent/30"));
+    updateFilters();
+  });
+</script>

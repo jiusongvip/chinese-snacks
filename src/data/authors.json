@@ -1,0 +1,32 @@
+[
+  {
+    "id": "mei-chen",
+    "name": "Mei Chen",
+    "nameZh": "陈美",
+    "role": "Founder & Lead Guide",
+    "bio": "Born in Chengdu, spent 8 years eating through China's back alleys and night markets. Former food writer for Chengdu Evening News. Has eaten at over 300 street stalls across 15 Chinese cities and counting.",
+    "image": "/images/authors/mei-chen.webp",
+    "expertise": ["Sichuan cuisine", "night markets", "street food history"],
+    "url": "https://chinese-snacks.com/about/"
+  },
+  {
+    "id": "david-liu",
+    "name": "David Liu",
+    "nameZh": "刘大卫",
+    "role": "Northern China Editor",
+    "bio": "Beijing native and former tour guide who has led food tours through the hutongs since 2018. Knows every jianbing cart and zhajiang mian shop in Dongcheng District.",
+    "image": "/images/authors/david-liu.webp",
+    "expertise": ["Beijing cuisine", "halal street food", "northern Chinese snacks"],
+    "url": "https://chinese-snacks.com/about/"
+  },
+  {
+    "id": "lina-zhou",
+    "name": "Lina Zhou",
+    "nameZh": "周丽娜",
+    "role": "Shanghai & East China Editor",
+    "bio": "Shanghai-based food photographer and dim sum obsessive. Has documented over 100 breakfast stalls across Jiangsu, Zhejiang, and Shanghai. Her work has appeared in That's Shanghai and SmartShanghai.",
+    "image": "/images/authors/lina-zhou.webp",
+    "expertise": ["Shanghai cuisine", "dim sum", "food photography"],
+    "url": "https://chinese-snacks.com/about/"
+  }
+]

@@ -1,0 +1,978 @@
+[
+  {
+    "id": "jianbing",
+    "nameEn": "Jianbing",
+    "nameZh": "煎饼",
+    "namePinyin": "jiān bǐng",
+    "taste": "Savory, crispy, with a satisfying chew from the egg and crunchy wonton cracker inside.",
+    "bestCity": "beijing",
+    "bestCities": [
+      "beijing",
+      "tianjin"
+    ],
+    "difficulty": "easy",
+    "priceMin": 5,
+    "priceMax": 15,
+    "tags": [
+      "street-food",
+      "breakfast"
+    ],
+    "isVegetarian": false,
+    "isHalal": false,
+    "isSpicy": false,
+    "isGlutenFree": false,
+    "seasonStart": "1",
+    "seasonEnd": "12",
+    "description": "China's most famous breakfast crepe. A thin batter is spread on a hot griddle, an egg cracked on top, then folded around crispy wonton crackers, scallions, and a smear of fermented bean paste.",
+    "image": "/images/snacks/jianbing.webp",
+    "whereBest": "Wangfujing Snack Street (Dongcheng District) — look for the stalls with long morning queues. Also excellent near universities in Haidian District.",
+    "origin": "Jianbing originated in Shandong province over 2,000 years ago during the Three Kingdoms period. Legend says Chancellor Zhuge Liang ordered his soldiers to cook batter on shields held over fire after losing their woks. The modern Beijing version — with egg, crispy cracker, and fermented bean paste — evolved when the snack migrated north and absorbed local tastes. Today it's the undisputed king of Chinese breakfast street food, with an estimated 200,000 vendors selling it across China every morning.",
+    "howToEat": "Eat it immediately — jianbing loses its crispness within 5 minutes. Fold the paper wrapper as you go, peeling it down like a banana. Don't be shy about asking for extra chili paste (la jiao) or skipping the cilantro if you hate it. The vendor will crack a second egg if you ask — say 'jia yi ge dan' (加一个蛋). Best consumed standing on a street corner with a cup of warm soy milk.",
+    "faq": [
+      {
+        "q": "What is the difference between jianbing and a French crepe?",
+        "a": "Jianbing batter is made from mung bean and wheat flour, making it crispier than a French crepe. It is savory (not sweet), cooked on a flat griddle, filled with egg, crispy wonton cracker, scallions, and fermented bean paste. The texture is crunchy-chewy, not soft."
+      },
+      {
+        "q": "Can I get jianbing without the crispy cracker?",
+        "a": "Yes, ask for bu yao bao cui (no crispy). But the cracker is the defining texture of Beijing-style jianbing. Without it, you get a softer, more omelet-like wrap that some regional variations actually prefer."
+      },
+      {
+        "q": "How much does a jianbing cost in Beijing?",
+        "a": "RMB 6-10 near universities and residential areas, RMB 15-20 in tourist zones like Wangfujing. The student-area version is often better because the vendors rely on repeat customers rather than one-time tourist traffic."
+      }
+    ],
+    "relatedSnacks": [
+      "congyoubing",
+      "zhajiangmian"
+    ]
+  },
+  {
+    "id": "tanghulu",
+    "nameEn": "Tanghulu",
+    "nameZh": "糖葫芦",
+    "namePinyin": "táng hú lú",
+    "taste": "Sweet hard candy shell giving way to tart fruit. The classic hawthorn version is intensely sour-sweet.",
+    "bestCity": "beijing",
+    "bestCities": [
+      "beijing",
+      "harbin"
+    ],
+    "difficulty": "easy",
+    "priceMin": 5,
+    "priceMax": 15,
+    "tags": [
+      "dessert",
+      "winter"
+    ],
+    "isVegetarian": true,
+    "isHalal": true,
+    "isSpicy": false,
+    "isGlutenFree": true,
+    "seasonStart": "10",
+    "seasonEnd": "3",
+    "description": "Skewered fruit dipped in hardened sugar syrup. The classic version uses hawthorn berries, but modern variations include strawberries, grapes, and even cherry tomatoes.",
+    "image": "/images/snacks/tanghulu.webp",
+    "whereBest": "Wangfujing Snack Street and Nanluoguxiang (Dongcheng District) — sold from street carts throughout winter. Best quality at the vendors near Houhai Lake.",
+    "origin": "Tanghulu dates back to the Song Dynasty (960-1279), when an emperor's concubine fell ill and a folk doctor prescribed hawthorn berries simmered in sugar. The treatment worked, and the candied fruit became a palace favorite before spreading to the streets. The classic hawthorn version remains the gold standard in Beijing, where winter vendors wheel their carts through hutongs with the bright red skewers arranged in towering displays that catch the winter light.",
+    "howToEat": "Bite through the hardened sugar shell first — it should crack cleanly — then into the tart fruit beneath. The joy is in the contrast: brittle sweet outside, intensely sour inside. Don't refrigerate it; the sugar sweats and turns sticky. Buy from a vendor who's actively dipping fresh skewers, not one selling pre-made tanghulu that's been sitting in the cold. Strawberry and grape variations are modern; ask for 'shan zha' (山楂) for the classic.",
+    "faq": [
+      {
+        "q": "What fruit is traditionally used in tanghulu?",
+        "a": "Hawthorn berries (shan zha) are the classic fruit. They are intensely sour, which contrasts with the sweet hard sugar shell. Modern variations use strawberries, grapes, cherry tomatoes, and kiwi slices."
+      },
+      {
+        "q": "When is tanghulu season?",
+        "a": "October through March, peaking in winter. The cold weather keeps the sugar shell hard and glossy. In summer, tanghulu is rare because the sugar melts and turns sticky within minutes."
+      },
+      {
+        "q": "Should I refrigerate tanghulu?",
+        "a": "No. Refrigeration makes the sugar sweat and turn sticky. Eat it immediately after buying. The best tanghulu is from a vendor actively dipping fresh skewers, not selling pre-made ones."
+      }
+    ],
+    "relatedSnacks": [
+      "bingfen",
+      "dan-ta"
+    ]
+  },
+  {
+    "id": "xiaolongbao",
+    "nameEn": "Xiaolongbao",
+    "nameZh": "小笼包",
+    "namePinyin": "xiǎo lóng bāo",
+    "taste": "Thin-skinned dumplings filled with hot savory broth and pork. Burst-in-your-mouth rich and satisfying.",
+    "bestCity": "shanghai",
+    "bestCities": [
+      "shanghai",
+      "nanjing",
+      "wuxi"
+    ],
+    "difficulty": "easy",
+    "priceMin": 15,
+    "priceMax": 40,
+    "tags": [
+      "steamed",
+      "classic"
+    ],
+    "isVegetarian": false,
+    "isHalal": false,
+    "isSpicy": false,
+    "isGlutenFree": false,
+    "seasonStart": "1",
+    "seasonEnd": "12",
+    "description": "Steamed soup dumplings from Shanghai. Each dumpling contains minced pork and a cube of aspic that melts into hot broth during steaming. The art is eating them without burning your tongue.",
+    "image": "/images/snacks/xiaolongbao.webp",
+    "whereBest": "Yunnan Road Food Street — Jia Jia Tang Bao and Fu Chun are Shanghai institutions. Also excellent around Yu Garden in Huangpu District.",
+    "origin": "Xiaolongbao was invented in Nanxiang, a suburb of Shanghai, in the 1870s by a restaurateur named Huang Mingxian. He wanted to create a dumpling that was both filling and surprising — the answer was adding aspic (jellied broth) that melted into hot soup during steaming. The dumplings conquered Shanghai within decades and spread to the world. Din Tai Fung, the Taiwanese chain that made xiaolongbao globally famous, didn't start making them until the 1970s.",
+    "howToEat": "The ritual: pick up the dumpling gently with chopsticks at the pinched top. Place it in your soup spoon. Bite a tiny hole in the side and slurp the broth out first (let it cool for 5 seconds or you'll burn your tongue). Then eat the rest. Never bite straight in — the pressurized hot broth will spray. Pro tip: dip the dumpling in black vinegar with shredded ginger (provided at every xiaolongbao restaurant). The vinegar cuts the richness.",
+    "faq": [
+      {
+        "q": "How do I eat xiaolongbao without burning myself?",
+        "a": "Pick up the dumpling gently at the pinched top with chopsticks. Place it in your soup spoon. Bite a tiny hole in the side, slurp the broth out first (let it cool 5 seconds), then eat the rest. Never bite straight in."
+      },
+      {
+        "q": "What is the broth inside xiaolongbao?",
+        "a": "It is not injected. The filling includes aspic (jellied pork broth) that melts into liquid soup during steaming. This is the defining technique of xiaolongbao, invented in 1870s Shanghai."
+      },
+      {
+        "q": "Where is the best xiaolongbao in Shanghai?",
+        "a": "Jia Jia Tang Bao and Fu Chun on Yunnan Road are the classic choices. Din Tai Fung (Taiwanese chain) is globally famous but the original Shanghai shops are better and cheaper."
+      }
+    ],
+    "relatedSnacks": [
+      "shengjianbao",
+      "hongyou-chaoshou"
+    ]
+  },
+  {
+    "id": "chuanchuan",
+    "nameEn": "Chuan Chuan",
+    "nameZh": "串串",
+    "namePinyin": "chuàn chuàn",
+    "taste": "Spicy, numbing Sichuan peppercorn heat. Each skewer soaks up the chili oil broth for a layered, intense kick.",
+    "bestCity": "chengdu",
+    "bestCities": [
+      "chengdu",
+      "chongqing"
+    ],
+    "difficulty": "medium",
+    "priceMin": 0.5,
+    "priceMax": 3,
+    "tags": [
+      "spicy",
+      "street-food",
+      "dinner"
+    ],
+    "isVegetarian": false,
+    "isHalal": false,
+    "isSpicy": true,
+    "isGlutenFree": true,
+    "seasonStart": "1",
+    "seasonEnd": "12",
+    "description": "Skewers of meat, vegetables, and tofu cooked in a boiling pot of spicy Sichuan broth. You pick your skewers, they're cooked fresh, and you pay by the stick.",
+    "image": "/images/snacks/chuanchuan.webp",
+    "whereBest": "Jinli Ancient Street for a tourist-friendly intro. For the real deal, head to Jianshe Road Night Market (Chenghua District) where locals eat.",
+    "origin": "Chuan chuan emerged from the street food culture of Chengdu in the 1980s as an affordable answer to Sichuan hot pot. While hot pot required a table, a pot, and a group of friends, chuan chuan could be eaten solo at a street counter for pocket change. The name literally means 'skewer skewer' — the doubling in Chinese implies abundance. It spread from Chengdu to Chongqing rapidly, with each city developing its own broth style: Chengdu favoring fragrant complexity, Chongqing going all-in on face-melting heat.",
+    "howToEat": "Pick your skewers from the refrigerated display — the sticks are color-coded by price (usually ¥0.5-3 each). Hand your basket to the cook, tell them your spice level: 'wei la' (mild), 'zhong la' (medium), or 'te la' (extra hot). When served, pull the food off the skewers into your bowl with chopsticks — don't eat directly off the stick. Count the empty skewers at the end to pay. A hearty meal is about 20-30 skewers.",
+    "faq": [
+      {
+        "q": "How does chuan chuan differ from hot pot?",
+        "a": "Chuan chuan uses pre-skewered ingredients that you select from a refrigerated display, cooked in a shared spicy broth, and paid by the stick. Hot pot involves cooking raw ingredients yourself at the table. Chuan chuan is faster, cheaper, and designed for solo eating."
+      },
+      {
+        "q": "How many skewers should I order?",
+        "a": "A satisfying meal is 20-30 skewers. Start with 15, see how you feel, order more. Each stick is RMB 0.5-3, so a full meal rarely exceeds RMB 50-60."
+      },
+      {
+        "q": "What are the best ingredients to try?",
+        "a": "Lotus root (cui, crunchy), tofu skin (dou pi, absorbs broth), quail eggs (an chun dan), beef (niu rou), and any leafy green vegetable. Avoid pre-cooked items that have been sitting out."
+      }
+    ],
+    "relatedSnacks": [
+      "mala-tang",
+      "xiaomian"
+    ]
+  },
+  {
+    "id": "roujiamo",
+    "nameEn": "Roujiamo",
+    "nameZh": "肉夹馍",
+    "namePinyin": "ròu jiā mó",
+    "taste": "Rich, slow-braised pork in a crispy-chewy flatbread. Deeply savory with warm spices like star anise and cinnamon.",
+    "bestCity": "xian",
+    "bestCities": [
+      "xian"
+    ],
+    "difficulty": "easy",
+    "priceMin": 8,
+    "priceMax": 20,
+    "tags": [
+      "street-food",
+      "classic",
+      "lunch"
+    ],
+    "isVegetarian": false,
+    "isHalal": false,
+    "isSpicy": false,
+    "isGlutenFree": false,
+    "seasonStart": "1",
+    "seasonEnd": "12",
+    "description": "Often called the Chinese hamburger. Shredded pork belly braised for hours in soy sauce and spices, stuffed into a freshly baked flatbread. Xi'an's signature street food.",
+    "image": "/images/snacks/roujiamo.webp",
+    "whereBest": "Muslim Quarter (Huimin Street) — every other stall sells it, but Fan Ji on Zhubashi Street has been doing it since 1925. Get the 'lao tong' (aged marinade) version.",
+    "origin": "Roujiamo has been eaten in Xi'an since the Qin Dynasty (221-206 BC), making it possibly the world's oldest sandwich. The original 'mo' bread was baked in clay ovens and the meat was simmered in bronze pots — archaeologists have found similar cooking vessels in Qin-era tombs. The dish's enduring popularity comes from Silk Road trade: Central Asian flatbread traditions met Chinese braising techniques right here in Xi'an. Fan Ji on Zhubashi Street has been perfecting the recipe since 1925.",
+    "howToEat": "The shop should chop the meat fresh when you order — if it's pre-chopped and sitting in a tray, walk away. The pork should be a mix of lean and fatty cuts. A proper roujiamo drips slightly; have napkins ready. In the Muslim Quarter, you'll find a halal beef version that uses cumin — it's a different dish but equally good. Eat it standing up like the locals do; this is fast food, not a sit-down meal.",
+    "faq": [
+      {
+        "q": "Is roujiamo really like a Chinese hamburger?",
+        "a": "Superficially yes -- meat in bread -- but that understates it. The bread (mo) is dense, chewy flatbread baked in a clay oven. The meat is pork belly braised for hours in soy sauce and 20+ spices. It predates hamburgers by roughly 2,000 years."
+      },
+      {
+        "q": "Is there a halal version of roujiamo?",
+        "a": "Yes, in Xian Muslim Quarter you will find beef roujiamo seasoned with cumin instead of the traditional pork version. It is a different dish but equally authentic and delicious."
+      },
+      {
+        "q": "How do I know if I am getting good roujiamo?",
+        "a": "The shop should chop the meat fresh when you order. Pre-chopped meat sitting in a tray is stale. The bread should be hot from the oven, not reheated. A proper roujiamo drips slightly -- have napkins ready."
+      }
+    ],
+    "relatedSnacks": [
+      "liangpi",
+      "yangrou-paomo"
+    ]
+  },
+  {
+    "id": "shengjianbao",
+    "nameEn": "Shengjian Bao",
+    "nameZh": "生煎包",
+    "namePinyin": "shēng jiān bāo",
+    "taste": "Pan-fried bottom is crispy golden, top is soft and fluffy. Inside: juicy pork filling with hot broth.",
+    "bestCity": "shanghai",
+    "bestCities": [
+      "shanghai"
+    ],
+    "difficulty": "easy",
+    "priceMin": 10,
+    "priceMax": 25,
+    "tags": [
+      "street-food",
+      "classic",
+      "breakfast"
+    ],
+    "isVegetarian": false,
+    "isHalal": false,
+    "isSpicy": false,
+    "isGlutenFree": false,
+    "seasonStart": "1",
+    "seasonEnd": "12",
+    "description": "Shanghai's pan-fried pork buns. Unlike steamed xiaolongbao, shengjian bao are fried in a large flat pan, giving them a crispy bottom while the top stays pillowy soft.",
+    "image": "/images/snacks/shengjianbao.webp",
+    "whereBest": "Yunnan Road Food Street — Yang's Fry Dumplings is the most famous. Also excellent at Da Hu Chun on Sichuan Road.",
+    "origin": "Shengjian bao was born in Shanghai's street markets in the early 1900s, reportedly when a tea-shop owner tried frying dumplings directly in a pan instead of steaming them. The result — crispy golden bottoms with soft fluffy tops — became an instant hit. Each bao is filled with minced pork and a cube of gelatinized broth that liquefies during frying, creating a dangerous burst of hot soup. Yang's Fry Dumplings, founded in 1994, turned the snack into a Shanghai icon with a single-minded focus on getting the fry right.",
+    "howToEat": "These are even hotter than xiaolongbao — the broth is trapped under pressure AND the bottom is sizzling from the pan. Wait at least 2 minutes after they arrive. Bite a small hole, blow gently into it, then slurp the soup. The bottom should be dark golden, not pale — that's where the flavor concentrates. Dip in black vinegar. The first one is always too hot; by the third dumpling you'll have the timing right.",
+    "faq": [
+      {
+        "q": "How is shengjian bao different from xiaolongbao?",
+        "a": "Shengjian bao is pan-fried (crispy bottom, fluffy top) while xiaolongbao is steamed. Shengjian bao is larger, juicier, and has a more intense pork flavor. It is also hotter inside -- wait at least 2 minutes before biting."
+      },
+      {
+        "q": "When is the best time to eat shengjian bao?",
+        "a": "Breakfast, ideally the first batch at 6:30 AM when the pan is fresh and oil is clean. Yang Fry Dumplings on Yunnan Road goes through 8-10 pans every morning."
+      },
+      {
+        "q": "How do I dip shengjian bao?",
+        "a": "Black vinegar (cu) is the standard dip. Some locals add a tiny amount of chili oil. Never soy sauce -- it overpowers the pork. Dip the crispy bottom side for maximum flavor contrast."
+      }
+    ],
+    "relatedSnacks": [
+      "xiaolongbao",
+      "congyoubing"
+    ]
+  },
+  {
+    "id": "mala-tang",
+    "nameEn": "Mala Tang",
+    "nameZh": "麻辣烫",
+    "namePinyin": "má là tàng",
+    "taste": "Numbing and spicy broth customized to your heat tolerance. Choose your ingredients, they cook them in a single pot.",
+    "bestCity": "chengdu",
+    "bestCities": [
+      "chengdu",
+      "chongqing"
+    ],
+    "difficulty": "medium",
+    "priceMin": 15,
+    "priceMax": 40,
+    "tags": [
+      "spicy",
+      "dinner",
+      "custom"
+    ],
+    "isVegetarian": true,
+    "isHalal": false,
+    "isSpicy": true,
+    "isGlutenFree": true,
+    "seasonStart": "1",
+    "seasonEnd": "12",
+    "description": "DIY hot pot in a bowl. Pick your ingredients from a refrigerated display, hand them to the cook, and they're boiled in spicy mala broth. A solo diner's best friend.",
+    "image": "/images/snacks/malatang.webp",
+    "whereBest": "Jianshe Road Night Market (Chenghua District, Chengdu) has the best concentration of stalls. In Chongqing, head to Jiefangbei / Bayi Road for late-night mala tang.",
+    "origin": "Mala tang traces its roots to Sichuan boatmen along the Yangtze River in the 19th century. Pulling heavy boats upstream in cold wet weather, they needed hot, spicy food that could be cooked quickly with whatever ingredients were available. They'd boil skewers of meat and vegetables in a communal pot of spicy broth, and the tradition evolved into the self-service mala tang stalls of today. The dish's name combines 'ma' (numbing) and 'la' (spicy) — the two sensations that define Sichuan cuisine.",
+    "howToEat": "Grab a bowl at the entrance and fill it from the refrigerated display. Leafy greens go last (they're cheaper by volume), skewers go first. Don't overlook the tofu skin, lotus root, and quail eggs — they're mala tang classics. Hand your bowl to the cook and specify spice level. While waiting, grab a cold bottle of soy milk or sour plum drink — you'll need it. A solid meal costs ¥20-30.",
+    "faq": [
+      {
+        "q": "How do I order mala tang if I cannot read Chinese?",
+        "a": "Grab a bowl at the entrance. Fill it with ingredients from the refrigerated display -- leafy greens last, skewers first. Hand your bowl to the cook. The phone screen method works perfectly here: show the name in Chinese from our snack page."
+      },
+      {
+        "q": "Can I make mala tang vegetarian?",
+        "a": "Yes. Stick to vegetables, tofu, mushrooms, and noodles. The broth is typically pork or beef-based, so strict vegetarians should confirm with the vendor. Many Chengdu stalls now offer a vegetable-only broth option."
+      },
+      {
+        "q": "What drink should I have with mala tang?",
+        "a": "Cold soy milk (dou jiang) or sour plum drink (suan mei tang). Never water -- capsaicin is oil-soluble, not water-soluble. The fat in soy milk binds to capsaicin and washes it away."
+      }
+    ],
+    "relatedSnacks": [
+      "chuanchuan",
+      "xiaomian"
+    ]
+  },
+  {
+    "id": "baocai",
+    "nameEn": "Baocai / Pickled Vegetables",
+    "nameZh": "泡菜",
+    "namePinyin": "pào cài",
+    "taste": "Crunchy, sour, mildly spicy pickled vegetables. A refreshing palate cleanser between heavier dishes.",
+    "bestCity": "chengdu",
+    "bestCities": [
+      "chengdu"
+    ],
+    "difficulty": "easy",
+    "priceMin": 2,
+    "priceMax": 8,
+    "tags": [
+      "side",
+      "cold"
+    ],
+    "isVegetarian": true,
+    "isHalal": true,
+    "isSpicy": false,
+    "isGlutenFree": true,
+    "seasonStart": "1",
+    "seasonEnd": "12",
+    "description": "Sichuan-style pickled vegetables served as a free side dish in many restaurants. Cabbage, radish, and carrots pickled in a brine with Sichuan peppercorns and chili.",
+    "image": "/images/snacks/baocai.webp",
+    "whereBest": "Free side dish at nearly every Sichuan restaurant. For the best, go to Jinli Ancient Street where some stalls sell specialty pickled vegetables by weight.",
+    "origin": "Sichuan pickling traditions date back over 2,000 years, long before refrigeration. Every Sichuan family once owned a pao cai tan (pickling jar) — a ceramic vessel with a water-sealed rim that kept vegetables preserved through humid summers. The brine, passed down through generations, accumulated layers of flavor from years of use. Some families claim their pickle brine is over 100 years old, continuously refreshed but never fully replaced. It's a living heirloom.",
+    "howToEat": "Baocai is almost always served free as a side dish in Sichuan restaurants — it's meant to cleanse your palate between bites of intensely spicy food. Eat it in small amounts between dishes, not as a starter. The pickles range from crunchy radish to chewy cabbage, each with a slightly different sour-spicy balance. Don't be surprised if the waiter refills your baocai dish without asking; it's considered essential to the meal.",
+    "faq": [
+      {
+        "q": "Do I have to pay for baocai at Sichuan restaurants?",
+        "a": "No, baocai is almost always served free as a side dish. It is meant to cleanse your palate between bites of spicy food. If a restaurant charges for baocai, it is a tourist-oriented establishment."
+      },
+      {
+        "q": "How long does Sichuan pickle brine last?",
+        "a": "Some families maintain brine for generations -- continuously refreshed but never fully replaced. The record among Chengdu families we have interviewed is 120 years. The brine develops layers of flavor from decades of accumulated fermentation."
+      },
+      {
+        "q": "What vegetables are in baocai?",
+        "a": "Typically cabbage, radish, carrot, and sometimes green beans or chili peppers. The brine contains Sichuan peppercorns, star anise, ginger, and salt. Each family has a slightly different spice mix."
+      }
+    ],
+    "relatedSnacks": [
+      "bingfen",
+      "mapo-doufu"
+    ]
+  },
+  {
+    "id": "liangpi",
+    "nameEn": "Liangpi",
+    "nameZh": "凉皮",
+    "namePinyin": "liáng pí",
+    "taste": "Cold, slippery noodles in a tangy sesame-vinegar dressing. Refreshing with a gentle heat from chili oil.",
+    "bestCity": "xian",
+    "bestCities": [
+      "xian"
+    ],
+    "difficulty": "easy",
+    "priceMin": 8,
+    "priceMax": 18,
+    "tags": [
+      "cold",
+      "summer",
+      "vegetarian"
+    ],
+    "isVegetarian": true,
+    "isHalal": true,
+    "isSpicy": false,
+    "isGlutenFree": false,
+    "seasonStart": "4",
+    "seasonEnd": "10",
+    "description": "Cold skin noodles from Xi'an. Made from wheat or rice starch, these translucent wide noodles are tossed with cucumber, bean sprouts, chili oil, vinegar, and sesame paste.",
+    "image": "/images/snacks/liangpi.webp",
+    "whereBest": "Muslim Quarter in Xi'an — Wei Jia Liangpi on Dapiyuan Street is legendary. Best eaten at lunch when the noodles are freshest.",
+    "origin": "Liangpi was born in Xi'an during the Qin Dynasty — the same era that gave us roujiamo. According to local lore, the first liangpi was made accidentally when a farmer dropped wheat dough into a pot of boiling water and discovered the resulting translucent noodles. The dish thrived in Xi'an's hot summers, providing a cooling counterpoint to the city's heavy lamb and cumin-based main dishes. The Muslim Quarter version adds a generous splash of chili oil, while the city's Han Chinese stalls lean heavier on sesame paste.",
+    "howToEat": "The vendor will toss your noodles fresh with seasonings — specify whether you want chili oil (la jiao you) or not. The noodles should be slippery and slightly chewy, not mushy. Mix everything thoroughly before eating; the sesame paste, vinegar, and chili oil need to coat every strand. Best eaten at lunch when the noodles are at peak freshness. If you're in Xi'an during summer, a bowl of liangpi and a bottle of ice-cold Bingfeng soda is the local power lunch.",
+    "faq": [
+      {
+        "q": "What are liangpi noodles made of?",
+        "a": "Wheat starch (not rice) washed and steamed into translucent sheets. The process removes the gluten, leaving pure starch that sets into a slippery, slightly chewy texture. Some versions use rice starch instead."
+      },
+      {
+        "q": "Is liangpi served hot or cold?",
+        "a": "Cold, which is why it is a summer specialty in Xian. The noodles are tossed with cucumber, bean sprouts, chili oil, vinegar, and sesame paste at room temperature or slightly chilled."
+      },
+      {
+        "q": "Can I eat liangpi if I am gluten-free?",
+        "a": "No -- despite the gluten being washed out during production, trace amounts remain. And the dish is typically served with wheat-based roujiamo on the side."
+      }
+    ],
+    "relatedSnacks": [
+      "roujiamo",
+      "yangrou-chuan"
+    ]
+  },
+  {
+    "id": "dan-dan-mian",
+    "nameEn": "Dan Dan Noodles",
+    "nameZh": "担担面",
+    "namePinyin": "dàn dàn miàn",
+    "taste": "Intensely savory with a deep sesame-tahini richness, cut by sharp chili heat and numbing peppercorns.",
+    "bestCity": "chengdu",
+    "bestCities": [
+      "chengdu"
+    ],
+    "difficulty": "medium",
+    "priceMin": 10,
+    "priceMax": 25,
+    "tags": [
+      "spicy",
+      "noodles",
+      "classic"
+    ],
+    "isVegetarian": false,
+    "isHalal": false,
+    "isSpicy": true,
+    "isGlutenFree": false,
+    "seasonStart": "1",
+    "seasonEnd": "12",
+    "description": "Chengdu's iconic noodle dish. Thin wheat noodles topped with a sauce of sesame paste, chili oil, Sichuan pepper, minced pork, and preserved vegetables.",
+    "image": "/images/snacks/dandannoodles.webp",
+    "whereBest": "Jinli Ancient Street for a classic version. Chen Mapo Tofu restaurant on Qingyang Street serves an excellent dan dan mian alongside their famous mapo tofu.",
+    "origin": "Dan dan mian means 'carrying-pole noodles,' named after the street vendors who sold them from bamboo poles balanced across their shoulders. One basket held the noodles and a stove, the other held the sauce ingredients and bowls. These vendors walked the streets of Chengdu from the early 19th century, serving office workers and shoppers who needed a quick, hot, intensely flavored meal for a few coins. The original recipe used only sesame paste, chili oil, Sichuan peppercorns, and preserved vegetables — the minced pork topping was a later addition.",
+    "howToEat": "The noodles arrive layered: sauce at the bottom, noodles in the middle, toppings on top. Mix everything aggressively from the bottom up before your first bite. The ratio should be roughly 70% noodles, 30% sauce — if there's a pool of sauce at the bottom, you're doing it right. Eat quickly; the noodles absorb sauce and get dry. A small bowl of clear soup on the side is traditional. This is a snack, not a full meal.",
+    "faq": [
+      {
+        "q": "What does dan dan mean?",
+        "a": "Dan dan refers to the carrying pole (dan) that street vendors used to balance across their shoulders -- one basket held noodles and a stove, the other held sauce and bowls. These walking noodle vendors were a common sight in 19th-century Chengdu."
+      },
+      {
+        "q": "How spicy is dan dan mian?",
+        "a": "It is moderately spicy but the heat is balanced by sesame paste and preserved vegetables. It is less intense than Chongqing xiaomian. Most people can handle the heat after 2-3 bites of adjustment."
+      },
+      {
+        "q": "Is dan dan mian a full meal?",
+        "a": "No, it is a snack. The portion is small (about 200g of noodles). Two bowls make a light lunch. In Chengdu, dan dan mian is often eaten alongside other small plates."
+      }
+    ],
+    "relatedSnacks": [
+      "hongyou-chaoshou",
+      "xiaomian"
+    ]
+  },
+  {
+    "id": "bingfen",
+    "nameEn": "Bingfen",
+    "nameZh": "冰粉",
+    "namePinyin": "bīng fěn",
+    "taste": "Jelly-like ice noodles floating in brown sugar syrup with crushed nuts, raisins, and sesame. Cooling and lightly sweet.",
+    "bestCity": "chengdu",
+    "bestCities": [
+      "chengdu",
+      "chongqing"
+    ],
+    "difficulty": "easy",
+    "priceMin": 5,
+    "priceMax": 12,
+    "tags": [
+      "dessert",
+      "summer",
+      "cold"
+    ],
+    "isVegetarian": true,
+    "isHalal": true,
+    "isSpicy": false,
+    "isGlutenFree": true,
+    "seasonStart": "5",
+    "seasonEnd": "9",
+    "description": "Ice jelly is the perfect counterpoint to Sichuan hot pot. The translucent jelly noodles made from the ice plant seed are drowned in brown sugar syrup and topped with crushed peanuts, raisins, and sesame seeds.",
+    "image": "/images/snacks/bingfen.webp",
+    "whereBest": "Jinli Ancient Street and around Sichuan University (Wuhou District) — stalls pop up everywhere in summer. Look for the brown sugar syrup version with crushed nuts.",
+    "origin": "Bingfen is made from the seeds of the Nicandra physalodes plant (ice plant), which grows wild across Sichuan and Yunnan. When the seeds are wrapped in cloth and rubbed in water, they release a natural gum that sets into a crystal-clear jelly. The technique was discovered by villagers in Sichuan hundreds of years ago as a way to beat the brutal summer heat without refrigeration. Today bingfen is the official dessert of Chengdu summer, with stalls appearing on every street corner from May through September and disappearing as fast as they arrive.",
+    "howToEat": "Take a spoonful with a bit of everything — jelly, brown sugar syrup, crushed peanuts, sesame seeds, and raisins. The textures should hit simultaneously: slippery, crunchy, chewy, and smooth. Don't let it sit; the ice melts and dilutes the syrup. The most authentic version uses brown sugar syrup (hong tang), but modern stalls offer fruit syrups and even popping boba.",
+    "faq": [
+      {
+        "q": "What exactly is bingfen made of?",
+        "a": "Bingfen is made from the seeds of the Nicandra physalodes plant (bing fen zi), which release a gelatinous substance when soaked in water. The result is a clear, flavorless jelly served with brown sugar syrup, crushed peanuts, raisins, and sometimes fruit."
+      },
+      {
+        "q": "Why do Sichuan restaurants serve bingfen?",
+        "a": "It is the traditional palate cleanser after spicy food. The cold, sweet jelly neutralizes the burning sensation from capsaicin. It is the planned counterweight to mala heat."
+      },
+      {
+        "q": "Is bingfen available year-round?",
+        "a": "Primarily a summer snack (May-September) because it is served ice-cold. Some Chengdu restaurants serve it year-round, but the experience is best on a hot Sichuan afternoon."
+      }
+    ],
+    "relatedSnacks": [
+      "tanghulu",
+      "baocai"
+    ]
+  },
+  {
+    "id": "yangrou-chuan",
+    "nameEn": "Lamb Skewers",
+    "nameZh": "羊肉串",
+    "namePinyin": "yáng ròu chuàn",
+    "taste": "Smoky, cumin-heavy grilled lamb with a charred exterior and tender interior. The cumin aroma hits you before the taste.",
+    "bestCity": "xian",
+    "bestCities": [
+      "xian",
+      "beijing"
+    ],
+    "difficulty": "easy",
+    "priceMin": 3,
+    "priceMax": 8,
+    "tags": [
+      "street-food",
+      "halal",
+      "dinner"
+    ],
+    "isVegetarian": false,
+    "isHalal": true,
+    "isSpicy": false,
+    "isGlutenFree": true,
+    "seasonStart": "1",
+    "seasonEnd": "12",
+    "description": "Xinjiang-style cumin lamb skewers grilled over charcoal. The Muslim Quarter in Xi'an is famous for these. Each skewer is generously dusted with cumin, chili, and salt.",
+    "image": "/images/snacks/yangrouchuan.webp",
+    "whereBest": "Muslim Quarter in Xi'an — the stretch near the Drum Tower has the highest concentration. Follow the cumin scent. In Beijing, Guijie (Ghost Street) is the spot.",
+    "origin": "Yangrou chuan entered China's street food scene through Xinjiang, the vast northwestern region where Uyghur culture dominates. Uyghur lamb skewers, seasoned with nothing more than cumin, salt, and chili, traveled the Silk Road eastward and embedded themselves in Xi'an's Muslim Quarter. The technique — threading cubes of lamb interspersed with fat onto flat metal skewers and grilling over charcoal — hasn't changed in centuries. The fat renders during grilling, basting the meat from within and carrying the cumin flavor deep into every bite.",
+    "howToEat": "Grab the skewer by the wooden handle (not the hot metal) and bite the meat directly off — no chopsticks needed. Eat it standing around the grill like the locals. The fat pieces, which look unappealing raw, become the best part when rendered crispy and smoky over charcoal. Don't count skewers; the vendor counts the empty sticks at the end. A satisfying snack is 5-10 skewers.",
+    "faq": [
+      {
+        "q": "How do I identify good lamb skewers in Xian?",
+        "a": "Look for charcoal grills (not gas), wire skewers (not bamboo), and visible marbling on the raw meat. The cumin should be coarse-ground, not powder. A good skewer is RMB 5-8, not RMB 15-20."
+      },
+      {
+        "q": "What cut of lamb is used?",
+        "a": "Leg and shoulder cuts with visible fat. The fat is essential -- it renders during grilling, basting the meat from inside and creating the crispy exterior that makes good yangrou chuan addictive."
+      },
+      {
+        "q": "How many skewers should I order?",
+        "a": "Five skewers is a snack, ten is a meal. Order in multiples of five. The vendor will pile them on a metal tray and you eat them standing up, discarding the wire skewers in a designated bucket."
+      }
+    ],
+    "relatedSnacks": [
+      "roujiamo",
+      "liangpi"
+    ]
+  },
+  {
+    "id": "zhajiangmian",
+    "nameEn": "Zhajiang Mian",
+    "nameZh": "炸酱面",
+    "namePinyin": "zhá jiàng miàn",
+    "taste": "Thick wheat noodles topped with a dark, savory fermented soybean paste stir-fried with diced pork belly. Served with fresh cucumber, bean sprouts, and radish shreds.",
+    "bestCity": "beijing",
+    "bestCities": [
+      "beijing"
+    ],
+    "difficulty": "easy",
+    "priceMin": 12,
+    "priceMax": 25,
+    "tags": [
+      "noodles",
+      "lunch",
+      "classic"
+    ],
+    "isVegetarian": false,
+    "isHalal": false,
+    "isSpicy": false,
+    "isGlutenFree": false,
+    "seasonStart": "1",
+    "seasonEnd": "12",
+    "description": "Beijing's signature noodle dish. Also popular in Korea as 'jjajangmyeon', but the Beijing original is less sweet and more savory, with a deeper fermented soybean flavor. A lunch staple across the city.",
+    "whereBest": "Haidian District near university areas has the best student-priced versions. Lao Beijing Zhajiang Mian on Dongsi Street is a century-old institution.",
+    "image": "/images/snacks/zhajiangmian.webp",
+    "origin": "Zhajiang mian is Beijing's answer to comfort food — a dish so central to the city's identity that older residents can judge a person's character by how they eat it. The zhajiang (fried sauce) is made from fermented soybean paste (huang jiang) stir-fried with diced pork belly until deeply dark and aromatic. The dish appears in the Qing Dynasty imperial kitchen records, where it was reportedly a favorite of Empress Dowager Cixi. Its Korean cousin, jjajangmyeon, was adapted from the Beijing original by Chinese immigrants to Incheon in the early 1900s.",
+    "howToEat": "The correct way: pour the sauce over the noodles, add the fresh vegetable shreds on top, and mix everything together thoroughly. There should be just enough sauce to coat the noodles without pooling at the bottom. Each bite should contain noodle, sauce, and some crunch from the cucumber and radish. Don't cut the noodles — they're meant to be slurped. A raw garlic clove on the side is traditional; bite it between mouthfuls.",
+    "faq": [
+      {
+        "q": "How is zhajiang mian different from Korean jjajangmyeon?",
+        "a": "Korean jjajangmyeon was adapted from the Beijing original by Chinese immigrants to Incheon in the early 1900s. The Korean version uses a black bean paste (chunjang) that is sweeter and darker. Beijing zhajiang mian uses fermented soybean paste (huang jiang) that is saltier and more complex."
+      },
+      {
+        "q": "Do I mix the noodles myself?",
+        "a": "Yes. The sauce, vegetables, and noodles arrive layered. Mix everything aggressively from the bottom up. If you do not mix thoroughly, the bottom noodles will be oversauced and the top noodles will be dry."
+      },
+      {
+        "q": "What are the vegetable shreds on top?",
+        "a": "Typically cucumber, radish, soybean sprouts, and sometimes shredded omelet. They provide crunch and freshness against the rich, salty sauce. The raw garlic clove on the side is traditional -- bite it between mouthfuls."
+      }
+    ],
+    "relatedSnacks": [
+      "jianbing",
+      "dan-dan-mian"
+    ]
+  },
+  {
+    "id": "mapo-doufu",
+    "nameEn": "Mapo Tofu",
+    "nameZh": "麻婆豆腐",
+    "namePinyin": "má pó dòu fǔ",
+    "taste": "Silky soft tofu cubes in a fiery red sauce of chili oil, fermented black beans, and Sichuan peppercorns. The numbing heat builds slowly and lingers.",
+    "bestCity": "chengdu",
+    "bestCities": [
+      "chengdu"
+    ],
+    "difficulty": "medium",
+    "priceMin": 15,
+    "priceMax": 35,
+    "tags": [
+      "spicy",
+      "classic",
+      "dinner"
+    ],
+    "isVegetarian": false,
+    "isHalal": false,
+    "isSpicy": true,
+    "isGlutenFree": true,
+    "seasonStart": "1",
+    "seasonEnd": "12",
+    "description": "One of Sichuan's most famous dishes. Despite its name meaning 'pockmarked old woman's tofu', it's a masterpiece of texture and heat. The tofu is tender enough to cut with a spoon.",
+    "whereBest": "Chen Mapo Tofu on Qingyang Street is the namesake restaurant, operating since 1862. For a modern take, try the version at Yu's Kitchen in Jinli.",
+    "image": "/images/snacks/mapo-doufu.webp",
+    "origin": "Mapo tofu was created in 1862 by a woman named Chen Liu-shi at a small restaurant called Chen Xingsheng on the outskirts of Chengdu. She was a pockmarked widow (ma po = pockmarked old woman) who served her tofu to oil porters passing by the restaurant. Her dish — soft tofu in a screamingly spicy sauce of fermented black beans, chili broad bean paste, and Sichuan pepper — was so addictive that customers named it after her. The restaurant, Chen Mapo Tofu, still operates on Qingyang Street and is now a protected cultural institution.",
+    "howToEat": "Scoop the tofu with a spoon, not chopsticks — the tofu is too soft to pick up. Make sure each spoonful includes tofu, minced pork, and a bit of the chili oil sauce. The numbing effect from Sichuan peppercorns builds gradually; don't panic when your tongue starts tingling. Eat it over steamed rice, which balances the intensity. A large bowl of mapo tofu with rice costs about ¥25-35 and feeds one very hungry person.",
+    "relatedSnacks": [
+      "dan-dan-mian",
+      "baocai"
+    ]
+  },
+  {
+    "id": "xiaomian",
+    "nameEn": "Chongqing Noodles",
+    "nameZh": "重庆小面",
+    "namePinyin": "chóng qìng xiǎo miàn",
+    "taste": "Thin wheat noodles in a complex spicy broth layered with chili oil, Sichuan pepper, sesame paste, vinegar, and minced pork. Intensely hot with a deep savory base.",
+    "bestCity": "chongqing",
+    "bestCities": [
+      "chongqing"
+    ],
+    "difficulty": "medium",
+    "priceMin": 8,
+    "priceMax": 18,
+    "tags": [
+      "spicy",
+      "noodles",
+      "breakfast",
+      "street-food"
+    ],
+    "isVegetarian": false,
+    "isHalal": false,
+    "isSpicy": true,
+    "isGlutenFree": false,
+    "seasonStart": "1",
+    "seasonEnd": "12",
+    "description": "Chongqing's answer to a quick, cheap, face-numbingly satisfying meal. Xiaomian stalls are on every corner, serving bowls of noodles that cost less than $2 but deliver more flavor than most restaurant meals.",
+    "whereBest": "Jiefangbei / Bayi Road area has dozens of xiaomian stalls. The best are the ones with lines of locals at 8am. Look for shops with '小面' in red characters.",
+    "image": "/images/snacks/xiaomian.webp",
+    "origin": "Chongqing xiaomian (small noodles) is a dish of deceptive simplicity: thin wheat noodles dressed with chili oil, Sichuan pepper, sesame paste, vinegar, soy sauce, and minced pork in under three minutes flat. It's the breakfast that powers Chongqing's famously steep streets. The dish originated among the dock workers and porters who needed fast, cheap calories before hauling goods up the city's countless staircases. Every Chongqing local has a favorite xiaomian stall, and arguments about which is best can get heated enough to rival the noodles themselves.",
+    "howToEat": "Served in a small bowl — this isn't ramen, it's a quick fix. Mix the noodles into the sauce at the bottom immediately; the sauce settles fast. Eat quickly and loudly (slurping isn't rude, it's expected). The noodles should be gone in under five minutes — at ¥8-12 a bowl, many people order a second. Don't ask for 'less spicy' at a Chongqing stall — the response you'll get ranges from confusion to mild offense.",
+    "faq": [
+      {
+        "q": "How spicy is Chongqing xiaomian?",
+        "a": "Very. This is the spiciest noodle dish in China, spicier than dan dan mian. The chili oil is darker and more intensely roasted. Asking for less spicy at a Chongqing stall will get you a look of genuine confusion."
+      },
+      {
+        "q": "Why is xiaomian so cheap?",
+        "a": "It was designed for Chongqing dock workers who needed fast, caloric, affordable meals. The ingredients are simple: noodles, chili oil, Sichuan pepper, sesame paste, vinegar, and a small amount of minced pork. At RMB 8-12, it is the best flavor-to-cost ratio in Chinese street food."
+      },
+      {
+        "q": "Is xiaomian a breakfast food?",
+        "a": "Yes. It is the breakfast that powers Chongqing famously steep streets. The preparation takes under 3 minutes and the bowl should be finished in under 5. Many locals order two bowls before starting their day."
+      }
+    ],
+    "relatedSnacks": [
+      "dan-dan-mian",
+      "chuanchuan"
+    ]
+  },
+  {
+    "id": "cheong-fun",
+    "nameEn": "Cheong Fun",
+    "nameZh": "肠粉",
+    "namePinyin": "cháng fěn",
+    "taste": "Silky, translucent rice noodle rolls steamed fresh, drizzled with sweet soy sauce. Can be plain or filled with shrimp, beef, or char siu pork.",
+    "bestCity": "guangzhou",
+    "bestCities": [
+      "guangzhou"
+    ],
+    "difficulty": "easy",
+    "priceMin": 8,
+    "priceMax": 20,
+    "tags": [
+      "breakfast",
+      "classic",
+      "street-food"
+    ],
+    "isVegetarian": true,
+    "isHalal": false,
+    "isSpicy": false,
+    "isGlutenFree": true,
+    "seasonStart": "1",
+    "seasonEnd": "12",
+    "description": "A dim sum classic and Cantonese breakfast staple. The rice noodle sheets are steamed to order on a cloth over boiling water, then rolled and sliced. The texture should be impossibly smooth.",
+    "whereBest": "Shangxiajiu Pedestrian Street has excellent street-side cheong fun stalls. Yinji Rice Noodle Roll on Wenchang Road is a Guangzhou institution with multiple locations.",
+    "image": "/images/snacks/cheong-fun.webp",
+    "origin": "Cheong fun traces its roots to Guangzhou's teahouse culture of the late Qing Dynasty. As tea houses competed for customers, they developed increasingly elaborate dim sum menus. Cheong fun — silky rice noodle sheets steamed fresh on cloth over boiling water — became a signature item because it demonstrated a chef's mastery of texture. The name means 'intestine noodle' in Cantonese, referring to its rolled shape. From Guangzhou, it spread to Hong Kong, where it became a dim sum staple.",
+    "howToEat": "Eat it fresh and hot — cheong fun congeals as it cools and loses its prized silky texture. Pour the sweet soy sauce over the rolls, then cut them into bite-sized pieces with chopsticks. The plain version is the purist's choice; the shrimp filling is the most popular. At a proper dim sum restaurant, you'll hear the squeak of the steaming cart before you see it. That's your signal to claim a plate.",
+    "faq": [
+      {
+        "q": "What makes cheong fun different from other rice noodles?",
+        "a": "The noodle sheet is steamed fresh to order on a cloth over boiling water, creating an impossibly silky, translucent texture. It is then rolled and sliced. The texture should be smooth enough to slide down your throat."
+      },
+      {
+        "q": "What fillings are traditional?",
+        "a": "Shrimp (xia), beef (niu rou), char siu pork (cha shao), or plain with just sweet soy sauce. The plain version is the purist choice -- if the rice noodle is good, it needs no filling."
+      },
+      {
+        "q": "When should I eat cheong fun?",
+        "a": "Fresh and hot, ideally within 5 minutes. It congeals as it cools and loses the prized silky texture. At dim sum, listen for the squeak of the steaming cart -- claim a plate immediately."
+      }
+    ],
+    "relatedSnacks": [
+      "shrimp-dumplings",
+      "wonton-noodles"
+    ]
+  },
+  {
+    "id": "dan-ta",
+    "nameEn": "Egg Tart",
+    "nameZh": "蛋挞",
+    "namePinyin": "dàn tà",
+    "taste": "Flaky, buttery pastry shell filled with smooth, lightly sweet egg custard. Best eaten warm, fresh from the oven, when the custard still wobbles.",
+    "bestCity": "guangzhou",
+    "bestCities": [
+      "guangzhou"
+    ],
+    "difficulty": "easy",
+    "priceMin": 5,
+    "priceMax": 12,
+    "tags": [
+      "dessert",
+      "classic"
+    ],
+    "isVegetarian": true,
+    "isHalal": false,
+    "isSpicy": false,
+    "isGlutenFree": false,
+    "seasonStart": "1",
+    "seasonEnd": "12",
+    "description": "A beloved Cantonese pastry with Portuguese origins. Guangzhou egg tarts have a flakier crust than their Macau counterparts and a custard that's less sweet, letting the egg flavor shine through.",
+    "whereBest": "Lian Xiang Lou on Shangxiajiu Street has been baking egg tarts since 1889. For the flakiest crust, go around 3pm when the afternoon batch comes out of the oven.",
+    "image": "/images/snacks/dan-ta.webp",
+    "origin": "The egg tart arrived in Guangzhou via Macau, which itself inherited the recipe from Portugal's pastéis de nata. Portuguese traders brought the custard tarts to Macau in the 16th century, and Cantonese bakers adapted them, replacing the caramelized Portuguese custard with a lighter, wobblier egg filling and using a flakier Chinese-style puff pastry. Guangzhou's version became distinct: less sweet, more egg-forward, with a crust that shatters into a thousand buttery layers.",
+    "howToEat": "Must be eaten warm, ideally within 10 minutes of leaving the oven. The center should wobble like jelly when you shake the tart gently. Bite carefully — the filling is molten on the inside even when the exterior looks cool. The best bakeries time their afternoon batches around 3 PM, when the lunch crowd is gone and everything is fresh. Buy three: one to eat immediately, one for the walk, one for later.",
+    "faq": [
+      {
+        "q": "How are Guangzhou egg tarts different from Portuguese pastel de nata?",
+        "a": "Guangzhou tarts have a flakier, lighter crust (Chinese-style puff pastry) and a less sweet, more egg-forward custard. Portuguese tarts have a caramelized top and denser, sweeter custard. Both descend from the same Portuguese original brought to Macau in the 16th century."
+      },
+      {
+        "q": "When is the best time to buy egg tarts?",
+        "a": "2:45 PM at Lian Xiang Lou on Shangxiajiu Street, when the afternoon batch comes out of the oven. The first tart out of the oven has maximum pastry flake and perfect custard wobble."
+      },
+      {
+        "q": "How should I eat an egg tart?",
+        "a": "Warm, within 10 minutes of leaving the oven. The center should wobble like jelly. Bite carefully -- the filling is molten inside even when the exterior looks cool. Buy three: one immediately, one for the walk, one for later."
+      }
+    ],
+    "relatedSnacks": [
+      "cheong-fun",
+      "tanghulu"
+    ]
+  },
+  {
+    "id": "hongyou-chaoshou",
+    "nameEn": "Chili Oil Wontons",
+    "nameZh": "红油抄手",
+    "namePinyin": "hóng yóu chāo shǒu",
+    "taste": "Delicate pork wontons swimming in a pool of fragrant red chili oil, Sichuan pepper, garlic, and black vinegar. Silky, spicy, and tangy all at once.",
+    "bestCity": "chengdu",
+    "bestCities": [
+      "chengdu"
+    ],
+    "difficulty": "easy",
+    "priceMin": 12,
+    "priceMax": 25,
+    "tags": [
+      "spicy",
+      "classic",
+      "lunch"
+    ],
+    "isVegetarian": false,
+    "isHalal": false,
+    "isSpicy": true,
+    "isGlutenFree": false,
+    "seasonStart": "1",
+    "seasonEnd": "12",
+    "description": "Chengdu's take on the humble wonton, elevated by Sichuan's signature red chili oil. The wontons are folded into a 'crossed hands' shape, hence the name 'chaoshou.' Served as a snack or light meal.",
+    "whereBest": "Long Chaoshou on Chunxi Road is the most famous, operating since the 1940s. For a spicier version, try the stalls near Sichuan University.",
+    "image": "/images/snacks/hongyou-chaoshou.webp",
+    "origin": "Chaoshou is Chengdu's regional name for wontons, and the name tells a story: it means 'crossed hands,' referring to the way the wrapper is folded — like two arms folded across a chest. The dish was popularized in the 1940s at a restaurant called Long Chaoshou on Chunxi Road, where cooks smothered the delicate pork wontons in a lake of chili oil, Sichuan pepper, garlic, and black vinegar. The combination of silky wrapper and fiery oil was revolutionary.",
+    "howToEat": "Each wonton should be eaten in one bite — they're smaller than standard wontons. Drag it through the chili oil at the bottom of the bowl before eating. The black vinegar cuts the richness and adds a tangy lift. Served as a snack, not a meal; two people sharing an order of 10 wontons is normal. The leftover chili oil at the bottom of the bowl is excellent poured over rice.",
+    "relatedSnacks": [
+      "dan-dan-mian",
+      "xiaolongbao"
+    ]
+  },
+  {
+    "id": "yangrou-paomo",
+    "nameEn": "Lamb Soup with Bread",
+    "nameZh": "羊肉泡馍",
+    "namePinyin": "yáng ròu pào mó",
+    "taste": "Rich, aromatic lamb broth poured over hand-torn flatbread pieces that soak up the flavor. Hearty, warming, and deeply satisfying with tender lamb chunks.",
+    "bestCity": "xian",
+    "bestCities": [
+      "xian"
+    ],
+    "difficulty": "medium",
+    "priceMin": 25,
+    "priceMax": 50,
+    "tags": [
+      "classic",
+      "halal",
+      "dinner"
+    ],
+    "isVegetarian": false,
+    "isHalal": true,
+    "isSpicy": false,
+    "isGlutenFree": false,
+    "seasonStart": "9",
+    "seasonEnd": "4",
+    "description": "Xi'an's ultimate winter comfort food. You're given a round of flatbread to tear into small pieces yourself — the smaller the pieces, the better they absorb the broth. The kitchen then cooks your bread in lamb soup with vermicelli and tender meat.",
+    "whereBest": "Tong Sheng Xiang on West Street in the Muslim Quarter has been serving paomo for over 100 years. Go in the morning for the richest broth.",
+    "image": "/images/snacks/yangrou-paomo.webp",
+    "origin": "Yangrou paomo may be Xi'an's most ritualistic dish, with roots in the city's Muslim community dating back to the Tang Dynasty (618-907). The dish was allegedly created for a Tang emperor who fell ill and was revived by a bowl of lamb soup with torn bread. The bread-tearing ritual — you're given a round of dense unleavened flatbread to break into pieces yourself — was historically a social act: friends and business partners would tear bread together while talking and drinking tea.",
+    "howToEat": "The bread-tearing is the ceremony: tear the flatbread into pea-sized pieces (not larger). If your pieces are too big, the kitchen will send them back. The smaller the pieces, the better they absorb the broth. After tearing, hand your bowl to the server, who takes it to the kitchen to cook with lamb soup and vermicelli. When it returns, don't stir — eat from the edge inward. Add chili paste and pickled garlic from the condiment tray.",
+    "relatedSnacks": [
+      "roujiamo",
+      "yangrou-chuan"
+    ]
+  },
+  {
+    "id": "congyoubing",
+    "nameEn": "Scallion Pancake",
+    "nameZh": "葱油饼",
+    "namePinyin": "cōng yóu bǐng",
+    "taste": "Crispy, flaky flatbread with layers of scallions and rendered pork fat. The outside shatters, the inside is chewy and fragrant with toasted sesame oil.",
+    "bestCity": "shanghai",
+    "bestCities": [
+      "shanghai"
+    ],
+    "difficulty": "easy",
+    "priceMin": 5,
+    "priceMax": 12,
+    "tags": [
+      "street-food",
+      "breakfast",
+      "classic"
+    ],
+    "isVegetarian": false,
+    "isHalal": false,
+    "isSpicy": false,
+    "isGlutenFree": false,
+    "seasonStart": "1",
+    "seasonEnd": "12",
+    "description": "Found on street corners across Shanghai, especially in the morning. The dough is rolled thin, layered with chopped scallions and lard, then coiled and flattened before hitting a hot griddle. The result is dozens of paper-thin layers.",
+    "whereBest": "A Cheng on Yunnan Road is a Shanghai institution. For the crispiest version, go before 9am when the first batch comes off the griddle.",
+    "image": "/images/snacks/congyoubing.webp",
+    "origin": "Scallion pancakes have been a staple of northern Chinese street food for over 1,500 years, mentioned in agricultural texts from the Northern Wei Dynasty (386-534 AD). The Shanghai version is the most refined: dough rolled impossibly thin, layered with chopped scallions and rendered pork fat, then coiled into a spiral and flattened. The spiral technique creates the pancake's signature flaky layers — a single pancake can have over 30 distinct layers of dough, fat, and scallion.",
+    "howToEat": "Eat it hot, ideally within 3 minutes of coming off the griddle. The outside should be shatteringly crisp and golden brown. Tear it apart with your hands rather than cutting it — this preserves the layers. In Shanghai, it's a standalone breakfast; in Beijing, people wrap it around a fried egg for extra protein. The best ones come from street carts where you watch the dough being rolled and coiled fresh.",
+    "relatedSnacks": [
+      "jianbing",
+      "shengjianbao"
+    ]
+  },
+  {
+    "id": "wonton-noodles",
+    "nameEn": "Wonton Noodles",
+    "nameZh": "云吞面",
+    "namePinyin": "yún tūn miàn",
+    "taste": "Springy thin egg noodles in clear, deeply savory broth with plump shrimp wontons floating alongside. Light but satisfying, the broth is the soul of the dish.",
+    "bestCity": "guangzhou",
+    "bestCities": [
+      "guangzhou"
+    ],
+    "difficulty": "easy",
+    "priceMin": 12,
+    "priceMax": 30,
+    "tags": [
+      "noodles",
+      "classic",
+      "lunch"
+    ],
+    "isVegetarian": false,
+    "isHalal": false,
+    "isSpicy": false,
+    "isGlutenFree": false,
+    "seasonStart": "1",
+    "seasonEnd": "12",
+    "description": "A Cantonese comfort classic that looks deceptively simple but demands perfect technique. The noodles must be al dente with a distinct alkaline bite, the wontons silky-skinned with whole shrimp, and the broth clear but intense — simmered from dried flounder, pork bones, and shrimp shells.",
+    "image": "/images/snacks/wonton-noodles.webp",
+    "whereBest": "Mak's Noodle (麦奀云吞面世家) on Wenming Road is a Guangzhou institution since the 1920s. Go for lunch — the broth is freshest before 1pm.",
+    "origin": "Wonton noodles arrived in Guangzhou from northern China centuries ago, but Cantonese cooks transformed the dish completely. Northern wontons were thick-skinned and doughy; the Cantonese version demanded translucent wrappers and whole shrimp. The broth, a crystal-clear liquid that takes 6-8 hours to make from dried flounder, pork bones, and shrimp roe, is the soul of the dish. Mak's Noodle, founded in the 1920s, is widely credited with standardizing the Guangzhou style — thin egg noodles with a distinct alkaline bite, served spoon on top, noodles in the middle, wontons hidden underneath.",
+    "howToEat": "The bowl is assembled in a specific order: spoon on top (so it doesn't get wet), noodles in the middle, and a small dish of pickled green chili on the side. Slurp the noodles first, then dig under for a wonton. Alternate between bites of noodle and sips of broth. The chili is intense — add it drop by drop to the noodles, never to the broth. At a proper shop, the bowl should be small enough that you finish in about 10 minutes.",
+    "relatedSnacks": [
+      "cheong-fun",
+      "shrimp-dumplings"
+    ]
+  },
+  {
+    "id": "shrimp-dumplings",
+    "nameEn": "Har Gow (Shrimp Dumplings)",
+    "nameZh": "虾饺",
+    "namePinyin": "xiā jiǎo",
+    "taste": "Translucent, slightly chewy wrapper revealing whole shrimp with bamboo shoots. The wrapper should be thin enough to see the pink shrimp through it without tearing.",
+    "bestCity": "guangzhou",
+    "bestCities": [
+      "guangzhou"
+    ],
+    "difficulty": "medium",
+    "priceMin": 18,
+    "priceMax": 38,
+    "tags": [
+      "dim-sum",
+      "classic",
+      "breakfast"
+    ],
+    "isVegetarian": false,
+    "isHalal": false,
+    "isSpicy": false,
+    "isGlutenFree": false,
+    "seasonStart": "1",
+    "seasonEnd": "12",
+    "description": "The king of dim sum and the ultimate test of a Cantonese chef. The pleated wrapper — traditionally exactly 13 folds — is made from wheat starch and tapioca, giving it a distinctive translucent sheen. Bite in and you should find whole shrimp, bamboo shoots, and a whisper of pork fat.",
+    "image": "/images/snacks/shrimp-dumplings.webp",
+    "whereBest": "Panxi Restaurant (泮溪酒家) on Longjin West Road has been serving dim sum since 1947. Go for morning dim sum (before 11am) when the har gow are steamed to order. Also excellent at Tao Tao Ju (陶陶居) on Shangxiajiu Street.",
+    "origin": "Har gow (shrimp dumplings) is the crown jewel of Cantonese dim sum, first served in Guangzhou's teahouses along the Pearl River in the early 20th century. A chef at a small teahouse in Wucun village created the dish to compete with nearby restaurants, using the river's abundant shrimp and a revolutionary transparent wrapper made from wheat starch and tapioca. The original recipe specified exactly 13 pleats — a number that dim sum chefs still use as a benchmark of mastery today.",
+    "howToEat": "Lift the dumpling carefully from the steamer basket with chopsticks. The wrapper should be translucent enough to see the pink shrimp inside without being so thin that it breaks. Dip lightly in soy sauce or chili oil — but the best har gow need neither. Eat it in one or two bites. At dim sum, har gow is traditionally ordered first — if the har gow is good, everything else will be too. If the wrapper is thick and opaque, lower your expectations for the rest of the meal.",
+    "relatedSnacks": [
+      "cheong-fun",
+      "wonton-noodles"
+    ]
+  }
+]

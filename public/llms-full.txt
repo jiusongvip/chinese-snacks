@@ -1,0 +1,44 @@
+# ChineseSnacks - Complete Content
+
+## About ChineseSnacks
+
+ChineseSnacks is a practical Chinese street food guide covering Beijing, Chengdu, Xi an, Shanghai, Guangzhou, and Chongqing. Every snack comes with a specific street or stall, a price range in yuan, and the exact Chinese phrase to say.
+
+We verify every recommendation: each snack street was visited in person, prices are updated seasonally, and listings are cross-checked with local residents. No sponsored placements. No affiliate links.
+
+## Key Snacks
+
+### Jianbing - Beijing
+China s most famous breakfast crepe. Thin batter on a hot griddle, egg cracked on top, folded around crispy wonton crackers, scallions, and fermented bean paste. Price: 5-15 yuan. Best at Wangfujing Snack Street.
+
+### Chuanchuan - Chengdu
+Skewered ingredients cooked in spicy mala broth. Choose your skewers, hand them over, and watch them boil. Price: 0.5-3 yuan per skewer.
+
+### Shengjianbao - Shanghai
+Pan-fried pork buns with crispy golden bottom and juicy filling. Price: 8-15 yuan for 4.
+
+### Xiaolongbao - Shanghai
+Steamed soup dumplings with delicate skin and hot broth inside. Price: 15-30 yuan per steamer.
+
+### Dandan Noodles - Chengdu
+Sichuan noodles topped with minced pork, preserved vegetables, and chili oil. Price: 8-15 yuan.
+
+### Yangrou Chuan - Xi an / Beijing
+Lamb skewers seasoned with cumin and chili. Price: 2-5 yuan per skewer.
+
+## Key Cities
+
+### Beijing - jianbing, tanghulu, zhajiangmian, yangrou chuan
+### Chengdu - chuanchuan, dandan noodles, mapo doufu, liangpi
+### Xi an - yangrou paomo, roujiamo, liangpi
+### Shanghai - xiaolongbao, shengjianbao, congyoubing
+### Chongqing - xiaomian, malatang
+### Guangzhou - cheong fun, dan ta, dim sum
+
+## Ordering Phrases
+- Zhe ge, yi ge - This one, one please
+- Duo shao qian? - How much?
+- Bu yao la - Not spicy
+- Wei dao hen hao! - It tastes great!
+
+This content was last updated August 2026. Visit [ChineseSnacks](https://chinese-snacks.com/) for the complete guide.

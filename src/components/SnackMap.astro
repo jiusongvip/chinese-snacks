@@ -1,0 +1,46 @@
+---
+import streets from "../data/snack-streets.json";
+import cities from "../data/cities.json";
+import snacks from "../data/snacks.json";
+
+const cityMap = Object.fromEntries(cities.map(c => [c.id, c]));
+const snackMap = Object.fromEntries(snacks.map(s => [s.id, s]));
+---
+<section class="py-24 px-6 bg-surface-alt">
+  <div class="max-w-[1400px] mx-auto w-full">
+    <p class="text-sm font-medium tracking-wide uppercase text-accent mb-3">Interactive Map</p>
+    <h2 class="text-3xl md:text-4xl font-black tracking-tighter mb-4">China's Snack Streets</h2>
+    <p class="text-ink-muted max-w-[55ch] mb-8">Tap a marker to see what to eat, when to go, and how tourist-friendly each street is.</p>
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <div class="lg:col-span-2 bg-white rounded-2xl border border-border overflow-hidden" style="min-height:500px;">
+        <div id="snack-map" class="w-full h-full" style="min-height:500px;"></div>
+      </div>
+      <div class="space-y-3 max-h-[500px] overflow-y-auto">
+        {streets.map(st => (
+          <div class="bg-white rounded-xl border border-border p-4 hover:border-accent/30 transition-all cursor-pointer snack-street-card" data-street-id={st.id}>
+            <div class="flex items-center gap-3 mb-2">
+              <img src={"/images/" + st.cityId + ".png"} alt={cityMap[st.cityId]?.name} class="w-8 h-8 rounded-lg object-cover flex-shrink-0" />
+              <div>
+                <h3 class="font-bold text-sm text-ink">{st.name}</h3>
+                <p class="text-xs text-ink-muted">{cityMap[st.cityId]?.name} &middot; {st.nameZh}</p>
+              </div>
+            </div>
+            <p class="text-xs text-ink-muted leading-relaxed mb-2">{st.description}</p>
+            <div class="flex flex-wrap gap-2 text-xs">
+              <span class="px-2 py-1 rounded-full bg-surface-alt text-ink-muted">{st.bestTime}</span>
+              <span class="px-2 py-1 rounded-full bg-surface-alt text-ink-muted">{"★".repeat(st.touristFriendly)}{"☆".repeat(5-st.touristFriendly)}</span>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+  var streetsData = [{"id":"wangfujing","cityId":"beijing","name":"Wangfujing Snack Street","nameZh":"王府井小吃街","lat":39.9133,"lng":116.4105,"bestTime":"Evening, 5pm-10pm","topSnacks":["tanghulu","jianbing"],"touristFriendly":4,"description":"Beijing's most famous snack street. Touristy but convenient, with everything from scorpion skewers to candied fruit."},{"id":"jinli","cityId":"chengdu","name":"Jinli Ancient Street","nameZh":"锦里古街","lat":30.648,"lng":104.045,"bestTime":"Late afternoon to night, 4pm-10pm","topSnacks":["dan-dan-mian","bingfen","chuanchuan"],"touristFriendly":5,"description":"A restored ancient street with lanterns, traditional architecture, and dozens of authentic Sichuan snack stalls."},{"id":"muslim-quarter","cityId":"xian","name":"Muslim Quarter","nameZh":"回民街","lat":34.264,"lng":108.938,"bestTime":"Evening, 5pm-11pm","topSnacks":["roujiamo","yangrou-chuan","liangpi"],"touristFriendly":4,"description":"Xi'an's vibrant Muslim Quarter is a sensory overload of sizzling grills, aromatic spices, and halal street food."},{"id":"yunnan-road","cityId":"shanghai","name":"Yunnan Road Food Street","nameZh":"云南南路美食街","lat":31.2304,"lng":121.4795,"bestTime":"Lunch and dinner, 11am-9pm","topSnacks":["xiaolongbao","shengjianbao"],"touristFriendly":4,"description":"Shanghai's historic food street lined with century-old snack shops. The go-to for authentic xiaolongbao and shengjianbao."},{"id":"jiefangbei","cityId":"chongqing","name":"Jiefangbei / Bayi Road","nameZh":"解放碑八一路好吃街","lat":29.5617,"lng":106.5747,"bestTime":"Evening, 6pm-midnight","topSnacks":["chuanchuan","mala-tang"],"touristFriendly":3,"description":"Chongqing's central food hub serving the city's famously intense spicy snacks in a bustling night market atmosphere."}];
+  var cityMapData = {"beijing":{"id":"beijing","name":"Beijing","nameZh":"北京","snackCount":8,"bestSeason":"Autumn / Winter","topSnackStreet":"Wangfujing Snack Street","description":"The capital's snack scene spans imperial court delicacies to hearty northern street food. Winter is peak season for tanghulu and roasted sweet potatoes."},"chengdu":{"id":"chengdu","name":"Chengdu","nameZh":"成都","snackCount":12,"bestSeason":"Year-round","topSnackStreet":"Jinli Ancient Street","description":"Sichuan's culinary capital. Chengdu snacks are defined by mala (numbing-spicy) flavors. The city was named a UNESCO City of Gastronomy for good reason."},"xian":{"id":"xian","name":"Xi'an","nameZh":"西安","snackCount":10,"bestSeason":"Year-round","topSnackStreet":"Muslim Quarter","description":"The ancient Silk Road city where Chinese and Central Asian food cultures collide. Heavy on lamb, cumin, and wheat-based snacks."},"shanghai":{"id":"shanghai","name":"Shanghai","nameZh":"上海","snackCount":7,"bestSeason":"Year-round","topSnackStreet":"Yunnan Road","description":"Shanghai's snack culture is refined and delicate: soup dumplings, pan-fried buns, and sweet pastries influenced by nearby Jiangsu and Zhejiang cuisines."},"guangzhou":{"id":"guangzhou","name":"Guangzhou","nameZh":"广州","snackCount":8,"bestSeason":"Year-round","topSnackStreet":"Shangxiajiu Pedestrian Street","description":"The birthplace of dim sum. Guangzhou's snack culture revolves around bite-sized steamed, fried, and baked treats served morning to night."},"chongqing":{"id":"chongqing","name":"Chongqing","nameZh":"重庆","snackCount":6,"bestSeason":"Year-round","topSnackStreet":"Jiefangbei / Bayi Road","description":"Chengdu's bolder, spicier sibling. Chongqing snacks are intensely hot, numbing, and served in the city's dramatic hillside night markets."}};
+  function initMap(){if(typeof L==="undefined"){setTimeout(initMap,100);return;}var map=L.map("snack-map").setView([33.5,108.5],5);L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",{attribution:"&copy; OSM",maxZoom:18}).addTo(map);var markers={};streetsData.forEach(function(st){var city=cityMapData[st.cityId]||{};var stars="";for(var i=0;i<st.touristFriendly;i++)stars+="★";for(var i=st.touristFriendly;i<5;i++)stars+="☆";var popup="<div style='min-width:200px;'><strong>"+st.name+"</strong><br><small>"+(city.name||st.cityId)+" &middot; "+st.nameZh+"</small><br><p style='margin:6px 0;font-size:12px;'>"+st.description+"</p><small>Best time: "+st.bestTime+"<br>"+stars+"</small><br><a href='/cities/"+st.cityId+"/' style='color:#c34a36;'>View city guide &rarr;</a></div>";markers[st.id]=L.marker([st.lat,st.lng]).bindPopup(popup).addTo(map);});document.querySelectorAll(".snack-street-card").forEach(function(card){card.addEventListener("mouseenter",function(){var sid=this.getAttribute("data-street-id");if(markers[sid])markers[sid].openPopup();});card.addEventListener("click",function(){var sid=this.getAttribute("data-street-id");if(markers[sid]){map.setView([markers[sid].getLatLng().lat,markers[sid].getLatLng().lng],13);markers[sid].openPopup();}});});setTimeout(function(){map.invalidateSize();},500);}
+  if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",initMap);}else{initMap();}
+</script>

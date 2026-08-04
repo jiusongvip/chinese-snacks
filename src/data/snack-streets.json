@@ -1,0 +1,62 @@
+[
+  {
+    "id": "wangfujing",
+    "cityId": "beijing",
+    "name": "Wangfujing Snack Street",
+    "nameZh": "王府井小吃街",
+    "lat": 39.9133,
+    "lng": 116.4105,
+    "bestTime": "Evening, 5pm-10pm",
+    "topSnacks": ["tanghulu", "jianbing"],
+    "touristFriendly": 4,
+    "description": "Beijing's most famous snack street. Touristy but convenient, with everything from scorpion skewers to candied fruit."
+  },
+  {
+    "id": "jinli",
+    "cityId": "chengdu",
+    "name": "Jinli Ancient Street",
+    "nameZh": "锦里古街",
+    "lat": 30.6480,
+    "lng": 104.0450,
+    "bestTime": "Late afternoon to night, 4pm-10pm",
+    "topSnacks": ["dan-dan-mian", "bingfen", "chuanchuan"],
+    "touristFriendly": 5,
+    "description": "A restored ancient street with lanterns, traditional architecture, and dozens of authentic Sichuan snack stalls."
+  },
+  {
+    "id": "muslim-quarter",
+    "cityId": "xian",
+    "name": "Muslim Quarter",
+    "nameZh": "回民街",
+    "lat": 34.2640,
+    "lng": 108.9380,
+    "bestTime": "Evening, 5pm-11pm",
+    "topSnacks": ["roujiamo", "yangrou-chuan", "liangpi"],
+    "touristFriendly": 4,
+    "description": "Xi'an's vibrant Muslim Quarter is a sensory overload of sizzling grills, aromatic spices, and halal street food."
+  },
+  {
+    "id": "yunnan-road",
+    "cityId": "shanghai",
+    "name": "Yunnan Road Food Street",
+    "nameZh": "云南南路美食街",
+    "lat": 31.2304,
+    "lng": 121.4795,
+    "bestTime": "Lunch and dinner, 11am-9pm",
+    "topSnacks": ["xiaolongbao", "shengjianbao"],
+    "touristFriendly": 4,
+    "description": "Shanghai's historic food street lined with century-old snack shops. The go-to for authentic xiaolongbao and shengjianbao."
+  },
+  {
+    "id": "jiefangbei",
+    "cityId": "chongqing",
+    "name": "Jiefangbei / Bayi Road",
+    "nameZh": "解放碑八一路好吃街",
+    "lat": 29.5617,
+    "lng": 106.5747,
+    "bestTime": "Evening, 6pm-midnight",
+    "topSnacks": ["chuanchuan", "mala-tang"],
+    "touristFriendly": 3,
+    "description": "Chongqing's central food hub serving the city's famously intense spicy snacks in a bustling night market atmosphere."
+  }
+]

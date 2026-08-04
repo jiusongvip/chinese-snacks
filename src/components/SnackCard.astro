@@ -1,0 +1,70 @@
+---
+interface Props {
+  snack: {
+    id: string;
+    nameEn: string;
+    nameZh: string;
+    namePinyin: string;
+    taste: string;
+    bestCity: string;
+    bestCities: string[];
+    difficulty: string;
+    priceMin: number;
+    priceMax: number;
+    tags: string[];
+    isVegetarian: boolean;
+    isHalal: boolean;
+    isSpicy: boolean;
+    isGlutenFree: boolean;
+    seasonStart: string;
+    seasonEnd: string;
+    description: string;
+    image: string | null;
+  };
+  cityName: string;
+}
+
+const { snack, cityName } = Astro.props;
+const difficultyColors: Record<string, string> = {
+  easy: "bg-green-100 text-green-800",
+  medium: "bg-yellow-100 text-yellow-800",
+  hard: "bg-red-100 text-red-800",
+};
+
+const emojiMap: Record<string, string> = {
+  dessert: "🍡",
+  spicy: "🍜",
+  breakfast: "🥞",
+  default: "🥟",
+};
+const emoji = snack.tags.includes("dessert") ? emojiMap.dessert : snack.isSpicy ? emojiMap.spicy : snack.tags.includes("breakfast") ? emojiMap.breakfast : emojiMap.default;
+---
+
+<a href={`/snacks/${snack.id}`} class="group block bg-white rounded-xl border border-border overflow-hidden hover:shadow-md hover:border-accent/30 transition-all duration-200 active:scale-[0.98]">
+  <div class="aspect-[16/10] bg-surface-alt flex items-center justify-center relative overflow-hidden">
+    {snack.image ? (
+      <img src={snack.image} alt={`${snack.nameEn} — ${snack.taste.substring(0, 60)}`} class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-400" width="800" height="500" loading="lazy" />
+    ) : (
+      <span class="text-5xl group-hover:scale-110 transition-transform duration-300">{emoji}</span>
+    )}
+    <div class="absolute top-3 left-3 flex gap-1.5 flex-wrap">
+      {snack.isSpicy && <span class="text-xs px-2 py-0.5 rounded-full bg-red-100 text-red-700 font-medium">Spicy</span>}
+      {snack.isVegetarian && <span class="text-xs px-2 py-0.5 rounded-full bg-green-100 text-green-700 font-medium">Veg</span>}
+      {snack.isHalal && <span class="text-xs px-2 py-0.5 rounded-full bg-blue-100 text-blue-700 font-medium">Halal</span>}
+    </div>
+  </div>
+  <div class="p-5">
+    <div class="flex items-center justify-between mb-1">
+      <h3 class="font-bold text-lg tracking-tight group-hover:text-accent transition-colors">{snack.nameEn}</h3>
+      <span class="text-xs px-2 py-0.5 rounded-full {difficultyColors[snack.difficulty]} capitalize">{snack.difficulty}</span>
+    </div>
+    <p class="text-sm text-ink-muted mb-2">
+      <span class="font-medium text-ink">{snack.nameZh}</span> &middot; {snack.namePinyin}
+    </p>
+    <p class="text-sm text-ink-muted leading-relaxed line-clamp-2 mb-3">{snack.taste}</p>
+    <div class="flex items-center justify-between text-xs text-ink-muted pt-3 border-t border-border">
+      <span>Best in {cityName}</span>
+      <span class="font-semibold text-ink">&yen;{snack.priceMin}&ndash;{snack.priceMax}</span>
+    </div>
+  </div>
+</a>

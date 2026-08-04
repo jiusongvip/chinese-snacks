@@ -1,0 +1,45 @@
+---
+const months = [
+  { month: "Jan", detail: "Peak tanghulu and winter lamb skewer season. Beijing's hutongs are full of roasted sweet potato carts. The coldest month, but the snacks are the heartiest.", top: ["tanghulu", "yangrou-chuan", "roujiamo"] },
+  { month: "Feb", detail: "Chinese New Year usually falls here — street markets explode with festive snacks. Tanghulu is everywhere, and families gather around hot pot. The best month for festival food.", top: ["tanghulu", "xiaolongbao", "roujiamo"] },
+  { month: "Mar", detail: "Winter snacks fade and spring flavors emerge. Fresh scallion pancakes and jianbing are at their best. Temperatures warm up, making street wandering comfortable again.", top: ["jianbing", "xiaolongbao", "dan-dan-mian"] },
+  { month: "Apr", detail: "Liangpi (cold noodles) season begins as Xi'an warms up. Cherry blossom season in Shanghai means outdoor snack markets. Perfect weather for walking and eating.", top: ["jianbing", "liangpi", "xiaolongbao"] },
+  { month: "May", detail: "Bingfen (ice jelly) stalls pop up across Sichuan. Night markets in Chengdu and Chongqing hit their stride. The start of peak street food season — warm nights, cold desserts.", top: ["liangpi", "bingfen", "chuanchuan"] },
+  { month: "Jun", detail: "Summer heat drives everyone to cold snacks — liangpi, bingfen, and iced drinks dominate. Guangzhou's dim sum tea houses are air-conditioned sanctuaries.", top: ["liangpi", "bingfen", "chuanchuan"] },
+  { month: "Jul", detail: "The hottest month. Sichuan cold noodles and ice jelly are essential survival tools. Xi'an's Muslim Quarter sizzles late into the night. Stay hydrated, eat cold.", top: ["liangpi", "bingfen", "mala-tang"] },
+  { month: "Aug", detail: "Peak summer snacking. Bingfen stalls are on every Chengdu street corner. Chongqing night markets are spectacular despite the humidity. Cold beer + spicy skewers = perfection.", top: ["liangpi", "bingfen", "mala-tang"] },
+  { month: "Sep", detail: "Late summer, early autumn transition. Mid-Autumn Festival brings mooncakes to every bakery. The weather cools, and night markets extend their hours.", top: ["bingfen", "liangpi", "chuanchuan"] },
+  { month: "Oct", detail: "Golden October — the best all-around snacking month. Tanghulu returns to Beijing streets. Xi'an's autumn lamb skewers are at peak flavor. National Day holiday means crowded but spectacular markets.", top: ["tanghulu", "roujiamo", "chuanchuan"] },
+  { month: "Nov", detail: "Winter snacks return in force. Steamed buns, hot soups, and tanghulu dominate. Shanghai's shengjian bao tastes better when there's a chill in the air.", top: ["tanghulu", "roujiamo", "xiaolongbao"] },
+  { month: "Dec", detail: "Full winter mode — tanghulu carts, roasted chestnuts, and lamb soup with bread in Xi'an. Hot pot season peaks. The coziest month for Chinese street food.", top: ["tanghulu", "xiaolongbao", "jianbing"] },
+];
+const now = new Date();
+const currentMonthIndex = now.getMonth();
+---
+
+<section class="py-24 px-6 bg-surface">
+  <div class="max-w-[1400px] mx-auto w-full">
+    <p class="text-sm font-medium tracking-wide uppercase text-accent mb-3">Seasonal Guide</p>
+    <h2 class="text-3xl md:text-4xl font-black tracking-tighter mb-4">What's in Season Now</h2>
+    <p class="text-ink-muted max-w-[55ch] mb-12">Some snacks are seasonal. Don't go hunting for summer bingfen in January.</p>
+
+    <div class="overflow-x-auto pb-4">
+      <div class="flex gap-3 min-w-max">
+        {months.map((m, i) => (
+          <div class={`w-[220px] rounded-xl border p-4 flex-shrink-0 transition-all ${i === currentMonthIndex ? 'border-accent bg-accent/5 shadow-sm' : 'border-border bg-white'}`}>
+            <p class={`text-xs font-bold uppercase mb-3 ${i === currentMonthIndex ? 'text-accent' : 'text-ink-muted'}`}>
+              {m.month}
+              {i === currentMonthIndex && <span class="ml-1 inline-block w-1.5 h-1.5 rounded-full bg-accent align-middle"></span>}
+            </p>
+            <p class="text-xs text-ink-muted leading-relaxed">{m.detail}</p>
+            <div class="mt-2 flex flex-wrap gap-1">
+              {m.top.map(s => (
+                <span class="text-[10px] px-1.5 py-0.5 rounded-full bg-accent/10 text-accent font-medium">{s.replace(/-/g, ' ')}</span>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
