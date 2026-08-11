@@ -3,8 +3,10 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import Nav from "../components/Nav.astro";
 import Footer from "../components/Footer.astro";
 import snacks from "../data/snacks.json";
+import packagedSnacks from "../data/packaged-snacks.json";
 
 const vegSnacks = snacks.filter(s => s.isVegetarian);
+const vegPackaged = packagedSnacks.filter(s => s.isVegetarian);
 ---
 
 <BaseLayout title="Vegetarian Chinese Snacks Guide | ChineseSnacks" description="A complete guide to vegetarian and vegan Chinese street snacks. What to eat, where to find it, and how to order in Chinese.">
@@ -40,6 +42,42 @@ const vegSnacks = snacks.filter(s => s.isVegetarian);
           <li>Fruit-based desserts like tanghulu and bingfen are naturally vegetarian</li>
           <li>Watch for hidden meat: many vegetable dishes use lard or meat-based stock</li>
         </ul>
+        <h2 class="text-xl font-bold text-ink mt-8">The Sneaky Non-Vegan Traps</h2>
+        <div class="bg-white rounded-xl border border-border p-6 space-y-4">
+          <div class="border-l-2 border-red-300 pl-4">
+            <h3 class="font-bold text-ink mb-1">Tangyuan (汤圆) often contains lard</h3>
+            <p class="text-sm text-ink-muted">The classic sweet glutinous rice balls look harmless, but many traditional recipes mix rendered pork fat (猪油) into the filling for richness. Always ask: "yǒu zhū yóu ma?" (Does it have lard?).</p>
+          </div>
+          <div class="border-l-2 border-red-300 pl-4">
+            <h3 class="font-bold text-ink mb-1">"Vegetable" dishes cooked in meat stock</h3>
+            <p class="text-sm text-ink-muted">Many vegetarian-looking dishes — including liangpi dressing and mala tang broth — use pork or beef stock as the base. Sichuan mala tang stalls often offer a vegetable-only broth option; just ask.</p>
+          </div>
+          <div class="border-l-2 border-red-300 pl-4">
+            <h3 class="font-bold text-ink mb-1">Jianbing and scallion pancakes fried in pork fat</h3>
+            <p class="text-sm text-ink-muted">The batter or pan can be seasoned with lard. In Shanghai, some vendors now make vegan jianbing with plant-based egg substitute — it is spreading, but always ask.</p>
+          </div>
+          <div class="border-l-2 border-red-300 pl-4">
+            <h3 class="font-bold text-ink mb-1">Mooncakes and pastries</h3>
+            <p class="text-sm text-ink-muted">Most traditional mooncakes use pork fat (猪油) in the crust. Look for the 素 (sù) label on packaging, or buy from vegetarian bakeries.</p>
+          </div>
+        </div>
+        <h2 class="text-xl font-bold text-ink mt-8">Vegan Packaged Snacks You Can Stock Up On</h2>
+        <p class="text-ink-muted">Not every packaged snack is vegan — but many of the best ones are. These are our tested picks, all clearly labeled and safe for vegetarian travelers:</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {vegPackaged.map(s => (
+            <div class="bg-white rounded-xl border border-border p-5">
+              <h3 class="font-bold text-ink mb-1">{s.nameEn}</h3>
+              <p class="text-xs text-ink-muted mb-2">{s.nameZh} &middot; {s.namePinyin} &middot; <span class="font-medium text-ink/70">{s.brand}</span></p>
+              <p class="text-xs text-ink-muted leading-relaxed mb-2">{s.description}</p>
+              <p class="text-xs font-semibold text-accent">&yen;{s.priceRmbMin}&ndash;{s.priceRmbMax} &middot; {s.whereToBuy[0] === "street-fresh" ? "Street-fresh" : "Supermarket"}</p>
+            </div>
+          ))}
+        </div>
+        <h2 class="text-xl font-bold text-ink mt-8">The Key Phrase</h2>
+        <div class="bg-white rounded-xl border border-border p-6">
+          <div class="text-lg font-bold text-ink mb-1">我不吃猪油,也不要肉汤 <span class="text-sm font-normal text-ink-muted">wǒ bù chī zhū yóu, yě bú yào ròu tāng</span></div>
+          <p class="text-sm text-ink-muted">"I don't eat lard, and no meat stock." This one sentence — saved on your phone — covers the three sneakiest non-vegan traps in Chinese street food.</p>
+        </div>
       </div>
     </div>
   </div>

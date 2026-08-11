@@ -14,10 +14,10 @@ import authors from "../data/authors.json";
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
         {authors.map(author => (
-          <div class="bg-white rounded-2xl border border-border p-8">
+          <div class="bg-white rounded-2xl border border-border p-8 md:col-span-1">
             <div class="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center text-2xl font-black text-accent mb-4">{author.name[0]}</div>
             <h2 class="font-bold text-xl mb-1">{author.name}</h2>
-            <p class="text-sm text-ink-muted mb-1">{author.nameZh}</p>
+            {author.nameZh && <p class="text-sm text-ink-muted mb-1">{author.nameZh}</p>}
             <p class="text-xs font-medium text-accent mb-3">{author.role}</p>
             <p class="text-sm text-ink-muted leading-relaxed mb-3">{author.bio}</p>
             <div class="flex flex-wrap gap-1">
@@ -31,29 +31,29 @@ import authors from "../data/authors.json";
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
         <div class="space-y-6 text-ink-muted leading-relaxed">
-          <p class="text-lg text-ink">ChineseSnacks was built because every "Chinese snacks" search result failed us.</p>
-          <p>Mei, David, and Lina searched together. They found listicles with no prices. Recipe blogs that assumed a kitchen. Amazon links when standing on a street corner in Chengdu, hungry.</p>
-          <p>Nobody was answering the three questions that matter when you're actually in China: <strong class="text-ink">Where exactly? How much? How do I order?</strong></p>
-          <p>So they built the tool they wished existed. Every snack on this site comes from someone who ate it recently, at a specific stall, for a verifiable price. No guesswork.</p>
+          <p class="text-lg text-ink">ChineseSnacks exists because most "Chinese snacks" search results fail travelers.</p>
+          <p>They offer listicles with no prices. Recipe blogs that assume a kitchen. Amazon links when you're standing on a street corner in Chengdu, hungry.</p>
+          <p>Nobody answers the three questions that matter when you're actually in China: <strong class="text-ink">Where exactly? How much? How do I order?</strong></p>
+          <p>So we built the tool we wished existed — and we made it verifiable. Every snack page states its price range, its best locations, and how to order it. Recommendations are cross-checked against local community feedback and public market data, not anonymous opinions.</p>
         </div>
         <div class="bg-white rounded-2xl border border-border p-8 space-y-6">
           <h2 class="text-lg font-bold text-ink">How We Verify</h2>
           <div class="space-y-4 text-sm text-ink-muted">
             <div class="flex gap-3">
               <span class="text-lg flex-shrink-0">📍</span>
-              <p>Each snack street was visited in person by at least one named team member. Coordinates are exact, not scraped from a map. David has walked every Beijing street on this site.</p>
+              <p>Locations are specific and checkable: named streets, named districts, named restaurants. Every snack street and stall we list can be found by following the address — no vague "somewhere in the city" recommendations.</p>
             </div>
             <div class="flex gap-3">
               <span class="text-lg flex-shrink-0">👥</span>
-              <p>Snack recommendations are cross-checked with local residents in each city. In Chengdu, Mei's network of former colleagues and food vendors reviews every entry.</p>
+              <p>Snack recommendations are cross-referenced with real community feedback, including Reddit's r/beijing and r/chinesefood discussions. Community picks are quoted and linked to their sources — we don't invent popularity.</p>
             </div>
             <div class="flex gap-3">
               <span class="text-lg flex-shrink-0">💰</span>
-              <p>Prices are updated seasonally. We note when a stall has tourist pricing vs. local pricing, and we tell you the difference.</p>
+              <p>Prices are given as ranges based on current market data and online retail channels, and we note when tourist pricing differs from local pricing — and tell you the difference.</p>
             </div>
             <div class="flex gap-3">
               <span class="text-lg flex-shrink-0">🔄</span>
-              <p>We revisit listings quarterly. If a street closes or a stall moves, we update within 30 days. This page was last refreshed August 2026.</p>
+              <p>We review listings quarterly. If a street closes or a stall moves, we update within 30 days of being told. This page was last refreshed August 2026.</p>
             </div>
           </div>
         </div>
@@ -61,8 +61,8 @@ import authors from "../data/authors.json";
 
       <div class="max-w-[65ch] space-y-6 text-ink-muted leading-relaxed border-t border-border pt-12">
         <h2 class="text-xl font-bold text-ink">Our Promise</h2>
-        <p>No sponsored placements. No affiliate links masquerading as recommendations. If we say a snack is good, it's because Mei, David, or Lina ate it and said so — usually more than once.</p>
-        <p>ChineseSnacks is independently run by three people who genuinely love Chinese street food. No marketing department. No SEO-driven content strategy. Just frustration with travel content that treats food like a museum exhibit instead of something you're supposed to eat.</p>
+        <p>No sponsored placements. No affiliate links masquerading as recommendations. If a snack earns a place on this site, it earned it on the evidence — community recommendations, market pricing, and brand reputation — not on payment.</p>
+        <p>ChineseSnacks is independently run by an editorial team with no marketing department and no paid-for content. We publish what travelers actually need: prices, locations, ordering phrases, and honest caveats.</p>
         <p>If you find an error — a closed stall, a wrong price, a phrase that got you blank stares — tell us. We'll fix it and credit you.</p>
       </div>
     </div>

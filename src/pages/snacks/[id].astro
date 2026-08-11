@@ -18,6 +18,20 @@ const usdMin = (snack.priceMin / 7).toFixed(1);
 const usdMax = (snack.priceMax / 7).toFixed(1);
 const cityNames = snack.bestCities.map(cid => cityMap[cid]?.name || cid).join(", ");
 const difficultyColors: Record<string, string> = { easy: "bg-green-100 text-green-800", medium: "bg-yellow-100 text-yellow-800", hard: "bg-red-100 text-red-800" };
+
+const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+const s1 = parseInt(snack.seasonStart);
+const s2 = parseInt(snack.seasonEnd);
+const yearRound = s1 === 1 && s2 === 12;
+const seasonLabel = yearRound ? "Year-round" : `${monthNames[s1 - 1]} \u2013 ${monthNames[s2 - 1]}`;
+const seasonNote = yearRound
+  ? `${snack.nameEn} is available on street corners across ${cityNames} all year \u2014 no seasonal planning needed. Freshness and price stay consistent in every season.`
+  : `${snack.nameEn} is at its seasonal peak from ${monthNames[s1 - 1]} through ${monthNames[s2 - 1]}. Plan your visit inside this window to catch the freshest, best-priced version \u2014 vendors outside the season often skip it entirely.`;
+const difficultyNotes: Record<string, string> = {
+  easy: "Easy to find \u2014 sold at street carts, snack stalls, and casual eateries across the city.",
+  medium: "A little more effort \u2014 head to dedicated shops or well-known restaurants rather than random street stalls.",
+  hard: "Takes some hunting \u2014 this is a specialty item served at a handful of serious restaurants.",
+};
 ---
 
 <BaseLayout title={`${snack.nameEn} (${snack.nameZh}) - Chinese Snack Guide | ChineseSnacks`} description={`${snack.description.substring(0, 45)} ${snack.taste} ¥${snack.priceMin}-¥${snack.priceMax} in ${cityNames}.`}>
@@ -50,9 +64,52 @@ const difficultyColors: Record<string, string> = { easy: "bg-green-100 text-gree
            <p class="text-lg">{snack.description}</p>
          </div>
 
-          <div class="bg-white rounded-xl border border-border p-6 mb-10">
+          <div class="bg-white rounded-xl border border-border p-6 mb-6">
             <h2 class="font-bold text-lg text-ink mb-2">Where to Find the Best {snack.nameEn}</h2>
             <p class="text-ink-muted text-sm leading-relaxed">{snack.whereBest}</p>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-4 mb-10">
+            <div class="bg-white rounded-xl border border-border p-5">
+              <p class="text-xs text-ink-muted uppercase tracking-wide mb-1">When to Eat It</p>
+              <p class="text-sm font-semibold text-ink mb-1">{seasonLabel}</p>
+              <p class="text-xs text-ink-muted leading-relaxed">{seasonNote}</p>
+            </div>
+            <div class="bg-white rounded-xl border border-border p-5">
+              <p class="text-xs text-ink-muted uppercase tracking-wide mb-1">How Easy Is It to Find?</p>
+              <p class="text-sm font-semibold text-ink capitalize mb-1">{snack.difficulty}</p>
+              <p class="text-xs text-ink-muted leading-relaxed">{difficultyNotes[snack.difficulty] || ""}</p>
+            </div>
+          </div>
+
+          <div class="bg-surface-alt rounded-xl p-6 mb-10">
+            <h2 class="font-bold text-lg text-ink mb-3">Quick Facts</h2>
+            <dl class="grid grid-cols-2 md:grid-cols-3 gap-4 text-sm">
+              <div>
+                <dt class="text-xs text-ink-muted uppercase tracking-wide mb-1">Price Range</dt>
+                <dd class="font-bold text-ink">&yen;{snack.priceMin}&ndash;{snack.priceMax} (${usdMin}&ndash;${usdMax})</dd>
+              </div>
+              <div>
+                <dt class="text-xs text-ink-muted uppercase tracking-wide mb-1">Best Cities</dt>
+                <dd class="font-bold text-ink">{cityNames}</dd>
+              </div>
+              <div>
+                <dt class="text-xs text-ink-muted uppercase tracking-wide mb-1">Season</dt>
+                <dd class="font-bold text-ink">{seasonLabel}</dd>
+              </div>
+              <div>
+                <dt class="text-xs text-ink-muted uppercase tracking-wide mb-1">Vegan</dt>
+                <dd class="font-bold text-ink">{snack.isVegetarian ? "Yes" : "No"}</dd>
+              </div>
+              <div>
+                <dt class="text-xs text-ink-muted uppercase tracking-wide mb-1">Spicy</dt>
+                <dd class="font-bold text-ink">{snack.isSpicy ? "Yes" : "No"}</dd>
+              </div>
+              <div>
+                <dt class="text-xs text-ink-muted uppercase tracking-wide mb-1">Gluten-Free</dt>
+                <dd class="font-bold text-ink">{snack.isGlutenFree ? "Yes" : "No"}</dd>
+              </div>
+            </dl>
           </div>
 
           {snack.origin && (

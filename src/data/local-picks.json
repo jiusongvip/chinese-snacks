@@ -1,0 +1,66 @@
+[
+  {
+    "id": "weilong-konjac",
+    "snack": "Weilong Konjac Strips",
+    "nameZh": "卫龙魔芋爽",
+    "quote": "卫龙魔芋爽 (Weilong Konjac) — the most upvoted pick in the thread",
+    "source": "Reddit r/beijing — 'Favorite Chinese snacks?'",
+    "note": "The single most recommended item in the r/beijing thread. ~¥3-6 per pack at any convenience store. If you only buy one packaged snack in China, make it this."
+  },
+  {
+    "id": "latiao",
+    "snack": "Latiao",
+    "nameZh": "辣条",
+    "quote": "\"Latiao... goated\" — u/sanisoftbabywipes",
+    "source": "Reddit r/beijing — 'Favorite Chinese snacks?'",
+    "note": "China's most iconic cheap snack. Reddit users described it in one word: goated. Bring extra packs home — they disappear fast."
+  },
+  {
+    "id": "huangfeihong-peanuts",
+    "snack": "Huang Fei Hong Spicy Peanuts",
+    "nameZh": "黄飞红麻辣花生",
+    "quote": "\"Huang Fei Hong spicy peanuts... perfect with ice-cold beer\" — u/PM_ME_RAD_ARTWORK",
+    "source": "Reddit r/beijing — 'Favorite Chinese snacks?'",
+    "note": "The numbing-crunchy peanut snack that pairs with beer. ~¥8-15 per bag. The Sichuan peppercorns in the bag are meant to be eaten too."
+  },
+  {
+    "id": "daoxiangcun-pastries",
+    "snack": "Dao Xiang Cun Pastries",
+    "nameZh": "稻香村糕点",
+    "quote": "Recommended by u/No_Silver_6547 as the authentic Beijing pastry pick",
+    "source": "Reddit r/beijing — 'Favorite Chinese snacks?'",
+    "note": "Beijing's heritage bakery (since 1895). Locals buy the gift boxes at any Beijing supermarket — look for the iconic shopfront."
+  },
+  {
+    "id": "donkey-rolling",
+    "snack": "Donkey Rolling (Lv Da Gun)",
+    "nameZh": "驴打滚",
+    "quote": "u/CelebrationUsed9188: \"Buy it at Wumei, Meilianmei, or Hualian supermarkets — eat it the same day\"",
+    "source": "Reddit r/beijing — 'Favorite Chinese snacks?'",
+    "note": "A Beijing-born glutinous rice roll with red-bean paste. Reddit's locals stress: this is fresh-made food, not shelf-stable — buy it fresh from local supermarkets like 物美 (Wumei), 美廉美 (Meilianmei), or 华联 (Hualian)."
+  },
+  {
+    "id": "sugar-roasted-chestnuts",
+    "snack": "Sugar-Roasted Chestnuts",
+    "nameZh": "糖炒栗子",
+    "quote": "u/cherry532: \"Sugar-roasted chestnuts — winter street snack, supermarkets generally don't sell them\"",
+    "source": "Reddit r/beijing — 'Favorite Chinese snacks?'",
+    "note": "Winter-only street food — look for the vendor with the giant iron wok full of black sand and chestnuts. ~¥15-25 per jin (500g)."
+  },
+  {
+    "id": "laosichuan-beef-jerky",
+    "snack": "Lao Sichuan Beef Jerky",
+    "nameZh": "老四川五香牛肉干",
+    "quote": "u/cherry532's pick for a classic meat snack",
+    "source": "Reddit r/beijing — 'Favorite Chinese snacks?'",
+    "note": "Chewy five-spice beef jerky with decades of brand history. More expensive than other snacks, but a crowd-pleaser back home."
+  },
+  {
+    "id": "white-rabbit",
+    "snack": "White Rabbit Candy",
+    "nameZh": "大白兔奶糖",
+    "quote": "Appears in nearly every comment listing 'must-take-home' snacks",
+    "source": "Reddit r/beijing — 'Favorite Chinese snacks?'",
+    "note": "The universal souvenir. One Redditor's tip: \"put the list into ChatGPT, translate it to Chinese, and show it to the staff at a big supermarket — done in 5 minutes.\""
+  }
+]

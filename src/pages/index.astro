@@ -3,6 +3,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import Nav from "../components/Nav.astro";
 import Hero from "../components/Hero.astro";
 import SnackCard from "../components/SnackCard.astro";
+import PackagedSnackCard from "../components/PackagedSnackCard.astro";
 import CityCard from "../components/CityCard.astro";
 import PhraseSheet from "../components/PhraseSheet.astro";
 import SeasonalCalendar from "../components/SeasonalCalendar.astro";
@@ -11,14 +12,17 @@ import FAQ from "../components/FAQ.astro";
 import Footer from "../components/Footer.astro";
 import snacks from "../data/snacks.json";
 import cities from "../data/cities.json";
+import packagedSnacks from "../data/packaged-snacks.json";
+import localPicks from "../data/local-picks.json";
 
 const featuredSnacks = snacks.slice(0, 9);
 const cityMap = Object.fromEntries(cities.map(c => [c.id, c.name]));
+const editorPicks = packagedSnacks.filter(s => s.editorPick);
 ---
 
 <BaseLayout
   title="Chinese Snacks: The Complete Guide to Street Food & Classics | ChineseSnacks"
-  description="Discover 22 iconic Chinese snacks with prices, taste guides, and where to eat them. From Beijing jianbing to Sichuan chuan chuan — plus packaged snacks you can buy online or bring home."
+  description="Discover 22 iconic Chinese snacks plus the best packaged snacks to buy — from Beijing jianbing to Sichuan chuan chuan, Weilong konjac to White Rabbit candy. Prices, brand picks, and where locals actually buy."
 >
   <Nav />
   <Hero />
@@ -51,51 +55,12 @@ const cityMap = Object.fromEntries(cities.map(c => [c.id, c.name]));
     <div class="max-w-[1400px] mx-auto w-full">
       <p class="text-sm font-medium tracking-wide uppercase text-accent mb-3">Packaged Snacks</p>
       <h2 class="text-3xl md:text-4xl font-black tracking-tighter mb-4">Chinese Snacks You Can Buy Online or Bring Home</h2>
-      <p class="text-ink-muted max-w-[55ch] mb-12">Not traveling to China? Many classic Chinese snacks are available in Asian grocery stores, online marketplaces, or as souvenirs. Here are the most popular ones to look for.</p>
+      <p class="text-ink-muted max-w-[55ch] mb-12">Not traveling to China? Many classic Chinese snacks are available in Asian grocery stores, online marketplaces, or as souvenirs. Here are the most popular ones to look for — with real brands, prices, and where to buy them.</p>
 
-      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-        <div class="bg-white rounded-xl border border-border p-5 text-center hover:border-accent/30 hover:shadow-sm transition-all">
-          <span class="text-4xl block mb-3">🍬</span>
-          <h3 class="font-bold text-sm text-ink mb-1">White Rabbit Candy</h3>
-          <p class="text-xs text-ink-muted leading-relaxed">bái tù nǎi táng</p>
-          <p class="text-[11px] text-ink-muted mt-2">Creamy milk chews wrapped in edible rice paper. The most famous Chinese candy worldwide.</p>
-          <span class="inline-block mt-2 text-[10px] px-2 py-0.5 rounded-full bg-amber-100 text-amber-700 font-medium">buy online</span>
-        </div>
-        <div class="bg-white rounded-xl border border-border p-5 text-center hover:border-accent/30 hover:shadow-sm transition-all">
-          <span class="text-4xl block mb-3">🍘</span>
-          <h3 class="font-bold text-sm text-ink mb-1">Shrimp Chips</h3>
-          <p class="text-xs text-ink-muted leading-relaxed">xiā tiáo</p>
-          <p class="text-[11px] text-ink-muted mt-2">Puffy, crispy prawn crackers that dissolve on your tongue. Available in spicy and original.</p>
-          <span class="inline-block mt-2 text-[10px] px-2 py-0.5 rounded-full bg-amber-100 text-amber-700 font-medium">buy online</span>
-        </div>
-        <div class="bg-white rounded-xl border border-border p-5 text-center hover:border-accent/30 hover:shadow-sm transition-all">
-          <span class="text-4xl block mb-3">🍐</span>
-          <h3 class="font-bold text-sm text-ink mb-1">Haw Flakes</h3>
-          <p class="text-xs text-ink-muted leading-relaxed">shān zhā piàn</p>
-          <p class="text-[11px] text-ink-muted mt-2">Discs of pressed hawthorn fruit — sweet-tart and nostalgic. A lunchbox staple for generations.</p>
-          <span class="inline-block mt-2 text-[10px] px-2 py-0.5 rounded-full bg-amber-100 text-amber-700 font-medium">buy online</span>
-        </div>
-        <div class="bg-white rounded-xl border border-border p-5 text-center hover:border-accent/30 hover:shadow-sm transition-all">
-          <span class="text-4xl block mb-3">🌻</span>
-          <h3 class="font-bold text-sm text-ink mb-1">Sunflower Seeds</h3>
-          <p class="text-xs text-ink-muted leading-relaxed">guā zǐ</p>
-          <p class="text-[11px] text-ink-muted mt-2">Roasted and seasoned sunflower seeds. The quintessential Chinese road trip and movie-night snack.</p>
-          <span class="inline-block mt-2 text-[10px] px-2 py-0.5 rounded-full bg-amber-100 text-amber-700 font-medium">buy online</span>
-        </div>
-        <div class="bg-white rounded-xl border border-border p-5 text-center hover:border-accent/30 hover:shadow-sm transition-all">
-          <span class="text-4xl block mb-3">🥠</span>
-          <h3 class="font-bold text-sm text-ink mb-1">Sesame Balls</h3>
-          <p class="text-xs text-ink-muted leading-relaxed">jiān duī / má tuán</p>
-          <p class="text-[11px] text-ink-muted mt-2">Fried glutinous rice balls coated in sesame seeds, filled with sweet red bean paste. Find them fresh or frozen.</p>
-          <span class="inline-block mt-2 text-[10px] px-2 py-0.5 rounded-full bg-blue-100 text-blue-700 font-medium">fresh best</span>
-        </div>
-        <div class="bg-white rounded-xl border border-border p-5 text-center hover:border-accent/30 hover:shadow-sm transition-all">
-          <span class="text-4xl block mb-3">🍪</span>
-          <h3 class="font-bold text-sm text-ink mb-1">Walnut Cookies</h3>
-          <p class="text-xs text-ink-muted leading-relaxed">hé táo sū</p>
-          <p class="text-[11px] text-ink-muted mt-2">Crumbly, buttery shortbread packed with chopped walnuts. A classic Chinese bakery staple sold in tins.</p>
-          <span class="inline-block mt-2 text-[10px] px-2 py-0.5 rounded-full bg-amber-100 text-amber-700 font-medium">buy online</span>
-        </div>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        {packagedSnacks.map(snack => (
+          <PackagedSnackCard snack={snack} />
+        ))}
       </div>
 
       <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
@@ -105,6 +70,39 @@ const cityMap = Object.fromEntries(cities.map(c => [c.id, c.name]));
         <a href="/bring-home" class="inline-flex items-center gap-2 text-accent font-medium text-sm hover:underline">
           Customs &amp; packing guide for travelers &rarr;
         </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- What Locals Recommend (community picks) -->
+  <section class="py-24 px-6 bg-surface">
+    <div class="max-w-[1400px] mx-auto w-full">
+      <p class="text-sm font-medium tracking-wide uppercase text-accent mb-3">Local Picks</p>
+      <h2 class="text-3xl md:text-4xl font-black tracking-tighter mb-4">What Locals Actually Recommend</h2>
+      <p class="text-ink-muted max-w-[55ch] mb-12">We scoured the r/beijing community thread "Favorite Chinese snacks?" to find what locals really buy — with the exact brands, prices, and where to get them. Skip the tourist shops; buy where Beijingers buy.</p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {localPicks.map(pick => (
+          <div class="bg-white rounded-xl border border-border p-6 hover:border-accent/30 hover:shadow-sm transition-all">
+            <div class="flex items-start justify-between gap-3 mb-2">
+              <h3 class="font-bold text-ink">{pick.snack}</h3>
+              <span class="text-xs font-medium text-ink/60 flex-shrink-0">{pick.nameZh}</span>
+            </div>
+            <p class="text-sm italic text-ink-muted mb-3 border-l-2 border-accent/30 pl-3">{pick.quote}</p>
+            <p class="text-sm text-ink-muted leading-relaxed mb-3">{pick.note}</p>
+            <p class="text-xs text-ink-muted/70 flex items-center gap-1.5">
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 256 256" fill="currentColor"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm16-40a8,8,0,0,1-8,8H120a8,8,0,0,1,0-16h16A8,8,0,0,1,136,176Zm29.66-70.62-28.22,28.22a8,8,0,0,1-11.32,0l-28.22-28.22a8,8,0,0,1,11.32-11.32L128,112.69l22.34-22.35a8,8,0,0,1,11.32,11.32Z"/></svg>
+              Source: {pick.source}
+            </p>
+          </div>
+        ))}
+      </div>
+
+      <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <a href="/blog/best-chinese-snacks-to-bring-home" class="inline-flex items-center gap-2 text-accent font-medium text-sm hover:underline">
+          Full guide: best Chinese snacks to bring home &rarr;
+        </a>
+        <p class="text-xs text-ink-muted">Buying tip: locals say skip tourist specialty shops — go to big supermarkets (Wumei, Hualian, Carrefour) and follow what locals queue for.</p>
       </div>
     </div>
   </section>

@@ -33,7 +33,7 @@ const pageUrl = new URL(Astro.url.pathname, siteUrl).href;
           <div class="flex items-start gap-4 bg-surface-alt rounded-xl p-6">
             <div class="w-14 h-14 rounded-full bg-accent/10 flex items-center justify-center text-xl font-black text-accent flex-shrink-0">{postAuthor.name[0]}</div>
             <div>
-              <p class="font-bold text-ink mb-1">{postAuthor.name} ({postAuthor.nameZh})</p>
+              <p class="font-bold text-ink mb-1">{postAuthor.name}{postAuthor.nameZh && ` (${postAuthor.nameZh})`}</p>
               <p class="text-sm text-ink-muted leading-relaxed">{postAuthor.bio}</p>
             </div>
           </div>
@@ -56,12 +56,11 @@ const pageUrl = new URL(Astro.url.pathname, siteUrl).href;
   "image": post.image.startsWith("http") ? post.image : `${siteUrl}${post.image}`,
   "datePublished": post.date,
   "dateModified": post.date,
-  "author": postAuthor ? {
-    "@type": "Person",
-    "name": postAuthor.name,
-    "url": `${siteUrl}/about`,
-    "jobTitle": postAuthor.role
-  } : undefined,
+  "author": {
+    "@type": "Organization",
+    "name": "ChineseSnacks Editorial Team",
+    "url": `${siteUrl}/about`
+  },
   "publisher": {
     "@type": "Organization",
     "name": "ChineseSnacks",
