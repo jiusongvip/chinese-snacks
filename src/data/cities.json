@@ -3,66 +3,264 @@
     "id": "beijing",
     "name": "Beijing",
     "nameZh": "北京",
+    "lat": 39.9042,
+    "lng": 116.4074,
     "snackCount": 4,
     "bestSeason": "Autumn / Winter",
     "topSnackStreet": "Wangfujing Snack Street",
     "description": "The capital's snack scene spans imperial court delicacies to hearty northern street food. Winter is peak season for tanghulu and roasted sweet potatoes.",
         "seoDescription": "From jianbing to tanghulu, explore the best Beijing street snacks. Discover hutong food culture and Wangfujing snack guide with prices. ChineseSnacks.",
-    "foodCulture": "Beijing's snack culture is a tale of two cities: the imperial and the street. For centuries, the Forbidden City's kitchens produced elaborate palace pastries and delicate dim sum that commoners never tasted. Meanwhile, the city's hutong alleys developed their own food economy — itinerant vendors selling jianbing at dawn, roasted sweet potatoes in winter, and tanghulu whenever the temperature dropped. The two worlds rarely overlapped, but together they created Beijing's distinct snack identity: hearty, wheat-based, built for cold weather. The influence of Mongolian and Manchu cuisine is felt in the city's love of lamb and fermented bean pastes. Today, Beijing's old snack streets like Guijie preserve this history, while modern chains try (and mostly fail) to replicate the magic of a hutong breakfast cart at 7 AM."
+    "foodCulture": "Beijing's snack culture is a tale of two cities: the imperial and the street. For centuries, the Forbidden City's kitchens produced elaborate palace pastries and delicate dim sum that commoners never tasted. Meanwhile, the city's hutong alleys developed their own food economy — itinerant vendors selling jianbing at dawn, roasted sweet potatoes in winter, and tanghulu whenever the temperature dropped. The two worlds rarely overlapped, but together they created Beijing's distinct snack identity: hearty, wheat-based, built for cold weather. The influence of Mongolian and Manchu cuisine is felt in the city's love of lamb and fermented bean pastes. Today, Beijing's old snack streets like Guijie preserve this history, while modern chains try (and mostly fail) to replicate the magic of a hutong breakfast cart at 7 AM.",
+    "itinerary": {
+      "halfDay": [
+        { "time": "6:45 AM", "stop": "University jianbing (Haidian District)", "what": "Student-priced jianbing at ¥6-8 — the real Beijing breakfast", "tip": "Go before 8:15 AM when the rush peaks; best carts pack up by 9 AM." },
+        { "time": "9:00 AM", "stop": "Hutong walk, Dongcheng", "what": "Walk the hutongs between Nanluoguxiang and Houhai", "tip": "Skip the tourist shops; the street food vendors near the hutongs are cheaper." },
+        { "time": "12:00 PM", "stop": "Zhajiang mian, Dongsi", "what": "Lao Beijing Zhajiang Mian — a century-old institution", "tip": "Mix the sauce in yourself; the cucumber shreds are part of the ritual." },
+        { "time": "3:00 PM", "stop": "Tanghulu cart, Houhai (winter only)", "what": "Buy tanghulu when the sugar has been dipped fresh", "tip": "Look for a vendor actively dipping skewers, not selling pre-made ones." }
+      ],
+      "fullDay": [
+        { "time": "6:45 AM", "stop": "University jianbing (Haidian District)", "what": "Student-priced jianbing at ¥6-8", "tip": "Same as the half-day route — start with the freshest meal of the day." },
+        { "time": "12:00 PM", "stop": "Zhajiang mian, Dongsi", "what": "Lao Beijing Zhajiang Mian on Dongsi Street", "tip": "Weekday lunch is calmer than weekends." },
+        { "time": "3:00 PM", "stop": "Tanghulu (winter) or egg tart detour", "what": "Afternoon sweet break", "tip": "In summer, skip tanghulu — the sugar melts." },
+        { "time": "6:00 PM", "stop": "Guijie (Ghost Street)", "what": "Spicy crawfish and Sichuan dishes until 4 AM", "tip": "Go between 10 PM and midnight for peak energy; crawfish are best May-August." }
+      ]
+    },
+    "streetGuide": [
+      { "name": "Wangfujing Snack Street", "bestFor": "First-time visitors who want everything in one convenient stop — jianbing, tanghulu, snacks from all over China", "avoidIf": "You want authentic, fairly priced street food — tourist markups run 50-200%", "tip": "Skip the scorpion skewers; they exist for photos, not food." },
+      { "name": "Guijie (Ghost Street)", "bestFor": "Night owls and crawfish lovers — over 100 restaurants open until 4 AM", "avoidIf": "You want a quick cheap bite — it's restaurant-heavy, not cart-heavy", "tip": "Peak energy is 10 PM-midnight." },
+      { "name": "University areas (Haidian)", "bestFor": "Budget travelers — jianbing at ¥6-8 vs ¥15-20 in tourist zones", "avoidIf": "You want one walkable street with everything", "tip": "Vendors rely on repeat students, so quality is consistently high." }
+    ],
+    "scenarios": [
+      { "who": "First-time visitors with 1 day", "advice": "Do the half-day route in the morning, then spend the afternoon in the hutongs. Skip Wangfujing unless you want the one-stop tourist experience." },
+      { "who": "Traveling with kids", "advice": "Stick to daytime Guijie or university areas — calmer crowds and no spice surprises. Tanghulu is a kid-friendly hit in winter." },
+      { "who": "Budget travelers", "advice": "Eat breakfast near universities (¥6-8 jianbing) and avoid all tourist-zone snacks. Zhajiang mian at ¥12-25 is the best lunch value." },
+      { "who": "Can't handle spicy", "advice": "No problem — Beijing's own snacks (jianbing, zhajiang mian, tanghulu) are traditionally zero-chili. That's the beauty of the capital." }
+    ],
+    "avoidTips": [
+      "Scorpion/seahorse skewers on Wangfujing are photo props, not food — ¥40-50 for what locals would never eat.",
+      "Tourist shops near Wangfujing and the hutongs mark up snacks 50-200% and stock inferior versions.",
+      "By 9 AM the best jianbing carts are packing up — breakfast is a morning-only event.",
+      "In summer, tanghulu vendors vanish — the sugar melts in the heat."
+    ]
   },
   {
     "id": "chengdu",
     "name": "Chengdu",
     "nameZh": "成都",
+    "lat": 30.5728,
+    "lng": 104.0668,
     "snackCount": 7,
     "bestSeason": "Year-round",
     "topSnackStreet": "Jinli Ancient Street",
     "description": "Sichuan's culinary capital. Chengdu snacks are defined by mala (numbing-spicy) flavors. The city was named a UNESCO City of Gastronomy for good reason.",
         "seoDescription": "Explore Chengdu's mala street food — dan dan noodles, chuan chuan and more. UNESCO City of Gastronomy snack guide with prices. ChineseSnacks.",
-    "foodCulture": "Chengdu's street food culture is inseparable from the city's personality: slow, sociable, and unafraid of intensity. This is a city where people measure a restaurant by its chili oil, not its decor. The UNESCO City of Gastronomy designation in 2010 formalized what locals always knew — that Chengdu's food culture is one of the world's great culinary traditions. The secret isn't just the famous mala (numbing-spicy) flavor; it's the philosophy of balancing extreme sensations. Every spicy dish has a cooling counterpart (bingfen after hot pot, pickled vegetables alongside chili oil wontons). Chengdu's famous 'tea house culture' means snacking isn't rushed — people spend hours nursing a cup of jasmine tea and grazing through small plates. The city has over 150,000 restaurants, roughly one for every 100 residents. It's not an exaggeration to say you could eat at a different place every meal for the rest of your life and never run out."
+    "foodCulture": "Chengdu's street food culture is inseparable from the city's personality: slow, sociable, and unafraid of intensity. This is a city where people measure a restaurant by its chili oil, not its decor. The UNESCO City of Gastronomy designation in 2010 formalized what locals always knew — that Chengdu's food culture is one of the world's great culinary traditions. The secret isn't just the famous mala (numbing-spicy) flavor; it's the philosophy of balancing extreme sensations. Every spicy dish has a cooling counterpart (bingfen after hot pot, pickled vegetables alongside chili oil wontons). Chengdu's famous 'tea house culture' means snacking isn't rushed — people spend hours nursing a cup of jasmine tea and grazing through small plates. The city has over 150,000 restaurants, roughly one for every 100 residents. It's not an exaggeration to say you could eat at a different place every meal for the rest of your life and never run out.",
+    "itinerary": {
+      "halfDay": [
+        { "time": "9:00 AM", "stop": "Heming Tea House, People's Park", "what": "Jasmine tea (¥20) with a morning snack — watch retirees play mahjong", "tip": "This is how Chengdu actually snacks: slow, with tea." },
+        { "time": "11:30 AM", "stop": "Dan dan mian, near Sichuan University", "what": "The lunch-only noodle window — shops sell out by 1:15 PM", "tip": "Ask for wei la (mild) on your first bowl." },
+        { "time": "4:00 PM", "stop": "Jinli Ancient Street", "what": "Bingfen (summer) and hongyou chaoshou with lantern-lit architecture", "tip": "Walk past the main drag's first 100 meters for better prices." },
+        { "time": "7:00 PM", "stop": "Jianshe Road Night Market", "what": "Mala tang and chuan chuan with the locals", "tip": "Count your chuan chuan sticks — ¥0.5-1 each." }
+      ],
+      "fullDay": [
+        { "time": "9:00 AM", "stop": "Heming Tea House, People's Park", "what": "Tea + morning snacks", "tip": "Add ¥8 bingfen in summer." },
+        { "time": "12:00 PM", "stop": "Chen Mapo Tofu, Qingyang Street", "what": "Mapo tofu at the 1862 namesake restaurant", "tip": "Order dan dan mian here too — it's excellent." },
+        { "time": "4:00 PM", "stop": "Jinli Ancient Street", "what": "Hongyou chaoshou + bingfen", "tip": "The red-awning chaoshou cart near the university end is the editor pick." },
+        { "time": "8:00 PM", "stop": "Jianshe Road Night Market", "what": "Mala tang, chuan chuan, late-night skewers", "tip": "Late-night broth (after 11 PM) is spicier and more adventurous." }
+      ]
+    },
+    "streetGuide": [
+      { "name": "Jinli Ancient Street", "bestFor": "Visitors who want photogenic, lantern-lit streets with every Sichuan snack in one place", "avoidIf": "You're price-sensitive — main-drag markups run 50-100%", "tip": "Use it as an introduction, then follow locals to Jianshe Road." },
+      { "name": "Jianshe Road Night Market", "bestFor": "The real deal — minimal English, maximum flavor, local prices", "avoidIf": "You're in a hurry or want sit-down comfort", "tip": "Mala tang ¥15-25 vs ¥35-50 at Jinli." },
+      { "name": "Kuanzhai Alley (Kuanzhai Xiangzi)", "bestFor": "Instagram-friendly lanes with restored architecture", "avoidIf": "You're hungry — it's more cafes and boutiques than street food", "tip": "Visit for the atmosphere, eat elsewhere." }
+    ],
+    "scenarios": [
+      { "who": "First-time visitors to Sichuan food", "advice": "Start mild: dan dan mian (wei la), hongyou chaoshou, then graduate to mala tang. Keep bingfen on standby as your fire extinguisher." },
+      { "who": "Traveling with kids", "advice": "Chuan chuan is fun and interactive — let kids pick skewers and count sticks. Avoid Chongqing-level spice; Chengdu's wei la is gentler." },
+      { "who": "Budget travelers", "advice": "Chuan chuan at ¥0.5-1 a stick and xiaomian-style bowls make Chengdu one of China's cheapest food cities — eat where students eat." },
+      { "who": "Can't handle spicy", "advice": "Order bingfen, baocai (free pickles), and ask for wei la everywhere. Chengdu tea houses and sweet snacks are your safe zone." }
+    ],
+    "avoidTips": [
+      "Jinli's main drag prices mala tang at ¥35-50 — the same bowl is ¥15-25 at Jianshe Road.",
+      "Chuan chuan at tourist stalls costs ¥2-3 per stick vs ¥0.5-1 where locals eat.",
+      "The best dan dan mian shops are lunch-only — most sell out by 1:15 PM.",
+      "'Mild' (wei la) in Chengdu still carries real heat — it's relative."
+    ]
   },
   {
     "id": "xian",
     "name": "Xi'an",
     "nameZh": "西安",
+    "lat": 34.3416,
+    "lng": 108.9398,
     "snackCount": 4,
     "bestSeason": "Year-round",
     "topSnackStreet": "Muslim Quarter",
     "description": "The ancient Silk Road city where Chinese and Central Asian food cultures collide. Heavy on lamb, cumin, and wheat-based snacks.",
         "seoDescription": "Discover Xi'an's Muslim Quarter snacks — roujiamo, yangrou paomo and more. Ancient Silk Road food culture guide with prices. ChineseSnacks.",
-    "foodCulture": "Xi'an's snack culture is the direct result of its geography. As the eastern terminus of the Silk Road, the city absorbed food traditions from Persia, Central Asia, and the Middle East over 2,000 years of continuous trade. The Muslim Quarter — a community descended from Persian and Arab merchants who settled here during the Tang Dynasty — is the living museum of this culinary fusion. Xi'an snacks are defined by their Silk Road DNA: heavy use of cumin (introduced from Central Asia), lamb (the protein of the steppes), and wheat-based breads (the staple of both Chinese and Central Asian diets). Even the city's famous hand-pulled noodles trace their technique to Muslim noodle-makers who adapted Chinese methods. Unlike the delicate snacks of Shanghai or the complex sauces of Chengdu, Xi'an food is direct, aromatic, and built for eating with your hands on a cold evening in an ancient alley."
+    "foodCulture": "Xi'an's snack culture is the direct result of its geography. As the eastern terminus of the Silk Road, the city absorbed food traditions from Persia, Central Asia, and the Middle East over 2,000 years of continuous trade. The Muslim Quarter — a community descended from Persian and Arab merchants who settled here during the Tang Dynasty — is the living museum of this culinary fusion. Xi'an snacks are defined by their Silk Road DNA: heavy use of cumin (introduced from Central Asia), lamb (the protein of the steppes), and wheat-based breads (the staple of both Chinese and Central Asian diets). Even the city's famous hand-pulled noodles trace their technique to Muslim noodle-makers who adapted Chinese methods. Unlike the delicate snacks of Shanghai or the complex sauces of Chengdu, Xi'an food is direct, aromatic, and built for eating with your hands on a cold evening in an ancient alley.",
+    "itinerary": {
+      "halfDay": [
+        { "time": "11:20 AM", "stop": "Wei Jia Liangpi, Dapiyuan Street", "what": "Liangpi at peak freshness — the noodles lose their bite after 1 PM", "tip": "The lunch line forms at 11:20 AM; get in early." },
+        { "time": "12:00 PM", "stop": "Fan Ji Roujiamo, Zhubashi Street", "what": "The 1925 roujiamo institution", "tip": "Order 'lao tong' (with fat) for the full experience." },
+        { "time": "5:45 PM", "stop": "Muslim Quarter main street — walk first", "what": "Survey the full length before buying anything (15 minutes)", "tip": "Note which stalls use charcoal and have local queues." },
+        { "time": "6:00 PM", "stop": "Lamb skewers, charcoal grills", "what": "Cumin lamb skewers — look for wire skewers, not bamboo", "tip": "By 7 PM the crowd triples; eat before then." }
+      ],
+      "fullDay": [
+        { "time": "8:00 AM", "stop": "Morning hu la tang (pepper soup)", "what": "Xi'an's hearty breakfast porridge", "tip": "Available near the Muslim Quarter's edge." },
+        { "time": "11:20 AM", "stop": "Wei Jia Liangpi, Dapiyuan Street", "what": "Liangpi at peak freshness", "tip": "Same as half-day — this window is non-negotiable." },
+        { "time": "1:00 PM", "stop": "Tong Sheng Xiang, West Street", "what": "Yangrou paomo — tear your own bread", "tip": "Tear the bread as small as you can; it takes 45-60 minutes total." },
+        { "time": "6:00 PM", "stop": "Muslim Quarter skewers + side streets", "what": "Lamb skewers, then Dapiyuan and Sajinqiao for the local favorites", "tip": "Walk at least 3 blocks past the main tourist drag." }
+      ]
+    },
+    "streetGuide": [
+      { "name": "Muslim Quarter main street", "bestFor": "First-timers — everything in one sensory-overload strip", "avoidIf": "You're price-sensitive — the first 200 meters cater to tourists", "tip": "Use the first pass to survey, then buy deeper." },
+      { "name": "Dapiyuan & Sajinqiao (side streets)", "bestFor": "Where locals actually eat — cheaper and less crowded", "avoidIf": "You want the full lantern-lit spectacle", "tip": "Wei Jia Liangpi is on Dapiyuan — the real deal." },
+      { "name": "Bell Tower / Zhonglou area", "bestFor": "Convenient pre-or-post sightseeing bites", "avoidIf": "You want night-market energy", "tip": "Good for a quick roujiamo, not a food crawl." }
+    ],
+    "scenarios": [
+      { "who": "First-time visitors with 1 day", "advice": "Do liangpi lunch, paomo early afternoon, then the Muslim Quarter at 6 PM sharp. That's the essential Xi'an food day." },
+      { "who": "Halal / no-pork travelers", "advice": "Xi'an is the easiest Chinese city for halal eating — the entire Muslim Quarter is halal. Roujiamo comes in beef versions." },
+      { "who": "Only a few hours between sights", "advice": "Skip paomo (needs an hour) and do roujiamo + liangpi + skewers in the quarter." },
+      { "who": "Winter visitors", "advice": "Charcoal grills make the quarter surprisingly warm — lamb skewers in freezing weather is a top-tier experience." }
+    ],
+    "avoidTips": [
+      "The first 200 meters of the Muslim Quarter main street are flashy stalls with English signs — prices drop past that point.",
+      "Look for charcoal grills, not gas — gas produces a worse sear and flavor.",
+      "By 7 PM the quarter is shoulder-to-shoulder; arrive at 5:45 PM to eat comfortably.",
+      "Liangpi after 1 PM has absorbed too much dressing — it loses its prized al dente bite."
+    ]
   },
   {
     "id": "shanghai",
     "name": "Shanghai",
     "nameZh": "上海",
+    "lat": 31.2304,
+    "lng": 121.4737,
     "snackCount": 3,
     "bestSeason": "Year-round",
     "topSnackStreet": "Yunnan Road",
     "description": "Shanghai's snack culture is refined and delicate: soup dumplings, pan-fried buns, and sweet pastries influenced by nearby Jiangsu and Zhejiang cuisines.",
         "seoDescription": "Shanghai's refined snack culture: xiaolongbao, shengjianbao and sweet pastries. Yunnan Road food guide with prices and tips. ChineseSnacks.",
-    "foodCulture": "Shanghai's snack culture reflects the city's identity as China's most cosmopolitan metropolis — refined, slightly sweet, and perpetually in conversation with outside influences. The city's signature snacks (xiaolongbao, shengjian bao, scallion pancakes) share a common philosophy: take a simple concept and execute it with obsessive precision. Shanghai doesn't do spicy or funky; it does subtle and layered. The sweetness in the city's soy-braised dishes comes from the Jiangsu-Zhejiang culinary tradition, while the breakfast culture owes a debt to both British colonial teatime habits and traditional Chinese morning markets. Shanghai's snack streets are unusual in China — many are permanent structures rather than night-market pop-ups — and some shops on Yunnan Road and Sichuan Road have been in continuous operation for over a century. The city's 'nongtang' (lane-house) neighborhoods historically had their own micro snack economies, with vendors specializing in single items passed down through families."
+    "foodCulture": "Shanghai's snack culture reflects the city's identity as China's most cosmopolitan metropolis — refined, slightly sweet, and perpetually in conversation with outside influences. The city's signature snacks (xiaolongbao, shengjian bao, scallion pancakes) share a common philosophy: take a simple concept and execute it with obsessive precision. Shanghai doesn't do spicy or funky; it does subtle and layered. The sweetness in the city's soy-braised dishes comes from the Jiangsu-Zhejiang culinary tradition, while the breakfast culture owes a debt to both British colonial teatime habits and traditional Chinese morning markets. Shanghai's snack streets are unusual in China — many are permanent structures rather than night-market pop-ups — and some shops on Yunnan Road and Sichuan Road have been in continuous operation for over a century. The city's 'nongtang' (lane-house) neighborhoods historically had their own micro snack economies, with vendors specializing in single items passed down through families.",
+    "itinerary": {
+      "halfDay": [
+        { "time": "6:30 AM", "stop": "Yang Fry Dumplings, Yunnan Road", "what": "Shengjian bao from the first batch — the pan is fresh, the oil clean", "tip": "Each pan holds ~70 buns and takes 12 minutes; the first batch is transcendent." },
+        { "time": "7:30 AM", "stop": "Jia Jia Tang Bao, Yunnan Road", "what": "Xiaolongbao with black vinegar and shredded ginger", "tip": "Go on a weekday — the morning dough is most elastic." },
+        { "time": "10:00 AM", "stop": "A Cheng Scallion Pancakes", "what": "Crispy congyoubing before 9 AM? Missed it? The 10 AM batch still works", "tip": "The flakiest version comes off the griddle in the first morning hours." },
+        { "time": "2:00 PM", "stop": "Tea house break", "what": "Shanghai-style afternoon tea with a sweet pastry", "tip": "The city's snack culture extends to proper tea rooms." }
+      ],
+      "fullDay": [
+        { "time": "6:30 AM", "stop": "Yang Fry Dumplings, Yunnan Road", "what": "Shengjian bao first batch", "tip": "Arrive at 6:30 sharp — the best batch goes fast." },
+        { "time": "10:00 AM", "stop": "Nanxiang, Yu Garden", "what": "Tourist-zone xiaolongbao — or walk to a local shop for half the price", "tip": "Yu Garden charges ¥45-60 vs ¥18-30 locally." },
+        { "time": "12:00 PM", "stop": "Sichuan Road / Fuzhou Road", "what": "Lunch along Shanghai's other century-old food streets", "tip": "Da Hu Chun on Sichuan Road is a shengjian bao classic." },
+        { "time": "7:00 PM", "stop": "Yunnan Road dinner", "what": "Return for the evening rhythm — dumplings and wontons", "tip": "Evening is calmer than the 6:30 AM rush." }
+      ]
+    },
+    "streetGuide": [
+      { "name": "Yunnan Road Food Street", "bestFor": "Serious eaters — Yang Fry Dumplings, Jia Jia Tang Bao, and A Cheng in one street", "avoidIf": "You want night-market chaos — this is refined and orderly", "tip": "Do breakfast here; it's the best hour of the day." },
+      { "name": "Yu Garden food court", "bestFor": "Tourists combining sightseeing with a quick bite", "avoidIf": "You care about value — xiaolongbao at ¥45-60 vs ¥18-30 elsewhere", "tip": "Beautiful architecture, mediocre food, premium prices." },
+      { "name": "Hongkou residential stalls", "bestFor": "The nameless, signless stalls where retirees queue at 7 AM", "avoidIf": "You need English menus or certainty", "tip": "Our editors' best shengjian bao was at a nameless Hongkou stall." }
+    ],
+    "scenarios": [
+      { "who": "First-time visitors", "advice": "Start with the Yunnan Road breakfast double-header: shengjian bao at 6:30, xiaolongbao at 7:30. Nothing else comes close." },
+      { "who": "Traveling with older parents", "advice": "Shanghai's sit-down dumpling shops and tea houses suit parents perfectly — no standing, no spice, no chaos." },
+      { "who": "Budget travelers", "advice": "Skip Yu Garden food court entirely. Eat on Yunnan Road and residential streets — ¥18-30 xiaolongbao beats ¥45-60 tourist versions." },
+      { "who": "Sweet tooths", "advice": "Shanghai does sweet better than any Chinese city — try soy-braised snacks and pastries; spice is almost nonexistent here." }
+    ],
+    "avoidTips": [
+      "Yu Garden food court: xiaolongbao at ¥45-60 is 2-3x the local price and no better.",
+      "Shengjian bao must be eaten within 5 minutes — buying for 'later' is wasted money.",
+      "The best xiaolongbao dough is in the morning; evening batches are less elastic.",
+      "Shanghainese vendors may speak only Shanghainese — use written Chinese or the phone screen method."
+    ]
   },
   {
     "id": "guangzhou",
     "name": "Guangzhou",
     "nameZh": "广州",
+    "lat": 23.1291,
+    "lng": 113.2644,
     "snackCount": 4,
     "bestSeason": "Year-round",
     "topSnackStreet": "Shangxiajiu Pedestrian Street",
     "description": "The birthplace of dim sum. Guangzhou's snack culture revolves around bite-sized steamed, fried, and baked treats served morning to night.",
         "seoDescription": "Guangzhou: birthplace of dim sum. Explore har gow, char siu bao and Cantonese snack culture. Shangxiajiu food guide with prices. ChineseSnacks.",
-    "foodCulture": "If any city can claim to have invented snacking as a lifestyle, it's Guangzhou. The Cantonese tradition of 'yum cha' (drinking tea) — which evolved into dim sum — began in Guangzhou's tea houses during the Qing Dynasty. The concept was simple but revolutionary: serve small, exquisite bites alongside tea so customers could graze for hours while socializing. From this, an entire cuisine of bite-sized delicacies emerged: steamed, fried, baked, and wrapped in translucent rice flour skins. Guangzhou's position as a major port meant ingredients flooded in from across Asia and Europe, enriching the dim sum repertoire. The city's snack culture has a rhythm: morning dim sum with family, afternoon egg tarts from a bakery, late-night cheong fun from a street stall. Guangzhou residents consume snacks throughout the day in a way that makes formal meals almost optional. The test of a Cantonese chef's skill has always been their har gow — if the pleats aren't exactly right and the wrapper isn't translucent, nothing else on the cart will be either."
+    "foodCulture": "If any city can claim to have invented snacking as a lifestyle, it's Guangzhou. The Cantonese tradition of 'yum cha' (drinking tea) — which evolved into dim sum — began in Guangzhou's tea houses during the Qing Dynasty. The concept was simple but revolutionary: serve small, exquisite bites alongside tea so customers could graze for hours while socializing. From this, an entire cuisine of bite-sized delicacies emerged: steamed, fried, baked, and wrapped in translucent rice flour skins. Guangzhou's position as a major port meant ingredients flooded in from across Asia and Europe, enriching the dim sum repertoire. The city's snack culture has a rhythm: morning dim sum with family, afternoon egg tarts from a bakery, late-night cheong fun from a street stall. Guangzhou residents consume snacks throughout the day in a way that makes formal meals almost optional. The test of a Cantonese chef's skill has always been their har gow — if the pleats aren't exactly right and the wrapper isn't translucent, nothing else on the cart will be either.",
+    "itinerary": {
+      "halfDay": [
+        { "time": "7:15 AM", "stop": "Panxi Restaurant, Longjin West Road", "what": "Morning dim sum — har gow and cheong fun in the first cart wave", "tip": "Arrive at 7:15 and claim a table near the kitchen door." },
+        { "time": "10:00 AM", "stop": "Shangxiajiu Pedestrian Street", "what": "Yinji Rice Noodle Roll — cheong fun steamed to order", "tip": "Fresh rolls beat pre-made every time." },
+        { "time": "2:45 PM", "stop": "Lian Xiang Lou, Shangxiajiu", "what": "Egg tarts from the first afternoon batch", "tip": "The first tart out of the oven has maximum pastry flake." },
+        { "time": "9:00 PM", "stop": "Late-night cheong fun stalls", "what": "A second cheong fun — different texture at night", "tip": "Late-night vendors run their own rhythm; follow local queues." }
+      ],
+      "fullDay": [
+        { "time": "7:15 AM", "stop": "Panxi Restaurant", "what": "Full dim sum breakfast", "tip": "Sundays are family day — arrive at 7 AM or wait hours." },
+        { "time": "11:00 AM", "stop": "Mak's Noodle, Wenming Road", "what": "Wonton noodles — broth freshest before 1 PM", "tip": "The clear broth is the soul; don't drown it in condiments." },
+        { "time": "2:45 PM", "stop": "Lian Xiang Lou", "what": "Afternoon egg tarts", "tip": "Grab a box to take on your walk." },
+        { "time": "8:00 PM", "stop": "Shangxiajiu evening + Tao Tao Ju", "what": "Evening dim sum or street-side snacks", "tip": "Tao Tao Ju on Shangxiajiu has operated since before WWII." }
+      ]
+    },
+    "streetGuide": [
+      { "name": "Shangxiajiu Pedestrian Street", "bestFor": "One-stop snacking: cheong fun, egg tarts, bakery classics in a lively pedestrian zone", "avoidIf": "You want a quiet, local-only atmosphere — it's busy and touristy", "tip": "Best in the late morning and mid-afternoon." },
+      { "name": "Panxi / Longjin West Road", "bestFor": "Serious dim sum — the 1947 institution and its neighbors", "avoidIf": "You're in a hurry — dim sum is a morning-long ritual", "tip": "Before 11 AM for the freshest har gow." },
+      { "name": "Mall dim sum chains", "bestFor": "Convenience and air conditioning", "avoidIf": "You want real dim sum — factory-made, frozen, reheated", "tip": "The price is similar to the real thing, the quality isn't." }
+    ],
+    "scenarios": [
+      { "who": "First-time visitors", "advice": "Start with Panxi morning dim sum — it sets the bar for everything else in the city." },
+      { "who": "Traveling with parents or grandparents", "advice": "Guangzhou is the best city in China for older travelers — long morning tea sessions with gentle food." },
+      { "who": "Vegetarians", "advice": "Plain cheong fun, vegetable dumplings, and egg tarts make Guangzhou unusually friendly for non-meat eaters." },
+      { "who": "Only an afternoon", "advice": "Do the egg tart window at 2:45 PM and a cheong fun late lunch — two icons in two hours." }
+    ],
+    "avoidTips": [
+      "Mall dim sum chains serve factory-made frozen items — same price, half the quality.",
+      "Egg tarts after 3:30 PM have been sitting — the flake dies fast.",
+      "On Sundays, Panxi fills by 7:15 AM — showing up at 10:30 means a long wait.",
+      "Don't order wonton noodles without trying the broth first — it's the point of the dish."
+    ]
   },
   {
     "id": "chongqing",
     "name": "Chongqing",
     "nameZh": "重庆",
+    "lat": 29.5630,
+    "lng": 106.5516,
     "snackCount": 4,
     "bestSeason": "Year-round",
     "topSnackStreet": "Jiefangbei / Bayi Road",
     "description": "Chengdu's bolder, spicier sibling. Chongqing snacks are intensely hot, numbing, and served in the city's dramatic hillside night markets.",
         "seoDescription": "Chongqing's intensely spicy snack scene: xiao mian, hot pot and mala culture. Hillside night market food guide with prices and tips. ChineseSnacks.",
-    "foodCulture": "Chongqing's snack culture is the wilder, louder sibling of Chengdu's. Where Chengdu food is complex and balanced, Chongqing food is an assault — hotter, oilier, and unapologetically extreme. The city's geography shaped its food: built on steep hills at the confluence of the Yangtze and Jialing rivers, Chongqing was historically a working-class port city where dock workers needed cheap, fast, and intensely caloric food. The city's signature xiao mian (small noodles) costs less than $2 and takes three minutes to prepare — the perfect meal for a dock worker between shifts. The fog and humidity that blanket Chongqing much of the year gave rise to the belief that spicy food drives out dampness (a concept in traditional Chinese medicine), and the city's cooks took this idea to its logical extreme. Chongqing hot pot — the city's most famous export — is deliberately spicier and oilier than the Chengdu version, and asking for 'less spicy' at a Chongqing restaurant will earn you a look of genuine confusion. The city's night markets, built into its dramatic hillside geography, are among the most visually spectacular places to eat street food anywhere in China."
+    "foodCulture": "Chongqing's snack culture is the wilder, louder sibling of Chengdu's. Where Chengdu food is complex and balanced, Chongqing food is an assault — hotter, oilier, and unapologetically extreme. The city's geography shaped its food: built on steep hills at the confluence of the Yangtze and Jialing rivers, Chongqing was historically a working-class port city where dock workers needed cheap, fast, and intensely caloric food. The city's signature xiao mian (small noodles) costs less than $2 and takes three minutes to prepare — the perfect meal for a dock worker between shifts. The fog and humidity that blanket Chongqing much of the year gave rise to the belief that spicy food drives out dampness (a concept in traditional Chinese medicine), and the city's cooks took this idea to its logical extreme. Chongqing hot pot — the city's most famous export — is deliberately spicier and oilier than the Chengdu version, and asking for 'less spicy' at a Chongqing restaurant will earn you a look of genuine confusion. The city's night markets, built into its dramatic hillside geography, are among the most visually spectacular places to eat street food anywhere in China.",
+    "itinerary": {
+      "halfDay": [
+        { "time": "8:00 AM", "stop": "Xiaomian stall, Jiefangbei", "what": "Chongqing's ¥8-12 breakfast — face-numbingly good", "tip": "Look for shops with '小面' in the sign and a line of locals." },
+        { "time": "5:45 PM", "stop": "Jiefangbei / Bayi Road — survey", "what": "Walk the food streets before the 8 PM surge", "tip": "Note which stalls have the longest local queues." },
+        { "time": "8:00 PM", "stop": "Bayi Road night market", "what": "Chuan chuan and mala tang — broth at peak depth", "tip": "8:30-10:30 PM is the sweet spot: developed but not over-reduced." },
+        { "time": "10:30 PM", "stop": "Late-night skewers", "what": "Street barbecue (shaokao) by the river or university area", "tip": "Locals eat late here — it's cultural, not touristy." }
+      ],
+      "fullDay": [
+        { "time": "8:00 AM", "stop": "Xiaomian breakfast", "what": "The cheapest serious meal in China — under ¥10", "tip": "Order 'wei la' (mild) if it's your first Chongqing morning." },
+        { "time": "12:30 PM", "stop": "Hot pot lunch (optional)", "what": "The city's most famous export — spicier than Chengdu's", "tip": "Ask for a mild broth and still expect serious heat." },
+        { "time": "8:00 PM", "stop": "Bayi Road night market", "what": "Chuan chuan, mala tang, grilled skewers", "tip": "Count sticks as you go — ¥0.5-1 each." },
+        { "time": "11:00 PM", "stop": "Midnight shaokao", "what": "Barbecue by the docks — grilled everything with cold beer", "tip": "Plastic tables, street energy, the real Chongqing." }
+      ]
+    },
+    "streetGuide": [
+      { "name": "Jiefangbei / Bayi Road", "bestFor": "The central, dramatic, hillside night-market experience", "avoidIf": "You want calm — this is the loudest food hub in the city", "tip": "8 PM onward; peak is 8:30-10:30 PM." },
+      { "name": "Jiaochangkou area", "bestFor": "Local, less-touristed skewer and hot pot alleys", "avoidIf": "You need English signage or easy navigation", "tip": "Follow the university crowds for the best value." },
+      { "name": "Nanshan (South Mountain)", "bestFor": "Night views of the city skyline with dinner", "avoidIf": "You're focused purely on street snacks", "tip": "Combine sightseeing and eating in one trip." }
+    ],
+    "scenarios": [
+      { "who": "First-time visitors", "advice": "Start with xiaomian at breakfast — it's the gentlest intro (relatively). Prepare for real heat by 8 PM." },
+      { "who": "Spice veterans", "advice": "Chongqing is the deep end. Skip Chengdu comparisons — order the standard and measure yourself against it." },
+      { "who": "Can't handle spicy", "advice": "Honest advice: Chongqing is the hardest Chinese food city for you. Stick to xiaomian with 'bu la' (no spice) — but know the broth may still carry heat." },
+      { "who": "Late-night eaters", "advice": "Chongqing's best hours are after 10 PM — shaokao and midnight mala tang are where the city really lives." }
+    ],
+    "avoidTips": [
+      "Asking for 'mild' in Chongqing is a negotiation, not a request — expect genuine confusion.",
+      "Bring tissues — your nose will run; stalls rarely provide napkins.",
+      "The broth sweet spot is 8:30-10:30 PM — earlier it's thin, later it gets salty.",
+      "Crawfish and market food peak May-August; winter night markets wind down earlier."
+    ]
   }
 ]

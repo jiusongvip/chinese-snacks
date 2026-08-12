@@ -58,5 +58,17 @@
     "topSnacks": ["chuanchuan", "mala-tang"],
     "touristFriendly": 3,
     "description": "Chongqing's central food hub serving the city's famously intense spicy snacks in a bustling night market atmosphere."
+  },
+  {
+    "id": "shangxiajiu",
+    "cityId": "guangzhou",
+    "name": "Shangxiajiu Pedestrian Street",
+    "nameZh": "上下九步行街",
+    "lat": 23.1191,
+    "lng": 113.2465,
+    "bestTime": "Late morning to night, 10am-10pm",
+    "topSnacks": ["shrimp-dumplings", "cheong-fun", "dan-ta"],
+    "touristFriendly": 4,
+    "description": "Guangzhou's classic shopping and eating street, lined with century-old bakeries like Lian Xiang Lou and street-side cheong fun stalls."
   }
 ]

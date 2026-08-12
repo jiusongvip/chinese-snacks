@@ -2,49 +2,18 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import Nav from "../../components/Nav.astro";
 import Footer from "../../components/Footer.astro";
-import SnackCard from "../../components/SnackCard.astro";
+import CityGuide from "../../components/CityGuide.astro";
 import cities from "../../data/cities.json";
 import snacks from "../../data/snacks.json";
+import streets from "../../data/snack-streets.json";
 
 const city = cities.find(c => c.id === "guangzhou")!;
 const citySnacks = snacks.filter(s => s.bestCities.includes("guangzhou"));
+const cityStreets = streets.filter(s => s.cityId === "guangzhou");
 ---
 
 <BaseLayout title="Guangzhou Dim Sum Guide | ChineseSnacks" description={city.seoDescription}>
   <Nav />
-  <div class="min-h-[100dvh] pt-24 pb-20 px-6">
-    <div class="max-w-[1400px] mx-auto w-full pt-16">
-      <p class="text-sm font-medium tracking-wide uppercase text-accent mb-3">{city.name} / {city.nameZh}</p>
-      <h1 class="text-4xl md:text-6xl font-black tracking-tighter mb-4">Guangzhou Street Snacks</h1>
-      <p class="text-lg text-ink-muted max-w-[55ch] mb-2">{city.description}</p>
-      <div class="w-full aspect-[21/9] rounded-2xl overflow-hidden bg-surface-alt mt-8 mb-12">
-        <img src="/images/guangzhou.webp" alt="Guangzhou dim sum and street food" class="w-full h-full object-cover" width="1200" height="514" />
-      </div>
-      
-    {city.foodCulture && (
-      <section class="mb-16 max-w-[65ch]">
-        <h2 class="text-xl font-bold tracking-tight mb-4">Guangzhou's Snack Culture</h2>
-        <p class="text-ink-muted leading-relaxed text-sm">{city.foodCulture}</p>
-      </section>
-    )}
-
-      <div class="flex flex-wrap gap-3 mt-4 mb-12 text-sm">
-        <span class="px-3 py-1 rounded-full bg-accent/10 text-accent font-medium">Best Season: {city.bestSeason}</span>
-        <span class="px-3 py-1 rounded-full bg-accent/10 text-accent font-medium">{city.snackCount} Snacks</span>
-      </div>
-      {citySnacks.length > 0 && (
-        <section class="mb-16">
-          <h2 class="text-2xl font-bold tracking-tight mb-6">Snacks to Try in Guangzhou</h2>
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {citySnacks.map(s => <SnackCard snack={s} cityName={city.name} />)}
-          </div>
-        </section>
-      )}
-    </div>
-
-      <div class="mt-12 pt-8 border-t border-border">
-        <p class="text-xs text-ink-muted flex items-center gap-2"><span class="inline-flex items-center gap-1 text-green-600 font-medium">✓</span> Verified by 2 Guangzhou locals. Shangxiajiu dim sum stalls sampled, prices checked July 2026.</p>
-      </div>
-  </div>
+  <CityGuide city={city} citySnacks={citySnacks} cityStreets={cityStreets} />
   <Footer />
 </BaseLayout>

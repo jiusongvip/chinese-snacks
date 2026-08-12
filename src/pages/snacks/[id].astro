@@ -4,6 +4,7 @@ import Nav from "../../components/Nav.astro";
 import Footer from "../../components/Footer.astro";
 import snacks from "../../data/snacks.json";
 import cities from "../../data/cities.json";
+import snackExtras from "../../data/snack-extras.json";
 
 export function getStaticPaths() {
   return snacks.map(s => ({ params: { id: s.id } }));
@@ -12,6 +13,9 @@ export function getStaticPaths() {
 const { id } = Astro.params;
 const snack = snacks.find(s => s.id === id);
 if (!snack) return Astro.redirect("/");
+
+const extras = snackExtras.find((e: any) => e.id === id);
+const compare = extras?.compare ? { ...extras.compare, withSnack: snacks.find((s: any) => s.id === extras.compare.withId) } : null;
 
 const cityMap = Object.fromEntries(cities.map(c => [c.id, c]));
 const usdMin = (snack.priceMin / 7).toFixed(1);
@@ -116,6 +120,67 @@ const difficultyNotes: Record<string, string> = {
             <div class="mb-10">
               <h2 class="font-bold text-lg text-ink mb-3">The Story Behind {snack.nameEn}</h2>
               <p class="text-ink-muted text-sm leading-relaxed">{snack.origin}</p>
+            </div>
+          )}
+
+          {extras && (extras.bestFor || extras.skipIf) && (
+            <div class="mb-10">
+              <h2 class="font-bold text-lg text-ink mb-3">Who Should Try {snack.nameEn}</h2>
+              <div class="grid md:grid-cols-2 gap-4">
+                <div class="bg-green-50 rounded-xl p-5 border border-green-100">
+                  <p class="text-xs font-bold uppercase tracking-wide text-green-700 mb-3">Best For</p>
+                  <ul class="space-y-2">
+                    {extras.bestFor.map((b: string) => (
+                      <li class="flex items-start gap-2 text-sm text-ink-muted leading-relaxed">
+                        <span class="text-green-600 mt-0.5 flex-shrink-0">✓</span>
+                        <span>{b}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div class="bg-red-50 rounded-xl p-5 border border-red-100">
+                  <p class="text-xs font-bold uppercase tracking-wide text-red-700 mb-3">When to Skip It</p>
+                  <p class="text-sm text-ink-muted leading-relaxed">{extras.skipIf}</p>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {compare && compare.withSnack && (
+            <div class="bg-white rounded-2xl border border-border p-6 md:p-8 mb-10">
+              <p class="text-xs font-medium tracking-wide uppercase text-accent mb-2">Snack Face-Off</p>
+              <h2 class="font-bold text-xl text-ink mb-1">{snack.nameEn} vs. {compare.withSnack.nameEn}</h2>
+              <p class="text-sm text-ink-muted mb-6">{compare.withNameZh} &middot; Which one should you order?</p>
+              <div class="overflow-x-auto -mx-2 px-2">
+                <table class="w-full text-sm">
+                  <thead>
+                    <tr class="border-b border-border">
+                      <th class="text-left py-3 pr-4 font-semibold text-ink-muted w-1/5">Aspect</th>
+                      <th class="text-left py-3 pr-4 font-bold text-ink">{snack.nameEn}</th>
+                      <th class="text-left py-3 font-bold text-ink">{compare.withSnack.nameEn}</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {compare.differences.map((d: string[]) => (
+                      <tr class="border-b border-border/60">
+                        <td class="py-3 pr-4 font-semibold text-ink-muted align-top">{d[0]}</td>
+                        <td class="py-3 pr-4 text-ink-muted align-top leading-relaxed">{d[1]}</td>
+                        <td class="py-3 text-ink-muted align-top leading-relaxed">{d[2]}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+              <div class="grid md:grid-cols-2 gap-3 mt-6">
+                <div class="bg-surface-alt rounded-xl p-4">
+                  <p class="text-xs font-bold uppercase tracking-wide text-accent mb-1">Choose {snack.nameEn} if&hellip;</p>
+                  <p class="text-sm text-ink-muted leading-relaxed">{compare.chooseThisIf}</p>
+                </div>
+                <div class="bg-surface-alt rounded-xl p-4">
+                  <p class="text-xs font-bold uppercase tracking-wide text-accent mb-1">Choose {compare.withSnack.nameEn} if&hellip;</p>
+                  <p class="text-sm text-ink-muted leading-relaxed">{compare.chooseThatIf}</p>
+                </div>
+              </div>
             </div>
           )}
 

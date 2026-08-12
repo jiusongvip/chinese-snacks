@@ -1,0 +1,420 @@
+[
+  {
+    "id": "jianbing",
+    "compare": {
+      "withId": "congyoubing",
+      "withName": "Scallion Pancake",
+      "withNameZh": "葱油饼",
+      "headline": "Jianbing or Scallion Pancake?",
+      "differences": [
+        ["Texture", "Crispy crepe folded around a crunchy wonton cracker", "Flaky, layered pancake with 30+ paper-thin dough layers"],
+        ["Base", "Mung bean + wheat batter, cooked as a thin sheet", "Wheat dough, rolled and pan-fried"],
+        ["Flavor", "Saucy and savory with egg, bean paste, and scallions", "Clean wheat flavor with scallion and lard"],
+        ["Best moment", "6-9 AM breakfast rush, eaten standing up", "Morning or any time, sold all day"]
+      ],
+      "chooseThisIf": "You want a complete eggy breakfast that eats like a meal — or you're on a first visit and want the icon.",
+      "chooseThatIf": "You want a simpler, portable, less messy snack — or something crispier without sauce."
+    },
+    "bestFor": ["First-time visitors who want China's most iconic street breakfast", "Budget travelers — student-area jianbing costs ¥6-10", "Early risers: best carts pack up by 9 AM"],
+    "skipIf": "You're craving something sweet, or you can't eat wheat or eggs. It's strictly savory."
+  },
+  {
+    "id": "tanghulu",
+    "compare": {
+      "withId": "bingfen",
+      "withName": "Bingfen",
+      "withNameZh": "冰粉",
+      "headline": "Tanghulu or Bingfen?",
+      "differences": [
+        ["Season", "October to March — a winter street staple", "May to September — a summer cooling dessert"],
+        ["Temperature", "Cold but crisp: hard sugar shell, tart fruit", "Ice-cold jelly with brown sugar syrup"],
+        ["Flavor", "Sweet-tart, intensely sour hawthorn contrast", "Mildly sweet, refreshing, near-neutral base"],
+        ["Where", "Beijing hutongs and northern cities", "Chengdu and Sichuan street corners"]
+      ],
+      "chooseThisIf": "You're visiting in winter and want the photogenic classic — or you love sour-sweet contrast.",
+      "chooseThatIf": "You're in Sichuan in summer and need a spicy-food fire extinguisher."
+    },
+    "bestFor": ["Winter travelers in Beijing or Harbin", "First-time visitors who want a famous, photogenic snack", "People who like sour flavors (classic hawthorn version)"],
+    "skipIf": "You're visiting between April and September — most vendors are gone and the sugar melts. Also skip if you dislike sour fruit."
+  },
+  {
+    "id": "xiaolongbao",
+    "compare": {
+      "withId": "shengjianbao",
+      "withName": "Shengjian Bao",
+      "withNameZh": "生煎包",
+      "headline": "Xiaolongbao or Shengjian Bao?",
+      "differences": [
+        ["Method", "Steamed in bamboo baskets — delicate, translucent skin", "Pan-fried — crispy bottom, fluffy top"],
+        ["Experience", "Elegant: slurp the broth through a thin wrapper", "Contrast: shatteringly crisp base, juicier pork"],
+        ["Best time", "7-11 AM breakfast, refined and quiet", "6:30-8:30 AM first batch, when the oil is clean"],
+        ["Price", "¥18-30 per basket (6-8 pieces)", "¥10-20 per serving (4-6 pieces)"]
+      ],
+      "chooseThisIf": "You're a first-timer — it's easier to eat and the broth is cooler.",
+      "chooseThatIf": "You want more texture and richer flavor, and you can handle the heat."
+    },
+    "bestFor": ["First-time visitors to Shanghai", "Anyone who wants an elegant, easy-to-eat dumpling", "Morning eaters on Yunnan Road"],
+    "skipIf": "You're in a hurry — it must be eaten fresh within 5 minutes of steaming. Skip if you're looking for something crispy."
+  },
+  {
+    "id": "chuanchuan",
+    "compare": {
+      "withId": "mala-tang",
+      "withName": "Mala Tang",
+      "withNameZh": "麻辣烫",
+      "headline": "Chuan Chuan or Mala Tang?",
+      "differences": [
+        ["Format", "Skewers you cook yourself in a boiling shared pot", "A bowl of ingredients the cook boils for you"],
+        ["Control", "You manage cooking time for each skewer", "You pick ingredients, the cook handles the rest"],
+        ["Pricing", "Count your sticks at the end — ¥0.5-1 each", "By weight or by portion — ¥15-40 per bowl"],
+        ["Social vibe", "Interactive, festive, good for groups", "Fast, solo-friendly, quicker turnaround"]
+      ],
+      "chooseThisIf": "You're with friends and want a hands-on, interactive meal.",
+      "chooseThatIf": "You're alone or in a hurry and want the same flavors without the cooking."
+    },
+    "bestFor": ["Groups who want a hands-on meal", "Adventurous eaters ready for the Chengdu/Chongqing spice level", "Budget travelers — counting sticks keeps costs transparent"],
+    "skipIf": "You're very sensitive to spice — even the 'mild' broth carries heat. Also skip if you dislike communal cooking pots."
+  },
+  {
+    "id": "roujiamo",
+    "compare": {
+      "withId": "yangrou-paomo",
+      "withName": "Lamb Soup with Bread",
+      "withNameZh": "羊肉泡馍",
+      "headline": "Roujiamo or Yangrou Paomo?",
+      "differences": [
+        ["Speed", "Fast street food — ready in minutes, eaten on the go", "Ritual meal — you tear the bread yourself, then wait"],
+        ["Bread", "Crispy flatbread stuffed with braised pork", "Torn bread pieces simmered in lamb broth"],
+        ["Time needed", "5 minutes", "45-60 minutes for the full experience"],
+        ["Price", "¥8-20", "¥25-50"]
+      ],
+      "chooseThisIf": "You want Xi'an's essential snack fast — the 'Chinese hamburger' experience.",
+      "chooseThatIf": "You have an hour and want the city's most immersive food ritual."
+    },
+    "bestFor": ["First-timers in Xi'an — it's the fastest introduction to the city's food", "Meat lovers who like slow-braised pork", "Budget travelers wanting a filling lunch"],
+    "skipIf": "You're vegetarian — the classic version is pork. (Halal beef versions exist but are less common.)"
+  },
+  {
+    "id": "shengjianbao",
+    "compare": {
+      "withId": "xiaolongbao",
+      "withName": "Xiaolongbao",
+      "withNameZh": "小笼包",
+      "headline": "Shengjian Bao or Xiaolongbao?",
+      "differences": [
+        ["Method", "Pan-fried: crispy golden bottom, soft top", "Steamed: thin, translucent skin all around"],
+        ["Texture", "Shattering crunch + juicy pork filling", "Silky, delicate, broth-forward"],
+        ["Heat", "Very hot — the frying seals in more moisture", "Cooler, gentler to eat"],
+        ["Price", "¥10-20 per serving", "¥18-30 per basket"]
+      ],
+      "chooseThisIf": "You want the most textural excitement and don't mind a first-bite burn risk.",
+      "chooseThatIf": "You're a first-timer or want something easier and more elegant to eat."
+    },
+    "bestFor": ["Breakfast purists — the first batch at 6:30 AM is the best batch", "People who love crispy textures", "Shanghai first-timers who want the city's street-level classic"],
+    "skipIf": "You can't eat it fresh — cold shengjian bao lose all their crunch within minutes."
+  },
+  {
+    "id": "mala-tang",
+    "compare": {
+      "withId": "chuanchuan",
+      "withName": "Chuan Chuan",
+      "withNameZh": "串串",
+      "headline": "Mala Tang or Chuan Chuan?",
+      "differences": [
+        ["Format", "Bowl of boiled ingredients, cooked for you", "DIY skewers you cook in a shared pot"],
+        ["Ease", "Zero technique — just pick and wait", "You manage cooking times yourself"],
+        ["Serving", "Individual bowl, perfect for solo diners", "Shared pot, built for groups"],
+        ["Price", "¥15-40 by weight/portion", "¥0.5-1 per stick, count at the end"]
+      ],
+      "chooseThisIf": "You're dining solo or want a fast, no-fuss spicy meal.",
+      "chooseThatIf": "You're with friends and want the interactive version."
+    },
+    "bestFor": ["Solo travelers", "Vegetarians — easy to pick a meat-free bowl", "First-timers to Sichuan spice, since you control the ingredients"],
+    "skipIf": "You dislike DIY assembly and want a sit-down meal — or you're avoiding spice entirely."
+  },
+  {
+    "id": "baocai",
+    "compare": {
+      "withId": "bingfen",
+      "withName": "Bingfen",
+      "withNameZh": "冰粉",
+      "headline": "Baocai or Bingfen as Your Spice Reset?",
+      "differences": [
+        ["Role", "Free savory side dish — palate reset between spicy bites", "Paid dessert — the cooling finish after a meal"],
+        ["Flavor", "Sour, salty, crunchy pickled vegetables", "Sweet, cold, jelly-like"],
+        ["Cost", "Free at nearly every Sichuan restaurant", "¥5-12 per bowl"],
+        ["When", "During the meal, eaten alongside", "After the meal, as planned counterweight"]
+      ],
+      "chooseThisIf": "You're eating at a Sichuan restaurant and want a free, savory palate cleanser.",
+      "chooseThatIf": "You want the sweet, cold, full-stop ending to a spicy meal."
+    },
+    "bestFor": ["Anyone eating Sichuan food — it's free and included", "Vegetarians and vegans", "People who like pickled, sour flavors"],
+    "skipIf": "You're not eating at a Sichuan restaurant — it's rarely sold as a standalone street snack."
+  },
+  {
+    "id": "liangpi",
+    "compare": {
+      "withId": "roujiamo",
+      "withName": "Roujiamo",
+      "withNameZh": "肉夹馍",
+      "headline": "Liangpi or Roujiamo?",
+      "differences": [
+        ["Temperature", "Cold — chilled wheat/rice starch noodles", "Hot — braised pork in a warm flatbread"],
+        ["Texture", "Slippery, chewy noodles with cucumber crunch", "Crispy bread, tender shredded meat"],
+        ["Meal size", "Light lunch or snack", "Hearty, filling fast food"],
+        ["Best time", "11:30 AM-12:30 PM at Wei Jia Liangpi", "Any time, but best fresh from the pan"]
+      ],
+      "chooseThisIf": "It's hot outside and you want something cold, tangy, and light.",
+      "chooseThatIf": "You're hungry for something substantial, meaty, and warm."
+    },
+    "bestFor": ["Summer visitors to Xi'an", "Vegetarians — the classic version is meat-free", "Anyone who wants a quick lunch that won't weigh them down"],
+    "skipIf": "You're gluten-sensitive — liangpi is made from wheat or rice starch but usually handled with wheat flour."
+  },
+  {
+    "id": "dan-dan-mian",
+    "compare": {
+      "withId": "xiaomian",
+      "withName": "Chongqing Noodles",
+      "withNameZh": "重庆小面",
+      "headline": "Dan Dan Mian or Chongqing Xiaomian?",
+      "differences": [
+        ["Style", "Chengdu: layered, fragrant chili oil with sesame paste", "Chongqing: aggressive, immediate, darker roasted chili"],
+        ["Toppings", "Minced pork, preserved vegetables, scallions", "Often simpler — noodles, greens, chili, pepper"],
+        ["Heat", "Balanced ma-la, approachable", "Roughly 50% more intense than Chengdu"],
+        ["Best spot", "Jinli or Chen Mapo Tofu on Qingyang Street", "Jiefangbei / Bayi Road stalls"]
+      ],
+      "chooseThisIf": "You want to taste Sichuan's layered, balanced chili oil artistry.",
+      "chooseThatIf": "You want the spicier, bolder street version — and can handle it."
+    },
+    "bestFor": ["First-timers to Sichuan noodles — it's the approachable entry point", "Anyone who wants a full, saucy meal in a bowl", "Fans of sesame-based sauces"],
+    "skipIf": "You're spice-averse — even 'mild' carries chili oil. Ask for wei la and be ready anyway."
+  },
+  {
+    "id": "bingfen",
+    "compare": {
+      "withId": "tanghulu",
+      "withName": "Tanghulu",
+      "withNameZh": "糖葫芦",
+      "headline": "Bingfen or Tanghulu?",
+      "differences": [
+        ["Season", "May to September — summer cooling dessert", "October to March — winter street staple"],
+        ["Sensation", "Cold jelly that resets the palate after spice", "Crisp sugar shell cracking over tart fruit"],
+        ["Flavor", "Mildly sweet brown sugar syrup", "Intense sweet-sour contrast"],
+        ["Where", "Chengdu and Sichuan", "Beijing and northern cities"]
+      ],
+      "chooseThisIf": "You just ate spicy food and need a cold, gentle reset — or it's summer.",
+      "chooseThatIf": "You're in the north in winter and want the seasonal icon."
+    },
+    "bestFor": ["Anyone eating Sichuan hot pot — the traditional finishing move", "Summer travelers", "Vegetarians and vegans"],
+    "skipIf": "You're visiting between October and March — bingfen stalls mostly disappear outside summer."
+  },
+  {
+    "id": "yangrou-chuan",
+    "compare": {
+      "withId": "roujiamo",
+      "withName": "Roujiamo",
+      "withNameZh": "肉夹馍",
+      "headline": "Lamb Skewers or Roujiamo?",
+      "differences": [
+        ["Eating style", "Graze — 10-20 skewers over conversation", "One hand-held sandwich, eaten fast"],
+        ["Flavor", "Cumin-forward, smoky from charcoal", "Soy-braised pork, rich and saucy"],
+        ["Best time", "Evening, when grills fire up", "Any time, but lunch is classic"],
+        ["Price", "¥3-8 per skewer", "¥8-20 each"]
+      ],
+      "chooseThisIf": "It's evening and you want the smoky, social night-market experience.",
+      "chooseThatIf": "You need a fast, filling, portable lunch."
+    },
+    "bestFor": ["Night-market lovers — the Muslim Quarter at 6 PM is the peak moment", "Anyone who loves cumin", "Groups sharing food"],
+    "skipIf": "You're vegetarian — or you're in a hurry (skewers are best eaten slowly, skewer after skewer)."
+  },
+  {
+    "id": "zhajiangmian",
+    "compare": {
+      "withId": "dan-dan-mian",
+      "withName": "Dan Dan Noodles",
+      "withNameZh": "担担面",
+      "headline": "Zhajiang Mian or Dan Dan Mian?",
+      "differences": [
+        ["Sauce", "Fermented soybean paste (huang jiang) — deeply savory", "Chili oil + sesame paste — numbing and spicy"],
+        ["Region", "Beijing and the north", "Chengdu and Sichuan"],
+        ["Heat", "Zero chili — mild and earthy", "Mala — two-dimensional heat"],
+        ["Toppings", "Pork, cucumber shreds, bean sprouts", "Minced pork, preserved vegetables, scallions"]
+      ],
+      "chooseThisIf": "You want a savory, comforting noodle bowl without any heat.",
+      "chooseThatIf": "You want the Sichuan signature with numbing spice."
+    },
+    "bestFor": ["People who want authentic Beijing flavor without spice", "Fans of fermented bean paste (miso-like depth)", "Lunch eaters near universities for student prices"],
+    "skipIf": "You're craving heat — this is a no-chili dish by tradition."
+  },
+  {
+    "id": "mapo-doufu",
+    "compare": {
+      "withId": "dan-dan-mian",
+      "withName": "Dan Dan Noodles",
+      "withNameZh": "担担面",
+      "headline": "Mapo Tofu or Dan Dan Mian?",
+      "differences": [
+        ["Type", "A main dish to share over rice", "A complete noodle bowl on its own"],
+        ["Texture", "Silken tofu cubes in numbing chili oil", "Chewy wheat noodles in sesame-chili sauce"],
+        ["Protein", "Tofu (pork optional in the sauce)", "Minced pork on top"],
+        ["Best with", "Steamed rice and a cold drink", "Eaten alone, slurped fast"]
+      ],
+      "chooseThisIf": "You're eating a meal with rice and want a shareable signature dish.",
+      "chooseThatIf": "You want a self-contained, faster one-bowl experience."
+    },
+    "bestFor": ["Anyone eating their first Sichuan meal — it's the classic benchmark", "Tofu lovers", "People who want a dish with rice"],
+    "skipIf": "You're a strict vegetarian — the traditional version includes ground pork in the sauce (ask for su version)."
+  },
+  {
+    "id": "xiaomian",
+    "compare": {
+      "withId": "dan-dan-mian",
+      "withName": "Dan Dan Noodles",
+      "withNameZh": "担担面",
+      "headline": "Chongqing Xiaomian or Dan Dan Mian?",
+      "differences": [
+        ["Heat", "Extreme — the deep end of Sichuan spice", "Balanced ma-la, more approachable"],
+        ["Chili oil", "Darker, more intensely roasted", "Fragrant, layered with spices"],
+        ["Region", "Chongqing, where mild means something else", "Chengdu, the city of balance"],
+        ["Price", "¥8-18, often under ¥10", "¥10-25"]
+      ],
+      "chooseThisIf": "You've built some tolerance and want the most intense noodle experience in China.",
+      "chooseThatIf": "You're new to Sichuan food and want layers you can actually taste."
+    },
+    "bestFor": ["Spice enthusiasts — Chongqing is the deep end", "Budget travelers — the cheapest serious meal in town", "Breakfast eaters who like noodles at 8 AM"],
+    "skipIf": "You're spice-sensitive — even 'bu la' (no spice) requests may earn confusion."
+  },
+  {
+    "id": "cheong-fun",
+    "compare": {
+      "withId": "wonton-noodles",
+      "withName": "Wonton Noodles",
+      "withNameZh": "云吞面",
+      "headline": "Cheong Fun or Wonton Noodles?",
+      "differences": [
+        ["Time of day", "Breakfast staple, also late-night", "Lunch — broth is freshest before 1 PM"],
+        ["Noodle type", "Silky rice noodle sheets, steamed to order", "Springy egg noodles with alkaline bite"],
+        ["Serving", "Plain with soy or filled (shrimp/beef)", "Wontons + noodles in clear broth"],
+        ["Texture", "Soft, slippery, delicate", "Chewy, al dente, springy"]
+      ],
+      "chooseThisIf": "You want a light, silky breakfast or a gentle late-night bite.",
+      "chooseThatIf": "You want a more substantial lunch with real broth depth."
+    },
+    "bestFor": ["Breakfast lovers in Guangzhou", "People who prefer soft, slippery textures", "Vegetarians — plain cheong fun with soy sauce works"],
+    "skipIf": "You want something with chew and bite — cheong fun is deliberately soft."
+  },
+  {
+    "id": "dan-ta",
+    "compare": {
+      "withId": "cheong-fun",
+      "withName": "Cheong Fun",
+      "withNameZh": "肠粉",
+      "headline": "Egg Tart or Cheong Fun?",
+      "differences": [
+        ["Type", "Sweet custard pastry — afternoon tea", "Savory rice noodle roll — breakfast"],
+        ["Best time", "Around 3 PM, when the fresh batch comes out", "Morning and late night"],
+        ["Texture", "Flaky crust, wobbly custard", "Silky sheets, smooth and soft"],
+        ["Price", "¥5-12", "¥8-20"]
+      ],
+      "chooseThisIf": "You want a sweet afternoon break — grab it at Lian Xiang Lou when the 2:45 PM batch is fresh.",
+      "chooseThatIf": "You're hungry for something savory and filling."
+    },
+    "bestFor": ["Afternoon snackers", "Anyone with a sweet tooth", "Fans of Portuguese-style pastries wanting the Cantonese take"],
+    "skipIf": "You're looking for a meal, not a treat — an egg tart is a moment, not a lunch."
+  },
+  {
+    "id": "hongyou-chaoshou",
+    "compare": {
+      "withId": "dan-dan-mian",
+      "withName": "Dan Dan Noodles",
+      "withNameZh": "担担面",
+      "headline": "Chili Oil Wontons or Dan Dan Mian?",
+      "differences": [
+        ["Format", "Wontons — soft wrappers, pork filling", "Noodles — chewy wheat strands"],
+        ["Sauce", "Red chili oil with black vinegar cutting the heat", "Chili oil + sesame paste, thicker and nuttier"],
+        ["Portion", "10 wontons — a snack or light meal", "A full bowl — a complete meal"],
+        ["Best spot", "Long Chaoshou on Chunxi Road", "Chen Mapo Tofu or any Jinli stall"]
+      ],
+      "chooseThisIf": "You want a lighter, softer bite where vinegar balances the heat.",
+      "chooseThatIf": "You want the full, substantial noodle experience."
+    },
+    "bestFor": ["People who like dumplings and want to try them Sichuan-style", "Lighter eaters", "Fans of chili oil with a vinegar counterpoint"],
+    "skipIf": "You're very hungry — 10 wontons may not cut it. Order two servings or add noodles."
+  },
+  {
+    "id": "yangrou-paomo",
+    "compare": {
+      "withId": "roujiamo",
+      "withName": "Roujiamo",
+      "withNameZh": "肉夹馍",
+      "headline": "Yangrou Paomo or Roujiamo?",
+      "differences": [
+        ["Ritual", "You tear the bread yourself — the smaller, the better", "Handed to you ready-made"],
+        ["Time", "45-60 minutes for the full experience", "5 minutes from order to eating"],
+        ["Meal", "A warming winter meal in a bowl", "A portable hand-held snack"],
+        ["Price", "¥25-50", "¥8-20"]
+      ],
+      "chooseThisIf": "It's cold, you have an hour, and you want Xi'an's most immersive food ritual.",
+      "chooseThatIf": "You're on the move and need something fast and filling."
+    },
+    "bestFor": ["Winter visitors to Xi'an — it's the city's ultimate comfort food", "Anyone who loves interactive food experiences", "Halal eaters — it's lamb and bread, no pork"],
+    "skipIf": "You're in a rush — the bread-tearing ritual can't be rushed, and neither should the meal."
+  },
+  {
+    "id": "congyoubing",
+    "compare": {
+      "withId": "jianbing",
+      "withName": "Jianbing",
+      "withNameZh": "煎饼",
+      "headline": "Scallion Pancake or Jianbing?",
+      "differences": [
+        ["Texture", "Flaky, layered, crispy all the way through", "Soft crepe with one crunchy cracker layer"],
+        ["Sauce", "None — clean wheat, scallion, and lard flavor", "Fermented bean paste, chili, egg"],
+        ["Portability", "Great cold, travels well", "Must be eaten immediately"],
+        ["Price", "¥5-12", "¥5-15"]
+      ],
+      "chooseThisIf": "You want a simpler, less messy, portable snack — or something crispier.",
+      "chooseThatIf": "You want the full saucy breakfast experience."
+    },
+    "bestFor": ["People who want an easy grab-and-go snack", "Anyone who loves flaky, layered pastry texture", "Morning walkers on Yunnan Road (A Cheng before 9 AM)"],
+    "skipIf": "You want a saucy, eggy, complete breakfast — the pancake is deliberately plain."
+  },
+  {
+    "id": "wonton-noodles",
+    "compare": {
+      "withId": "cheong-fun",
+      "withName": "Cheong Fun",
+      "withNameZh": "肠粉",
+      "headline": "Wonton Noodles or Cheong Fun?",
+      "differences": [
+        ["Noodle", "Springy egg noodles with a slightly alkaline bite", "Soft, silky rice noodle sheets"],
+        ["Broth", "Clear, complex stock — the soul of the dish", "Soy sauce or none — the noodle is the star"],
+        ["Filling", "Plump shrimp-pork wontons", "Optional shrimp or beef in the roll"],
+        ["Best time", "Lunch, broth freshest before 1 PM", "Breakfast and late night"]
+      ],
+      "chooseThisIf": "You want depth — broth, texture, and a more complete meal.",
+      "chooseThatIf": "You want the gentle, soft, minimal version."
+    },
+    "bestFor": ["Anyone who loves Cantonese broth craft — Mak's Noodle is the benchmark", "People who like springy noodles", "Lunch eaters"],
+    "skipIf": "You dislike the slightly alkaline flavor of traditional wonton noodles — it's authentic, not a flaw."
+  },
+  {
+    "id": "shrimp-dumplings",
+    "compare": {
+      "withId": "cheong-fun",
+      "withName": "Cheong Fun",
+      "withNameZh": "肠粉",
+      "headline": "Har Gow or Cheong Fun?",
+      "differences": [
+        ["Craft", "13-fold pleated wrapper — the chef's exam dish", "Steamed rice sheets — technique in evenness"],
+        ["Filling", "Whole shrimp, clean and sweet", "Plain or filled with shrimp/beef"],
+        ["When to order", "Morning dim sum, before 11 AM at Panxi", "Breakfast or late night"],
+        ["Portion", "3-4 pieces per basket", "A full roll — more substantial"]
+      ],
+      "chooseThisIf": "You're judging a dim sum restaurant — order the har gow first.",
+      "chooseThatIf": "You want a bigger, softer, simpler bite."
+    },
+    "bestFor": ["Dim sum connoisseurs", "First-time visitors to Guangzhou — it's the city's signature test dish", "Shrimp lovers"],
+    "skipIf": "You're shellfish-allergic — and note the wrapper sometimes contains wheat."
+  }
+]
