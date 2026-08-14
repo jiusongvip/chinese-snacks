@@ -7,7 +7,7 @@ const cityMap = Object.fromEntries(cities.map(c => [c.id, c.name]));
 
 <section id="quiz" class="py-24 px-6 bg-surface">
   <div class="max-w-[800px] mx-auto">
-    <p class="text-sm font-medium tracking-wide uppercase text-accent mb-3 text-center">Snack Finder</p>
+    <p class="text-sm font-medium tracking-wide uppercase text-accent-dark mb-3 text-center">Snack Finder</p>
     <h2 class="text-3xl md:text-4xl font-black tracking-tighter mb-4 text-center">Which Chinese Snack Should You Try?</h2>
     <p class="text-ink-muted max-w-[55ch] mb-12 text-center mx-auto">Answer three quick questions and we&apos;ll find the perfect snack for you.</p>
     <div id="quiz-container" class="bg-white rounded-2xl border border-border p-8 md:p-12">
@@ -16,7 +16,7 @@ const cityMap = Object.fromEntries(cities.map(c => [c.id, c.name]));
         <h3 class="text-xl font-bold mb-6">Where are you visiting?</h3>
         <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
           {cities.map(city => (
-            <button class="quiz-city-btn text-left p-4 rounded-xl border border-border hover:border-accent/40 hover:bg-accent/5 transition-all font-medium" data-city={city.id}>
+            <button class="quiz-city-btn text-left p-4 rounded-xl border border-border hover:border-accent/60 hover:bg-accent/20 transition-all font-medium" data-city={city.id}>
               <span class="block text-sm font-bold text-ink">{city.name}</span>
               <span class="block text-xs text-ink-muted mt-0.5">{city.nameZh}</span>
             </button>
@@ -27,22 +27,22 @@ const cityMap = Object.fromEntries(cities.map(c => [c.id, c.name]));
         <p class="text-xs font-medium text-ink-muted uppercase tracking-wide mb-2">Question 2 of 3</p>
         <h3 class="text-xl font-bold mb-6">What&apos;s your flavor mood?</h3>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
-          <button class="quiz-flavor-btn text-left p-4 rounded-xl border border-border hover:border-accent/40 hover:bg-accent/5 transition-all" data-flavor="spicy">
+          <button class="quiz-flavor-btn text-left p-4 rounded-xl border border-border hover:border-accent/60 hover:bg-accent/20 transition-all" data-flavor="spicy">
             <span class="block text-lg mb-1">🌶️</span>
             <span class="block text-sm font-bold text-ink">Bring the heat</span>
             <span class="block text-xs text-ink-muted mt-0.5">Spicy, numbing, bold Sichuan-style</span>
           </button>
-          <button class="quiz-flavor-btn text-left p-4 rounded-xl border border-border hover:border-accent/40 hover:bg-accent/5 transition-all" data-flavor="savory">
+          <button class="quiz-flavor-btn text-left p-4 rounded-xl border border-border hover:border-accent/60 hover:bg-accent/20 transition-all" data-flavor="savory">
             <span class="block text-lg mb-1">🥟</span>
             <span class="block text-sm font-bold text-ink">Savory &amp; comforting</span>
             <span class="block text-xs text-ink-muted mt-0.5">Dumplings, noodles, classic flavors</span>
           </button>
-          <button class="quiz-flavor-btn text-left p-4 rounded-xl border border-border hover:border-accent/40 hover:bg-accent/5 transition-all" data-flavor="sweet">
+          <button class="quiz-flavor-btn text-left p-4 rounded-xl border border-border hover:border-accent/60 hover:bg-accent/20 transition-all" data-flavor="sweet">
             <span class="block text-lg mb-1">🍡</span>
             <span class="block text-sm font-bold text-ink">Something sweet</span>
             <span class="block text-xs text-ink-muted mt-0.5">Desserts, candied fruit, ice treats</span>
           </button>
-          <button class="quiz-flavor-btn text-left p-4 rounded-xl border border-border hover:border-accent/40 hover:bg-accent/5 transition-all" data-flavor="any">
+          <button class="quiz-flavor-btn text-left p-4 rounded-xl border border-border hover:border-accent/60 hover:bg-accent/20 transition-all" data-flavor="any">
             <span class="block text-lg mb-1">🎲</span>
             <span class="block text-sm font-bold text-ink">Surprise me</span>
             <span class="block text-xs text-ink-muted mt-0.5">I&apos;m open to anything</span>
@@ -53,22 +53,22 @@ const cityMap = Object.fromEntries(cities.map(c => [c.id, c.name]));
         <p class="text-xs font-medium text-ink-muted uppercase tracking-wide mb-2">Question 3 of 3</p>
         <h3 class="text-xl font-bold mb-6">How do you want to eat?</h3>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
-          <button class="quiz-style-btn text-left p-4 rounded-xl border border-border hover:border-accent/40 hover:bg-accent/5 transition-all" data-style="street">
+          <button class="quiz-style-btn text-left p-4 rounded-xl border border-border hover:border-accent/60 hover:bg-accent/20 transition-all" data-style="street">
             <span class="block text-lg mb-1">🚶</span>
             <span class="block text-sm font-bold text-ink">Street stall, standing up</span>
             <span class="block text-xs text-ink-muted mt-0.5">Quick, cheap, authentic street food</span>
           </button>
-          <button class="quiz-style-btn text-left p-4 rounded-xl border border-border hover:border-accent/40 hover:bg-accent/5 transition-all" data-style="sitdown">
+          <button class="quiz-style-btn text-left p-4 rounded-xl border border-border hover:border-accent/60 hover:bg-accent/20 transition-all" data-style="sitdown">
             <span class="block text-lg mb-1">🍽️</span>
             <span class="block text-sm font-bold text-ink">Sit down, take your time</span>
             <span class="block text-xs text-ink-muted mt-0.5">Restaurant or tea house experience</span>
           </button>
-          <button class="quiz-style-btn text-left p-4 rounded-xl border border-border hover:border-accent/40 hover:bg-accent/5 transition-all" data-style="adventurous">
+          <button class="quiz-style-btn text-left p-4 rounded-xl border border-border hover:border-accent/60 hover:bg-accent/20 transition-all" data-style="adventurous">
             <span class="block text-lg mb-1">🔥</span>
             <span class="block text-sm font-bold text-ink">Adventurous &amp; local</span>
             <span class="block text-xs text-ink-muted mt-0.5">What locals actually eat</span>
           </button>
-          <button class="quiz-style-btn text-left p-4 rounded-xl border border-border hover:border-accent/40 hover:bg-accent/5 transition-all" data-style="safe">
+          <button class="quiz-style-btn text-left p-4 rounded-xl border border-border hover:border-accent/60 hover:bg-accent/20 transition-all" data-style="safe">
             <span class="block text-lg mb-1">🛡️</span>
             <span class="block text-sm font-bold text-ink">Safe &amp; familiar</span>
             <span class="block text-xs text-ink-muted mt-0.5">Easy to order, universally liked</span>
@@ -87,7 +87,7 @@ var snacksData=JSON.parse(document.getElementById("quiz-snacks-data").textConten
 var cityMapData=JSON.parse(document.getElementById("quiz-citymap-data").textContent);
 var answers={city:"",flavor:"",style:""};
 function showStep(id){document.querySelectorAll(".quiz-step").forEach(function(el){el.style.display="none";});var s=document.getElementById(id);if(s)s.style.display="";}
-function sel(e,sel){var b=e.currentTarget.parentElement.querySelectorAll(sel);b.forEach(function(x){x.classList.remove("border-accent","bg-accent/5","ring-2","ring-accent/30");});e.currentTarget.classList.add("border-accent","bg-accent/5","ring-2","ring-accent/30");}
+function sel(e,sel){var b=e.currentTarget.parentElement.querySelectorAll(sel);b.forEach(function(x){x.classList.remove("border-accent","bg-accent/25","ring-2","ring-accent/40");});e.currentTarget.classList.add("border-accent","bg-accent/25","ring-2","ring-accent/40");}
 document.querySelectorAll(".quiz-city-btn").forEach(function(b){b.addEventListener("click",function(e){sel(e,".quiz-city-btn");answers.city=this.getAttribute("data-city");showStep("step-2");});});
 document.querySelectorAll(".quiz-flavor-btn").forEach(function(b){b.addEventListener("click",function(e){sel(e,".quiz-flavor-btn");answers.flavor=this.getAttribute("data-flavor");showStep("step-3");});});
 document.querySelectorAll(".quiz-style-btn").forEach(function(b){b.addEventListener("click",function(e){sel(e,".quiz-style-btn");answers.style=this.getAttribute("data-style");showResults();});});
@@ -114,9 +114,9 @@ h+='<h3 class="text-xl font-bold mb-1">You should try...</h3>';
 h+='<p class="text-sm text-ink-muted mb-8">Based on visiting '+cn+' and your preferences.</p>';
 h+='<div class="space-y-4 mb-8">';
 top.forEach(function(s,i){
-var badge=i===0?'<span class="text-xs px-1.5 py-0.5 rounded-full bg-accent text-white font-bold mr-2">Best Match</span>':"";
+var badge=i===0?'<span class="text-xs px-1.5 py-0.5 rounded-full bg-accent text-ink font-black mr-2">Best Match</span>':"";
 var img=s.img?'<img src="'+s.img+'" alt="'+s.nEn+'" class="w-full h-full object-cover" />':'<span class="text-2xl">'+e4(s)+'</span>';
-h+='<a href="/snacks/'+s.id+'" class="flex gap-4 p-4 rounded-xl border border-border hover:border-accent/40 hover:shadow-sm transition-all group items-center">';
+h+='<a href="/snacks/'+s.id+'" class="flex gap-4 p-4 rounded-xl border border-border hover:border-accent/60 hover:shadow-sm transition-all group items-center">';
 h+='<div class="w-16 h-16 rounded-lg bg-surface-alt flex-shrink-0 overflow-hidden flex items-center justify-center">'+img+'</div>';
 h+='<div class="flex-1 min-w-0">';
 h+='<div class="flex items-center gap-2 mb-0.5">'+badge+'<span class="font-bold text-ink">'+s.nEn+'</span></div>';
@@ -129,7 +129,7 @@ h+='</div></div>';
 h+='<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 256 256" fill="currentColor" class="text-ink-muted flex-shrink-0"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"/></svg>';
 h+='</a>';
 });
-h+='</div><div class="flex gap-3 justify-center"><button onclick="showStep(\'step-1\');resetQ();" class="text-sm font-medium text-accent hover:underline">Try Again</button><a href="/snacks" class="inline-flex items-center gap-1 text-sm font-medium text-accent hover:underline">Browse All Snacks &rarr;</a></div>';
+h+='</div><div class="flex gap-3 justify-center"><button onclick="showStep(\'step-1\');resetQ();" class="text-sm font-bold text-accent-dark hover:underline">Try Again</button><a href="/snacks" class="inline-flex items-center gap-1 text-sm font-bold text-accent-dark hover:underline">Browse All Snacks &rarr;</a></div>';
 document.getElementById("step-results").innerHTML=h;showStep("step-results");}
-function resetQ(){answers={city:"",flavor:"",style:""};document.querySelectorAll(".quiz-city-btn,.quiz-flavor-btn,.quiz-style-btn").forEach(function(b){b.classList.remove("border-accent","bg-accent/5","ring-2","ring-accent/30");});}
+function resetQ(){answers={city:"",flavor:"",style:""};document.querySelectorAll(".quiz-city-btn,.quiz-flavor-btn,.quiz-style-btn").forEach(function(b){b.classList.remove("border-accent","bg-accent/25","ring-2","ring-accent/40");});}
 </script>

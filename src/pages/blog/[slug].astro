@@ -31,7 +31,7 @@ const pageUrl = new URL(Astro.url.pathname, siteUrl).href;
       {postAuthor && (
         <div class="mt-12 pt-8 border-t border-border">
           <div class="flex items-start gap-4 bg-surface-alt rounded-xl p-6">
-            <div class="w-14 h-14 rounded-full bg-accent/10 flex items-center justify-center text-xl font-black text-accent flex-shrink-0">{postAuthor.name[0]}</div>
+            <div class="w-14 h-14 rounded-full bg-accent/25 flex items-center justify-center text-xl font-black text-accent-dark flex-shrink-0">{postAuthor.name[0]}</div>
             <div>
               <p class="font-bold text-ink mb-1">{postAuthor.name}{postAuthor.nameZh && ` (${postAuthor.nameZh})`}</p>
               <p class="text-sm text-ink-muted leading-relaxed">{postAuthor.bio}</p>
@@ -40,7 +40,7 @@ const pageUrl = new URL(Astro.url.pathname, siteUrl).href;
         </div>
       )}
       <div class="mt-12 pt-8 border-t border-border">
-        <a href="/blog" class="inline-flex items-center gap-1 text-sm font-medium text-accent hover:underline">&larr; Back to all posts</a>
+        <a href="/blog" class="inline-flex items-center gap-1 text-sm font-bold text-accent-dark hover:underline">&larr; Back to all posts</a>
       </div>
     </div>
   </div>

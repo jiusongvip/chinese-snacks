@@ -21,6 +21,21 @@ const cityMap = Object.fromEntries(cities.map(c => [c.id, c]));
 const usdMin = (snack.priceMin / 7).toFixed(1);
 const usdMax = (snack.priceMax / 7).toFixed(1);
 const cityNames = snack.bestCities.map(cid => cityMap[cid]?.name || cid).join(", ");
+const metaSentence = (t: string) => t.split(/[.!?]/)[0].trim() + ".";
+const metaDesc = (() => {
+  const tail = ` From ¥${snack.priceMin}-¥${snack.priceMax} in ${cityNames}.`;
+  const d = metaSentence(snack.description);
+  const t = metaSentence(snack.taste);
+  const budget = 158 - tail.length;
+  if (d.length + 1 + t.length <= budget) return `${d} ${t}${tail}`;
+  const tWords = t.split(" ");
+  let tShort = "";
+  for (const w of tWords) {
+    if (d.length + 1 + tShort.length + 1 + w.length > budget) break;
+    tShort = tShort ? tShort + " " + w : w;
+  }
+  return tShort ? `${d} ${tShort}${tail}` : `${d}${tail}`;
+})();
 const difficultyColors: Record<string, string> = { easy: "bg-green-100 text-green-800", medium: "bg-yellow-100 text-yellow-800", hard: "bg-red-100 text-red-800" };
 
 const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
@@ -38,21 +53,21 @@ const difficultyNotes: Record<string, string> = {
 };
 ---
 
-<BaseLayout title={`${snack.nameEn} (${snack.nameZh}) - Chinese Snack Guide | ChineseSnacks`} description={`${snack.description.substring(0, 45)} ${snack.taste} ¥${snack.priceMin}-¥${snack.priceMax} in ${cityNames}.`}>
+<BaseLayout title={`${snack.nameEn} (${snack.nameZh}) - Chinese Snack Guide | ChineseSnacks`} description={metaDesc}>
   <Nav />
   <div class="min-h-[100dvh] pt-24 pb-20 px-6">
     <div class="max-w-[1400px] mx-auto w-full pt-16">
+      <!-- Breadcrumb -->
+      <nav class="flex items-center gap-1.5 text-xs text-ink-muted mb-8" aria-label="Breadcrumb">
+        <a href="/" class="hover:text-accent-dark transition-colors">Home</a>
+        <span class="text-ink-muted/40">/</span>
+        <a href="/snacks" class="hover:text-accent-dark transition-colors">Snacks</a>
+        <span class="text-ink-muted/40">/</span>
+        <span class="text-ink">{snack.nameEn}</span>
+      </nav>
       <div class="grid md:grid-cols-5 gap-8">
-          <!-- Breadcrumb -->
-          <nav class="flex items-center gap-1.5 text-xs text-ink-muted mb-6" aria-label="Breadcrumb">
-            <a href="/" class="hover:text-accent transition-colors">Home</a>
-            <span class="text-ink-muted/40">/</span>
-            <a href="/snacks" class="hover:text-accent transition-colors">Snacks</a>
-            <span class="text-ink-muted/40">/</span>
-            <span class="text-ink">{snack.nameEn}</span>
-          </nav>
         <div class="md:col-span-3">
-          <p class="text-sm font-medium tracking-wide uppercase text-accent mb-3">{snack.tags.join(" · ")}</p>
+          <p class="text-sm font-medium tracking-wide uppercase text-accent-dark mb-3">{snack.tags.join(" · ")}</p>
           <h1 class="text-4xl md:text-6xl font-black tracking-tighter mb-2">{snack.nameEn}</h1>
           <p class="text-2xl text-ink-muted mb-6">{snack.nameZh} &middot; <span class="italic">{snack.namePinyin}</span></p>
 
@@ -146,9 +161,19 @@ const difficultyNotes: Record<string, string> = {
             </div>
           )}
 
+          {snack.fieldNote && (
+            <div class="bg-accent rounded-2xl p-6 md:p-8 mb-10">
+              <p class="text-xs font-black uppercase tracking-widest text-ink/60 mb-4">Editor's Field Note</p>
+              <div class="flex gap-4">
+                <span class="text-5xl md:text-6xl font-black leading-none text-ink/15 select-none">&ldquo;</span>
+                <p class="text-ink text-base md:text-lg font-semibold leading-relaxed -mt-1">{snack.fieldNote}</p>
+              </div>
+            </div>
+          )}
+
           {compare && compare.withSnack && (
             <div class="bg-white rounded-2xl border border-border p-6 md:p-8 mb-10">
-              <p class="text-xs font-medium tracking-wide uppercase text-accent mb-2">Snack Face-Off</p>
+              <p class="text-xs font-medium tracking-wide uppercase text-accent-dark mb-2">Snack Face-Off</p>
               <h2 class="font-bold text-xl text-ink mb-1">{snack.nameEn} vs. {compare.withSnack.nameEn}</h2>
               <p class="text-sm text-ink-muted mb-6">{compare.withNameZh} &middot; Which one should you order?</p>
               <div class="overflow-x-auto -mx-2 px-2">
@@ -173,11 +198,11 @@ const difficultyNotes: Record<string, string> = {
               </div>
               <div class="grid md:grid-cols-2 gap-3 mt-6">
                 <div class="bg-surface-alt rounded-xl p-4">
-                  <p class="text-xs font-bold uppercase tracking-wide text-accent mb-1">Choose {snack.nameEn} if&hellip;</p>
+                  <p class="text-xs font-bold uppercase tracking-wide text-accent-dark mb-1">Choose {snack.nameEn} if&hellip;</p>
                   <p class="text-sm text-ink-muted leading-relaxed">{compare.chooseThisIf}</p>
                 </div>
                 <div class="bg-surface-alt rounded-xl p-4">
-                  <p class="text-xs font-bold uppercase tracking-wide text-accent mb-1">Choose {compare.withSnack.nameEn} if&hellip;</p>
+                  <p class="text-xs font-bold uppercase tracking-wide text-accent-dark mb-1">Choose {compare.withSnack.nameEn} if&hellip;</p>
                   <p class="text-sm text-ink-muted leading-relaxed">{compare.chooseThatIf}</p>
                 </div>
               </div>
@@ -194,7 +219,7 @@ const difficultyNotes: Record<string, string> = {
           <div class="grid grid-cols-2 gap-4 mb-10">
             <div class="bg-surface-alt rounded-xl p-5">
               <p class="text-xs text-ink-muted uppercase tracking-wide mb-1">Price Range</p>
-              <p class="text-2xl font-black text-accent">&yen;{snack.priceMin}&ndash;{snack.priceMax}</p>
+              <p class="text-2xl font-black text-accent-dark">&yen;{snack.priceMin}&ndash;{snack.priceMax}</p>
             </div>
             <div class="bg-surface-alt rounded-xl p-5">
               <p class="text-xs text-ink-muted uppercase tracking-wide mb-1">Best Found In</p>
@@ -256,10 +281,10 @@ const difficultyNotes: Record<string, string> = {
             <h3 class="font-bold text-xl mb-2">Cities</h3>
             <div class="space-y-2 mb-6">
               {snack.bestCities.map(cid => (
-                <a href={`/cities/${cid}`} class="block text-sm text-accent hover:underline">{cityMap[cid]?.name || cid}</a>
+                <a href={`/cities/${cid}`} class="block text-sm text-accent-dark hover:underline">{cityMap[cid]?.name || cid}</a>
               ))}
             </div>
-            <a href={`/cities/${snack.bestCity}`} class="inline-flex items-center gap-2 w-full justify-center bg-accent text-white px-6 py-3 rounded-full font-medium text-sm hover:bg-accent-dark transition-colors active:scale-[0.98]">
+            <a href={`/cities/${snack.bestCity}`} class="inline-flex items-center gap-2 w-full justify-center bg-accent text-ink px-6 py-3 rounded-full font-black text-sm hover:bg-accent-light transition-colors active:scale-[0.98]">
               View {cityMap[snack.bestCity]?.name || snack.bestCity} Guide
             </a>
           </div>

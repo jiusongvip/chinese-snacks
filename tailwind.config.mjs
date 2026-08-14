@@ -5,19 +5,19 @@ export default {
     extend: {
       colors: {
         accent: {
-          DEFAULT: '#C34A36',
-          light: '#D96C5A',
-          dark: '#A13B2A',
+          DEFAULT: '#F7E47D',
+          light: '#FFF3A8',
+          dark: '#8A6F00',
         },
         surface: {
-          DEFAULT: '#FAFAF9',
-          alt: '#F5F2EF',
+          DEFAULT: '#FFF9EB',
+          alt: '#F5EDD6',
         },
         ink: {
           DEFAULT: '#1C1917',
-          muted: '#6B6560',
+          muted: '#6B6255',
         },
-        border: '#E7E2DD',
+        border: '#E8E0C6',
       },
       fontFamily: {
         sans: ['Satoshi', 'system-ui', 'sans-serif'],

@@ -45,7 +45,8 @@
     "relatedSnacks": [
       "congyoubing",
       "zhajiangmian"
-    ]
+    ],
+    "fieldNote": "Order it 'jia liang ge dan, bu yao la' (two eggs, no chili) — the two-egg version holds together for the walk to your hotel. The crunch window is about 90 seconds; eat it standing at the cart, before you start walking."
   },
   {
     "id": "tanghulu",
@@ -93,7 +94,8 @@
     "relatedSnacks": [
       "bingfen",
       "dan-ta"
-    ]
+    ],
+    "fieldNote": "Winter rule: the hawthorn version is the only one worth the line. Vendors selling strawberry tanghulu in November are usually dipping frozen fruit. Also, the caramel should crack — if it bends, the syrup was cooked on a humid day and will chew like taffy."
   },
   {
     "id": "xiaolongbao",
@@ -142,7 +144,8 @@
     "relatedSnacks": [
       "shengjianbao",
       "hongyou-chaoshou"
-    ]
+    ],
+    "fieldNote": "The first batch at Jia Jia Tang Bao leaves the steamer at 6:45 AM — that's when the skin is thinnest and the broth hottest. After 9 AM the batches get rushed and torn wrappers get more common. Order one basket and eat it in under four minutes."
   },
   {
     "id": "chuanchuan",
@@ -191,7 +194,8 @@
     "relatedSnacks": [
       "mala-tang",
       "xiaomian"
-    ]
+    ],
+    "fieldNote": "The trick isn't the skewers, it's the pot: at Jianshe Road, the stall with the longest line replaces its oil pot every few hours — clean oil means clean flavor. And count your sticks twice when they tally the bill; busy stalls miscount by two or three."
   },
   {
     "id": "roujiamo",
@@ -239,7 +243,8 @@
     "relatedSnacks": [
       "liangpi",
       "yangrou-paomo"
-    ]
+    ],
+    "fieldNote": "Ask for 'lao tong rou' (aged marinade). The pork has been braising in the same pot for years, and the flavor is twice as deep as the fresh version. Fan Ji on Zhubashi Street is famous for exactly this — the queue moves fast, so don't be put off."
   },
   {
     "id": "shengjianbao",
@@ -287,7 +292,8 @@
     "relatedSnacks": [
       "xiaolongbao",
       "congyoubing"
-    ]
+    ],
+    "fieldNote": "The first pan at Yang's Fry Dumplings goes out around 6:45 AM with clean oil — that's why the bottoms crack instead of taste greasy. You have about four minutes before the steam softens the base. Eat the whole thing in two bites, soup and all."
   },
   {
     "id": "mala-tang",
@@ -336,7 +342,8 @@
     "relatedSnacks": [
       "chuanchuan",
       "xiaomian"
-    ]
+    ],
+    "fieldNote": "Pick your ingredients before the evening rush: after 7 PM the broth gets cloudy and the spice concentrates as it re-boils. The locals' move is to order one notch below your usual spice level — you can always add chili oil at the table."
   },
   {
     "id": "baocai",
@@ -383,7 +390,8 @@
     "relatedSnacks": [
       "bingfen",
       "mapo-doufu"
-    ]
+    ],
+    "fieldNote": "The free baocai is a quality test. If the brine is aged, the vegetables come out properly crunchy and the kitchen cares about its craft. It's free — treat it as a signal about the restaurant, not as the meal itself."
   },
   {
     "id": "liangpi",
@@ -431,7 +439,8 @@
     "relatedSnacks": [
       "roujiamo",
       "yangrou-chuan"
-    ]
+    ],
+    "fieldNote": "Wei Jia Liangpi runs out by 1:30 PM on weekends — the noodles are made that morning and sold until gone. The vinegar-sesame balance runs sweeter before noon and sharper after; regulars time their visit for the morning batch."
   },
   {
     "id": "dan-dan-mian",
@@ -479,7 +488,8 @@
     "relatedSnacks": [
       "hongyou-chaoshou",
       "xiaomian"
-    ]
+    ],
+    "fieldNote": "The sesame paste is what separates Chengdu dan dan mian from everything else — at Chen Mapo it's blended in while still warm. Order 'shao la' (less chili) and you still get the full layered flavor, minus the tears."
   },
   {
     "id": "bingfen",
@@ -528,7 +538,8 @@
     "relatedSnacks": [
       "tanghulu",
       "baocai"
-    ]
+    ],
+    "fieldNote": "Look at the syrup, not the toppings: real bingfen uses old rock sugar that pours a clear amber, not muddy brown. The stalls on Jianshe Road pour it from copper kettles — that's the one to get after hot pot."
   },
   {
     "id": "yangrou-chuan",
@@ -577,7 +588,8 @@
     "relatedSnacks": [
       "roujiamo",
       "liangpi"
-    ]
+    ],
+    "fieldNote": "The marker of a good cart: cumin dusted on AFTER the skewer leaves the grill, so it doesn't burn and the aroma lands on your tongue. In Xi'an's Muslim Quarter, follow the smell of charcoal smoke, not the signboard."
   },
   {
     "id": "zhajiangmian",
@@ -625,7 +637,8 @@
     "relatedSnacks": [
       "jianbing",
       "dan-dan-mian"
-    ]
+    ],
+    "fieldNote": "The sauce-to-noodle ratio is the test. If the bowl arrives pale, send it back — a proper Beijing zhajiangmian comes out dark amber with a visible oil ring. Order 'guo jiang' (extra sauce on the side) if you like it rich."
   },
   {
     "id": "mapo-doufu",
@@ -673,7 +686,8 @@
     "relatedSnacks": [
       "dan-dan-mian",
       "baocai"
-    ]
+    ],
+    "fieldNote": "Two tells of a great version: the tofu should arrive trembling, and the chili oil should form a red ring around the bowl. At Chen Mapo the oil is burned in small batches — order it as a main with rice, not as a side."
   },
   {
     "id": "xiaomian",
@@ -722,7 +736,8 @@
     "relatedSnacks": [
       "dan-dan-mian",
       "chuanchuan"
-    ]
+    ],
+    "fieldNote": "Chongqing breakfast rule: the noodle shop with folding stools on the curb is the one. The chili oil should be dark red and leave a stain on the bowl — pale oil means yesterday's batch. Under ¥10 for a bowl is the going rate."
   },
   {
     "id": "cheong-fun",
@@ -770,7 +785,8 @@
     "relatedSnacks": [
       "shrimp-dumplings",
       "wonton-noodles"
-    ]
+    ],
+    "fieldNote": "Say 'lao ban, duo dian jiang' (more sauce) — the soy-sesame sauce is where the flavor lives. Ask for sheets steamed fresh from the bamboo tray rather than the pre-steamed pile; the fresh ones melt on the tongue."
   },
   {
     "id": "dan-ta",
@@ -817,7 +833,8 @@
     "relatedSnacks": [
       "cheong-fun",
       "tanghulu"
-    ]
+    ],
+    "fieldNote": "The 2:45 PM batch at Lian Xiang Lou sells out by 3:15 — the custard is poured fresh so the top blisters. If you walk in before 2 PM and the shop is quiet, the tarts have been sitting; skip and come back."
   },
   {
     "id": "hongyou-chaoshou",
@@ -865,7 +882,8 @@
     "relatedSnacks": [
       "dan-dan-mian",
       "xiaolongbao"
-    ]
+    ],
+    "fieldNote": "The black vinegar is the secret — it cuts the chili oil so you can actually taste the pork. Long Chaoshou serves ten per bowl; the right order is one bowl plus a dan dan mian to share, not two bowls of wontons."
   },
   {
     "id": "yangrou-paomo",
@@ -913,7 +931,8 @@
     "relatedSnacks": [
       "roujiamo",
       "yangrou-chuan"
-    ]
+    ],
+    "fieldNote": "Tear the bread smaller than your thumbnail — a big piece won't soak up the broth and you'll be chewing dough at the end. The full ritual runs 45 minutes; go at 2 PM when the shop is quiet and you have the time."
   },
   {
     "id": "congyoubing",
@@ -961,7 +980,8 @@
     "relatedSnacks": [
       "jianbing",
       "shengjianbao"
-    ]
+    ],
+    "fieldNote": "The cold test: a good congyoubing still flakes after sitting for an hour. The best morning version is cooked in the same pan as the jianbing — shared lard, shared flavor."
   },
   {
     "id": "wonton-noodles",
@@ -1009,7 +1029,8 @@
     "relatedSnacks": [
       "cheong-fun",
       "shrimp-dumplings"
-    ]
+    ],
+    "fieldNote": "The broth is the dish: it should be clear with a golden oil sheen — cloudiness means it was boiled too hard. Order the shrimp-pork ('xian xia') version and finish within about eight minutes, before the noodles soften."
   },
   {
     "id": "shrimp-dumplings",
@@ -1057,6 +1078,7 @@
     "relatedSnacks": [
       "cheong-fun",
       "wonton-noodles"
-    ]
+    ],
+    "fieldNote": "Count the pleats: a proper har gow has thirteen folds and a wrapper thin enough to see the shrimp through. At Panxi, order it first, before 11 AM — the morning shrimp are the freshest catch of the day."
   }
 ]

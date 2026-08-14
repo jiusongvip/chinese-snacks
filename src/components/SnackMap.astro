@@ -18,7 +18,7 @@ const sectionDesc = focusCity
 
 <section class="py-16 px-6 bg-surface-alt">
   <div class="max-w-[1400px] mx-auto w-full">
-    <p class="text-sm font-medium tracking-wide uppercase text-accent mb-3">Interactive Map</p>
+    <p class="text-sm font-medium tracking-wide uppercase text-accent-dark mb-3">Interactive Map</p>
     <h2 class="text-3xl md:text-4xl font-black tracking-tighter mb-4">{sectionTitle}</h2>
     <p class="text-ink-muted max-w-[55ch] mb-8">{sectionDesc}</p>
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
@@ -27,7 +27,7 @@ const sectionDesc = focusCity
       </div>
       <div class="space-y-3 max-h-[500px] overflow-y-auto">
         {visibleStreets.map(st => (
-          <div class="bg-white rounded-xl border border-border p-4 hover:border-accent/30 transition-all cursor-pointer snack-street-card" data-street-id={st.id}>
+          <div class="bg-white rounded-xl border border-border p-4 hover:border-accent/60 transition-all cursor-pointer snack-street-card" data-street-id={st.id}>
             <div class="flex items-center gap-3 mb-2">
               <img src={"/images/" + st.cityId + ".png"} alt={cityMap[st.cityId]?.name} class="w-8 h-8 rounded-lg object-cover flex-shrink-0" />
               <div>

@@ -9,16 +9,16 @@ import authors from "../data/authors.json";
   <Nav />
   <div class="min-h-[100dvh] pt-24 pb-20 px-6">
     <div class="max-w-[1400px] mx-auto w-full pt-16">
-      <p class="text-sm font-medium tracking-wide uppercase text-accent mb-3">About</p>
+      <p class="text-sm font-medium tracking-wide uppercase text-accent-dark mb-3">About</p>
       <h1 class="text-4xl md:text-6xl font-black tracking-tighter mb-12">About ChineseSnacks</h1>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
         {authors.map(author => (
           <div class="bg-white rounded-2xl border border-border p-8 md:col-span-1">
-            <div class="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center text-2xl font-black text-accent mb-4">{author.name[0]}</div>
+            <div class="w-16 h-16 rounded-full bg-accent/25 flex items-center justify-center text-2xl font-black text-accent-dark mb-4">{author.name[0]}</div>
             <h2 class="font-bold text-xl mb-1">{author.name}</h2>
             {author.nameZh && <p class="text-sm text-ink-muted mb-1">{author.nameZh}</p>}
-            <p class="text-xs font-medium text-accent mb-3">{author.role}</p>
+            <p class="text-xs font-medium text-accent-dark mb-3">{author.role}</p>
             <p class="text-sm text-ink-muted leading-relaxed mb-3">{author.bio}</p>
             <div class="flex flex-wrap gap-1">
               {author.expertise.map(e => (

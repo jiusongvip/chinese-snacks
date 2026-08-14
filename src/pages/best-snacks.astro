@@ -1,0 +1,243 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Nav from "../components/Nav.astro";
+import Footer from "../components/Footer.astro";
+import PackagedSnackCard from "../components/PackagedSnackCard.astro";
+import snacks from "../data/snacks.json";
+import cities from "../data/cities.json";
+import packagedSnacks from "../data/packaged-snacks.json";
+
+const cityMap = Object.fromEntries(cities.map(c => [c.id, c.name]));
+const rankedPackaged = [...packagedSnacks].sort(
+  (a, b) => (b.editorPick ? 1 : 0) - (a.editorPick ? 1 : 0) || b.rating - a.rating
+);
+
+const streetIds = [
+  "jianbing",
+  "xiaolongbao",
+  "roujiamo",
+  "shengjianbao",
+  "mala-tang",
+  "liangpi",
+  "dan-dan-mian",
+  "yangrou-chuan",
+  "zhajiangmian",
+  "mapo-doufu",
+  "cheong-fun",
+  "tanghulu",
+];
+const streetClassics = streetIds.map(id => snacks.find(s => s.id === id)).filter(Boolean);
+
+const faqs = [
+  {
+    q: "What are the most popular Chinese snacks?",
+    a: "Two families dominate. On the street, jianbing (breakfast crepes), xiaolongbao (soup dumplings), and roujiamo (Chinese burgers) are the everyday classics travelers meet first. In supermarkets, White Rabbit candy, Weilong konjac strips, and Wangwang senbei rice crackers are the national favorites — the brands locals actually buy as gifts and souvenirs.",
+  },
+  {
+    q: "Can I buy Chinese snacks online outside China?",
+    a: "Yes. White Rabbit candy runs about $3-6 per bag on Amazon, and most major brands (Weilong, Wangwang, Huang Fei Hong) ship through Asian grocery platforms like Yami, Weee, and Sayweee in the US, and Oriental Mart in the UK. Prices overseas are typically 2-3x the China supermarket price, so stock up while you're in China.",
+  },
+  {
+    q: "Which Chinese snacks are vegetarian?",
+    a: "Plenty: haw flakes, Wangwang senbei, sesame candy, latiao (spicy gluten strips), and White Rabbit candy (dairy-based, so lacto-vegetarian). But watch out — mooncakes and some pastry snacks hide lard or meat. Our vegetarian guide lists every safe pick, and which common 'vegetarian-looking' snacks to skip.",
+  },
+  {
+    q: "How much do Chinese snacks cost?",
+    a: "Street snacks run ¥0.5-¥50: chuan chuan skewers from ¥0.5 each, jianbing ¥5-15, a full bowl of yangrou paomo up to ¥50. Packaged snacks in Chinese supermarkets cost ¥5-40 per pack; the same items cost $3-15 overseas. All our picks list both the street price and the online price.",
+  },
+  {
+    q: "What Chinese snacks can I bring back home?",
+    a: "Commercially sealed, packaged snacks are generally allowed into the US, UK, and Australia. Best bets: White Rabbit candy, haw flakes, Wangwang senbei, and vacuum-sealed pastries. Avoid fresh produce, meat, and homemade items. Full customs rules for each country are in our bring-home guide.",
+  },
+];
+
+const schemaItems = [
+  ...rankedPackaged.slice(0, 5).map((s, i) => ({
+    position: i + 1,
+    name: s.nameEn,
+  })),
+  ...streetClassics.slice(0, 5).map((s, i) => ({
+    position: i + 6,
+    name: s.nameEn,
+  })),
+];
+---
+
+<BaseLayout
+  title="Best Chinese Snacks in 2026: Top 25 Street & Packaged Picks | ChineseSnacks"
+  description="The best Chinese snacks to try in 2026 — 15 packaged favorites with real brands and prices (White Rabbit, Weilong, Wangwang) plus 12 street classics. Where to buy them in China or online."
+>
+  <Nav />
+
+  <!-- Hero -->
+  <section class="px-6 pt-16 md:pt-24 pb-10 bg-surface">
+    <div class="max-w-[1400px] mx-auto w-full">
+      <div class="hero-anim">
+        <p class="text-xs font-black uppercase tracking-widest text-accent-dark mb-4">The 2026 Edition &middot; Field-tested picks</p>
+        <h1 class="text-5xl md:text-7xl font-black tracking-tighter leading-[0.95] mb-6">
+          The Best Chinese Snacks
+        </h1>
+        <p class="text-ink-muted text-lg md:text-xl max-w-[60ch] leading-relaxed mb-8">
+          Ranked, priced, and verified: 15 packaged favorites you can buy by brand (White Rabbit, Weilong, Wangwang)
+          plus 12 street classics worth the queue. Every pick includes what it tastes like, what it costs,
+          and exactly where to get it — on the street in China or online abroad.
+        </p>
+        <div class="flex flex-wrap gap-8 md:gap-12 mb-10">
+          <div>
+            <p class="text-3xl md:text-4xl font-black tracking-tighter">{rankedPackaged.length}</p>
+            <p class="text-xs text-ink-muted uppercase tracking-wide mt-1">Packaged picks</p>
+          </div>
+          <div>
+            <p class="text-3xl md:text-4xl font-black tracking-tighter">{streetClassics.length}</p>
+            <p class="text-xs text-ink-muted uppercase tracking-wide mt-1">Street classics</p>
+          </div>
+          <div>
+            <p class="text-3xl md:text-4xl font-black tracking-tighter">6</p>
+            <p class="text-xs text-ink-muted uppercase tracking-wide mt-1">Cities covered</p>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl border border-border p-6 max-w-[60ch]">
+          <p class="text-xs font-black uppercase tracking-widest text-ink/50 mb-2">How we picked</p>
+          <p class="text-sm text-ink-muted leading-relaxed">
+            Picks are based on local market research, community threads where Beijingers name their own favorites,
+            and our editors' street-level field notes. Packaged snacks are ranked by a 5-point rating system;
+            street classics by popularity across the six cities we cover. Prices were checked on-site and online in 2025-2026.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 01 · Packaged picks -->
+  <section class="py-24 md:py-28 px-6 bg-surface-alt border-y border-border">
+    <div class="max-w-[1400px] mx-auto w-full">
+      <div class="reveal flex items-baseline gap-5 mb-6">
+        <span class="text-4xl md:text-6xl font-black tracking-tighter text-ink/10 select-none">01</span>
+        <h2 class="text-4xl md:text-6xl font-black tracking-tighter leading-none">Packaged Snacks, Ranked</h2>
+      </div>
+      <p class="reveal text-ink-muted max-w-[55ch] text-lg mb-14">
+        The brands locals actually buy — with prices in RMB and online, ratings, and where to find them.
+        Editor's Picks are marked; you can't go wrong starting with those.
+      </p>
+
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        {rankedPackaged.map((snack, i) => (
+          <div class="reveal" style={`transition-delay: ${(i % 4) * 70}ms`}>
+            <PackagedSnackCard snack={snack} />
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 02 · Street classics -->
+  <section class="py-24 md:py-28 px-6 bg-surface">
+    <div class="max-w-[1400px] mx-auto w-full">
+      <div class="reveal flex items-baseline gap-5 mb-6">
+        <span class="text-4xl md:text-6xl font-black tracking-tighter text-ink/10 select-none">02</span>
+        <h2 class="text-4xl md:text-6xl font-black tracking-tighter leading-none">Street Classics, Ranked</h2>
+      </div>
+      <p class="reveal text-ink-muted max-w-[55ch] text-lg mb-14">
+        Twelve street snacks worth the queue — each with its home city, the price you should pay, and a full guide.
+      </p>
+
+      <div>
+        {streetClassics.map((s, i) => (
+          <a
+            href={`/snacks/${s.id}`}
+            class="reveal group grid grid-cols-[2.5rem_1fr_auto] md:grid-cols-[3.5rem_1fr_auto_auto] items-center gap-4 py-5 px-2 border-b border-border hover:bg-accent transition-colors duration-300"
+            style={`transition-delay: ${(i % 4) * 60}ms`}
+          >
+            <span class="text-2xl md:text-4xl font-black tracking-tighter text-ink/10 group-hover:text-ink/30 transition-colors">{String(i + 1).padStart(2, "0")}</span>
+            <div>
+              <p class="font-black text-ink group-hover:translate-x-1 transition-transform duration-300">
+                {s.nameEn} <span class="text-ink-muted font-medium">&middot; {s.nameZh}</span>
+              </p>
+              <p class="text-sm text-ink-muted line-clamp-1 mt-0.5">{s.taste}</p>
+            </div>
+            <div class="text-right hidden md:block">
+              <p class="font-black text-accent-dark">&yen;{s.priceMin}&ndash;{s.priceMax}</p>
+              <p class="text-xs text-ink-muted">{cityMap[s.bestCity] || s.bestCity}</p>
+            </div>
+            <span class="text-accent-dark font-black text-xl justify-self-end">&rarr;</span>
+          </a>
+        ))}
+      </div>
+
+      <div class="reveal mt-10">
+        <a href="/snacks" class="inline-flex items-center gap-3 group text-lg font-black tracking-tight">
+          <span class="underline decoration-accent decoration-4 underline-offset-4 group-hover:bg-accent group-hover:no-underline px-1 transition-all duration-200">Browse all {snacks.length} street snacks</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 256 256" fill="currentColor" class="group-hover:translate-x-1 transition-transform"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 · Where to buy -->
+  <section class="py-24 md:py-28 px-6 bg-surface-alt border-t border-border">
+    <div class="max-w-[1400px] mx-auto w-full">
+      <div class="reveal flex items-baseline gap-5 mb-6">
+        <span class="text-4xl md:text-6xl font-black tracking-tighter text-ink/10 select-none">03</span>
+        <h2 class="text-4xl md:text-6xl font-black tracking-tighter leading-none">Where to Buy</h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6 mb-12">
+        <div class="reveal bg-white rounded-2xl border border-border p-6">
+          <p class="text-xs font-black uppercase tracking-widest text-accent-dark mb-3">In China &middot; supermarkets</p>
+          <p class="text-sm text-ink-muted leading-relaxed">Hema, Yonghui, and Wumei carry the full brand lineup with the lowest prices — White Rabbit from ¥10, Weilong konjac from ¥5. Look for the shelves near checkout; that's where the national favorites live.</p>
+        </div>
+        <div class="reveal bg-white rounded-2xl border border-border p-6" style="transition-delay: 80ms">
+          <p class="text-xs font-black uppercase tracking-widest text-accent-dark mb-3">Online abroad</p>
+          <p class="text-sm text-ink-muted leading-relaxed">Amazon stocks White Rabbit ($3-6/bag) and Wangwang; Asian platforms Yami, Weee, and Sayweee ship most brands in the US, Oriental Mart in the UK. Expect 2-3x the China price.</p>
+        </div>
+        <div class="reveal bg-white rounded-2xl border border-border p-6" style="transition-delay: 160ms">
+          <p class="text-xs font-black uppercase tracking-widest text-accent-dark mb-3">Bringing them home</p>
+          <p class="text-sm text-ink-muted leading-relaxed">Sealed, commercial packaging passes US/UK/AU customs. Keep labels intact and declare everything. Our customs guide covers the exact rules — and which snacks to avoid packing.</p>
+          <a href="/bring-home" class="inline-flex items-center gap-2 text-sm font-black text-accent-dark mt-4 hover:underline">Customs &amp; packing guide &rarr;</a>
+        </div>
+      </div>
+
+      <!-- FAQ -->
+      <div class="reveal max-w-[65ch]">
+        <h2 class="font-black text-3xl tracking-tighter mb-6">Chinese Snacks FAQ</h2>
+        <div class="space-y-4">
+          {faqs.map(f => (
+            <details class="bg-white rounded-xl border border-border p-5 group">
+              <summary class="font-semibold text-ink text-sm cursor-pointer list-none flex items-center justify-between gap-4">
+                {f.q}
+                <span class="text-accent-dark text-lg flex-shrink-0 group-open:rotate-45 transition-transform duration-200">+</span>
+              </summary>
+              <p class="text-ink-muted text-sm leading-relaxed mt-3 pt-3 border-t border-border">{f.a}</p>
+            </details>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+
+  <!-- FAQ Schema -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map(f => ({
+      "@type": "Question",
+      "name": f.q,
+      "acceptedAnswer": { "@type": "Answer", "text": f.a }
+    }))
+  })}>
+  </script>
+
+  <!-- ItemList Schema -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Best Chinese Snacks",
+    "itemListElement": schemaItems.map(it => ({
+      "@type": "ListItem",
+      "position": it.position,
+      "name": it.name
+    }))
+  })}>
+  </script>
+</BaseLayout>

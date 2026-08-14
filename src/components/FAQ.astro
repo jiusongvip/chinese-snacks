@@ -14,12 +14,12 @@ const faqs = [
 
 <section class="py-24 px-6 bg-surface-alt">
   <div class="max-w-[1400px] mx-auto w-full">
-    <p class="text-sm font-medium tracking-wide uppercase text-accent mb-3">Common Questions</p>
+    <p class="text-sm font-medium tracking-wide uppercase text-accent-dark mb-3">Common Questions</p>
     <h2 class="text-3xl md:text-4xl font-black tracking-tighter mb-12">Frequently Asked Questions</h2>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-[960px]">
       {faqs.map(faq => (
-        <details class="group bg-white rounded-xl border border-border overflow-hidden">
+        <details class="group bg-white rounded-xl border border-border overflow-hidden hover:border-accent/50 transition-colors">
           <summary class="p-5 cursor-pointer font-medium text-sm text-ink flex items-center justify-between select-none">
             {faq.q}
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 256 256" fill="currentColor" class="text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-3">

@@ -19,22 +19,22 @@ const currentMonthIndex = now.getMonth();
 
 <section class="py-24 px-6 bg-surface">
   <div class="max-w-[1400px] mx-auto w-full">
-    <p class="text-sm font-medium tracking-wide uppercase text-accent mb-3">Seasonal Guide</p>
+    <p class="text-sm font-medium tracking-wide uppercase text-accent-dark mb-3">Seasonal Guide</p>
     <h2 class="text-3xl md:text-4xl font-black tracking-tighter mb-4">What's in Season Now</h2>
     <p class="text-ink-muted max-w-[55ch] mb-12">Some snacks are seasonal. Don't go hunting for summer bingfen in January.</p>
 
     <div class="overflow-x-auto pb-4">
       <div class="flex gap-3 min-w-max">
         {months.map((m, i) => (
-          <div class={`w-[220px] rounded-xl border p-4 flex-shrink-0 transition-all ${i === currentMonthIndex ? 'border-accent bg-accent/5 shadow-sm' : 'border-border bg-white'}`}>
-            <p class={`text-xs font-bold uppercase mb-3 ${i === currentMonthIndex ? 'text-accent' : 'text-ink-muted'}`}>
+          <div class={`w-[220px] rounded-xl border p-4 flex-shrink-0 transition-all ${i === currentMonthIndex ? 'border-accent bg-accent/25 shadow-sm' : 'border-border bg-white'}`}>
+            <p class={`text-xs font-bold uppercase mb-3 ${i === currentMonthIndex ? 'text-accent-dark' : 'text-ink-muted'}`}>
               {m.month}
               {i === currentMonthIndex && <span class="ml-1 inline-block w-1.5 h-1.5 rounded-full bg-accent align-middle"></span>}
             </p>
             <p class="text-xs text-ink-muted leading-relaxed">{m.detail}</p>
             <div class="mt-2 flex flex-wrap gap-1">
               {m.top.map(s => (
-                <span class="text-[10px] px-1.5 py-0.5 rounded-full bg-accent/10 text-accent font-medium">{s.replace(/-/g, ' ')}</span>
+                <span class="text-[10px] px-1.5 py-0.5 rounded-full bg-accent/25 text-accent-dark font-bold">{s.replace(/-/g, ' ')}</span>
               ))}
             </div>
           </div>

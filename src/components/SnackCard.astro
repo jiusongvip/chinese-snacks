@@ -40,7 +40,7 @@ const emojiMap: Record<string, string> = {
 const emoji = snack.tags.includes("dessert") ? emojiMap.dessert : snack.isSpicy ? emojiMap.spicy : snack.tags.includes("breakfast") ? emojiMap.breakfast : emojiMap.default;
 ---
 
-<a href={`/snacks/${snack.id}`} class="group block bg-white rounded-xl border border-border overflow-hidden hover:shadow-md hover:border-accent/30 transition-all duration-200 active:scale-[0.98]">
+<a href={`/snacks/${snack.id}`} class="group block bg-white rounded-xl border border-border overflow-hidden hover:shadow-md hover:border-accent/60 hover:-translate-y-0.5 transition-all duration-200 active:scale-[0.98]">
   <div class="aspect-[16/10] bg-surface-alt flex items-center justify-center relative overflow-hidden">
     {snack.image ? (
       <img src={snack.image} alt={`${snack.nameEn} — ${snack.taste.substring(0, 60)}`} class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-400" width="800" height="500" loading="lazy" />
@@ -55,7 +55,7 @@ const emoji = snack.tags.includes("dessert") ? emojiMap.dessert : snack.isSpicy 
   </div>
   <div class="p-5">
     <div class="flex items-center justify-between mb-1">
-      <h3 class="font-bold text-lg tracking-tight group-hover:text-accent transition-colors">{snack.nameEn}</h3>
+      <h3 class="font-bold text-lg tracking-tight group-hover:text-accent-dark transition-colors">{snack.nameEn}</h3>
       <span class="text-xs px-2 py-0.5 rounded-full {difficultyColors[snack.difficulty]} capitalize">{snack.difficulty}</span>
     </div>
     <p class="text-sm text-ink-muted mb-2">

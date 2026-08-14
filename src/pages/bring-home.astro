@@ -2,47 +2,58 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Nav from "../components/Nav.astro";
 import Footer from "../components/Footer.astro";
+import PackagedSnackCard from "../components/PackagedSnackCard.astro";
+import packagedSnacks from "../data/packaged-snacks.json";
+
+const travelFriendly = packagedSnacks.filter(s => s.travelFriendly);
+const ranked = [...packagedSnacks].sort(
+  (a, b) => (b.editorPick ? 1 : 0) - (a.editorPick ? 1 : 0) || b.rating - a.rating
+);
 ---
 
-<BaseLayout title="Can You Bring Chinese Snacks Home? | ChineseSnacks" description="Customs rules for USA, UK & Australia, packaging tips, and the best Chinese snacks to bring home from your trip to China.">
+<BaseLayout
+  title="Can You Bring Chinese Snacks Home? Customs Rules & Best Picks | ChineseSnacks"
+  description="Customs rules for USA, UK & Australia, packaging tips, and the 15 best packaged Chinese snacks to bring home — with real brands, prices, and where to buy them."
+>
   <Nav />
   <div class="min-h-[100dvh] pt-24 pb-20 px-6">
     <div class="max-w-[1400px] mx-auto w-full pt-16">
-      <p class="text-sm font-medium tracking-wide uppercase text-accent mb-3">Practical Guide</p>
+      <p class="text-sm font-medium tracking-wide uppercase text-accent-dark mb-3">Practical Guide</p>
       <h1 class="text-4xl md:text-6xl font-black tracking-tighter mb-6">Bringing Chinese Snacks Home</h1>
       <div class="max-w-[65ch] space-y-6 text-ink-muted leading-relaxed">
-        <p class="text-lg">You had amazing snacks in China and want to bring some home. Here's what you need to know about customs, packaging, and the best items to pack.</p>
-        
+        <p class="text-lg">You had amazing snacks in China and want to bring some home. Here's what you need to know about customs, packaging, and the exact brands worth the suitcase space.</p>
+
         <h2 class="text-xl font-bold text-ink mt-8">Customs Rules (USA)</h2>
         <p>Commercially packaged and sealed snacks are generally allowed. Fresh produce, meat products, and homemade items are prohibited. Always declare food items on your customs form.</p>
-        
+
         <h2 class="text-xl font-bold text-ink mt-8">Customs Rules (UK)</h2>
         <p>Packaged snacks are fine. Meat and dairy products from non-EU countries face restrictions. Check the UK government website before traveling.</p>
-        
+
         <h2 class="text-xl font-bold text-ink mt-8">Customs Rules (Australia)</h2>
         <p>Australia has some of the strictest biosecurity laws. Most packaged snacks are okay if commercially sealed, but declare everything. Homemade items are almost never allowed.</p>
-        
+
         <h2 class="text-xl font-bold text-ink mt-8">Best Snacks to Bring Home</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div class="bg-white rounded-xl border border-border p-5">
-            <h3 class="font-bold text-ink mb-1">Mooncakes</h3>
-            <p class="text-xs text-ink-muted">Vacuum-sealed, travel well, and are uniquely Chinese. Buy at bakeries, not street stalls.</p>
+        <p class="text-sm">Our full ranked list of {ranked.length} packaged snacks — every one passes the sealed-packaging customs test. The {travelFriendly.length} marked <span class="font-semibold text-ink">Bring-home safe</span> are the easiest to pack and most stable in a suitcase.</p>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-8">
+        {ranked.map((snack, i) => (
+          <div class="reveal" style={`transition-delay: ${(i % 4) * 70}ms`}>
+            <PackagedSnackCard snack={snack} />
           </div>
-          <div class="bg-white rounded-xl border border-border p-5">
-            <h3 class="font-bold text-ink mb-1">Dried Fruits &amp; Nuts</h3>
-            <p class="text-xs text-ink-muted">Dried hawthorn, candied ginger, and spiced walnuts are lightweight and customs-friendly.</p>
-          </div>
-          <div class="bg-white rounded-xl border border-border p-5">
-            <h3 class="font-bold text-ink mb-1">Tea</h3>
-            <p class="text-xs text-ink-muted">Chinese tea is universally allowed through customs. Jasmine, oolong, and pu'er are excellent gifts.</p>
-          </div>
-          <div class="bg-white rounded-xl border border-border p-5">
-            <h3 class="font-bold text-ink mb-1">Sesame Snacks</h3>
-            <p class="text-xs text-ink-muted">Sesame brittle, sesame balls, and sesame candy bars are sealed, stable, and delicious.</p>
-          </div>
-        </div>
-        
-        <h2 class="text-xl font-bold text-ink mt-8">Tips</h2>
+        ))}
+      </div>
+
+      <div class="max-w-[65ch] space-y-6 text-ink-muted leading-relaxed mt-14">
+        <h2 class="text-xl font-bold text-ink">Where to Buy Before You Fly</h2>
+        <ul class="space-y-3 list-disc pl-5">
+          <li><span class="font-semibold text-ink">Supermarkets (Hema, Yonghui, Wumei):</span> the full brand lineup at the lowest prices — White Rabbit from ¥10, Weilong konjac from ¥5</li>
+          <li><span class="font-semibold text-ink">Convenience stores (7-Eleven, Lawson):</span> quick single packs near your hotel, slightly pricier</li>
+          <li><span class="font-semibold text-ink">Airport duty-free:</span> the classic gift brands in premium gift boxes, 1.5-2x supermarket prices</li>
+          <li><span class="font-semibold text-ink">Already home?</span> Amazon stocks White Rabbit ($3-6/bag); Yami, Weee, and Sayweee ship most brands in the US; Oriental Mart in the UK</li>
+        </ul>
+
+        <h2 class="text-xl font-bold text-ink mt-8">Packaging Tips</h2>
         <ul class="space-y-3 list-disc pl-5">
           <li>Always choose vacuum-sealed, commercially packaged snacks — avoid anything from open-air markets</li>
           <li>Keep original packaging — customs officers want to see labels</li>
@@ -50,6 +61,13 @@ import Footer from "../components/Footer.astro";
           <li>Declare everything on arrival — failing to declare is worse than having something confiscated</li>
           <li>Buy at supermarkets (Carrefour, Hema, Yonghui) for the most customs-friendly packaging</li>
         </ul>
+
+        <p class="pt-4">
+          <a href="/best-snacks" class="inline-flex items-center gap-3 group text-lg font-black tracking-tight">
+            <span class="underline decoration-accent decoration-4 underline-offset-4 group-hover:bg-accent group-hover:no-underline px-1 transition-all duration-200">See the full ranked list of best Chinese snacks</span>
+            <span class="group-hover:translate-x-1 transition-transform">&rarr;</span>
+          </a>
+        </p>
       </div>
     </div>
   </div>
