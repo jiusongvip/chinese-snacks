@@ -9,8 +9,10 @@ interface Props {
 }
 
 const { title, description, ogImage = "/images/hero.webp", canonicalURL, schemaType, noindex = false } = Astro.props;
-const siteUrl = Astro.site?.origin || "https://chinese-snacks.com";
-const pageUrl = canonicalURL ? `${siteUrl}${canonicalURL}` : new URL(Astro.url.pathname || '/', siteUrl).href.replace(/\/$/, '');
+const siteUrl = Astro.site?.origin || "https://www.chinese-snacks.com";
+const pageUrl = canonicalURL
+  ? `${siteUrl}${canonicalURL}`
+  : (Astro.url.pathname === '/' ? new URL('/', siteUrl).href.replace(/\/$/, '') : new URL(Astro.url.pathname, siteUrl).href);
 const siteName = "ChineseSnacks";
 ---
 

@@ -11,7 +11,7 @@ export function getStaticPaths() {
 
 const { post } = Astro.props;
 const postAuthor = authors.find(a => a.id === post.author);
-const siteUrl = Astro.site?.origin || "https://chinese-snacks.com";
+const siteUrl = Astro.site?.origin || "https://www.chinese-snacks.com";
 const pageUrl = new URL(Astro.url.pathname, siteUrl).href;
 ---
 
@@ -40,7 +40,7 @@ const pageUrl = new URL(Astro.url.pathname, siteUrl).href;
         </div>
       )}
       <div class="mt-12 pt-8 border-t border-border">
-        <a href="/blog" class="inline-flex items-center gap-1 text-sm font-bold text-accent-dark hover:underline">&larr; Back to all posts</a>
+        <a href="/blog/" class="inline-flex items-center gap-1 text-sm font-bold text-accent-dark hover:underline">&larr; Back to all posts</a>
       </div>
     </div>
   </div>

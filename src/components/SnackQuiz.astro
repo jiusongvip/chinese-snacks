@@ -129,7 +129,7 @@ h+='</div></div>';
 h+='<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 256 256" fill="currentColor" class="text-ink-muted flex-shrink-0"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"/></svg>';
 h+='</a>';
 });
-h+='</div><div class="flex gap-3 justify-center"><button onclick="showStep(\'step-1\');resetQ();" class="text-sm font-bold text-accent-dark hover:underline">Try Again</button><a href="/snacks" class="inline-flex items-center gap-1 text-sm font-bold text-accent-dark hover:underline">Browse All Snacks &rarr;</a></div>';
+h+='</div><div class="flex gap-3 justify-center"><button onclick="showStep(\'step-1\');resetQ();" class="text-sm font-bold text-accent-dark hover:underline">Try Again</button><a href="/snacks/" class="inline-flex items-center gap-1 text-sm font-bold text-accent-dark hover:underline">Browse All Snacks &rarr;</a></div>';
 document.getElementById("step-results").innerHTML=h;showStep("step-results");}
 function resetQ(){answers={city:"",flavor:"",style:""};document.querySelectorAll(".quiz-city-btn,.quiz-flavor-btn,.quiz-style-btn").forEach(function(b){b.classList.remove("border-accent","bg-accent/25","ring-2","ring-accent/40");});}
 </script>
