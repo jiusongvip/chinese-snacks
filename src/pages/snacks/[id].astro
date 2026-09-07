@@ -306,13 +306,17 @@ const difficultyNotes: Record<string, string> = {
             <p class="text-ink-muted text-sm leading-relaxed mb-6">{snack.taste}</p>
             <h3 class="font-bold text-xl mb-2">Cities</h3>
             <div class="space-y-2 mb-6">
-              {snack.bestCities.map(cid => (
-                <a href={`/cities/${cid}/`} class="block text-sm text-accent-dark hover:underline">{cityMap[cid]?.name || cid}</a>
+              {snack.bestCities.map(cid => cityMap[cid] ? (
+                <a href={`/cities/${cid}/`} class="block text-sm text-accent-dark hover:underline">{cityMap[cid].name}</a>
+              ) : (
+                <span class="block text-sm text-ink-muted">{cid.charAt(0).toUpperCase() + cid.slice(1)}</span>
               ))}
             </div>
-            <a href={`/cities/${snack.bestCity}/`} class="inline-flex items-center gap-2 w-full justify-center bg-accent text-ink px-6 py-3 rounded-full font-black text-sm hover:bg-accent-light transition-colors active:scale-[0.98]">
-              View {cityMap[snack.bestCity]?.name || snack.bestCity} Guide
-            </a>
+            {cityMap[snack.bestCity] && (
+              <a href={`/cities/${snack.bestCity}/`} class="inline-flex items-center gap-2 w-full justify-center bg-accent text-ink px-6 py-3 rounded-full font-black text-sm hover:bg-accent-light transition-colors active:scale-[0.98]">
+                View {cityMap[snack.bestCity].name} Guide
+              </a>
+            )}
           </div>
         </aside>
       </div>
