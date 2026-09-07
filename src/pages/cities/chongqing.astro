@@ -12,7 +12,7 @@ const citySnacks = snacks.filter(s => s.bestCities.includes("chongqing"));
 const cityStreets = streets.filter(s => s.cityId === "chongqing");
 ---
 
-<BaseLayout title="Chongqing Snacks Guide | ChineseSnacks" description={city.seoDescription}>
+<BaseLayout title="Chongqing Snacks: Spicy Street Food Guide | ChineseSnacks" description={city.seoDescription}>
   <Nav />
   <CityGuide city={city} citySnacks={citySnacks} cityStreets={cityStreets} />
   <Footer />

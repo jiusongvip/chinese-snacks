@@ -12,7 +12,7 @@ const citySnacks = snacks.filter(s => s.bestCities.includes("chengdu"));
 const cityStreets = streets.filter(s => s.cityId === "chengdu");
 ---
 
-<BaseLayout title="Chengdu Snacks Guide | ChineseSnacks" description={city.seoDescription}>
+<BaseLayout title="Chengdu Snacks: Mala Street Food &amp; Prices | ChineseSnacks" description={city.seoDescription}>
   <Nav />
   <CityGuide city={city} citySnacks={citySnacks} cityStreets={cityStreets} />
   <Footer />

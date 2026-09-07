@@ -3,7 +3,7 @@ import snacks from "../data/snacks.json";
 import cities from "../data/cities.json";
 import posts from "../data/blog.json";
 ---
-<link rel="preload" as="image" href="/images/hero.webp" />
+<link rel="preload" as="image" href="/images/hero.webp" fetchpriority="high" />
 
 <section class="relative min-h-[100dvh] flex flex-col justify-center pt-28 pb-0 px-6 overflow-hidden">
   <!-- Decorative graphic circle -->
@@ -37,10 +37,10 @@ import posts from "../data/blog.json";
 
     <!-- Image with offset graphic frame -->
     <div class="lg:col-span-5 relative">
-      <div class="hero-anim relative" style="animation-delay: 0.4s">
+        <div class="hero-anim-lcp relative" style="animation-delay: 0.4s">
         <div class="absolute -top-5 -right-5 w-full h-full bg-accent rounded-[1.75rem] rotate-2" aria-hidden="true"></div>
         <div class="relative aspect-[4/3] rounded-[1.75rem] overflow-hidden border-4 border-surface shadow-2xl shadow-ink/15">
-          <img src="/images/hero.webp" alt="Chinese street food market at dusk with steaming dumplings and red lanterns" class="absolute inset-0 w-full h-full object-cover" width="1200" height="900" loading="eager" />
+          <img src="/images/hero.webp" alt="Chinese street food market at dusk with steaming dumplings and red lanterns" class="absolute inset-0 w-full h-full object-cover" width="800" height="600" loading="eager" fetchpriority="high" />
         </div>
       </div>
     </div>

@@ -64,8 +64,8 @@ const schemaItems = [
 ---
 
 <BaseLayout
-  title="Best Chinese Snacks in 2026: Top 25 Street & Packaged Picks | ChineseSnacks"
-  description="The best Chinese snacks to try in 2026 — 15 packaged favorites with real brands and prices (White Rabbit, Weilong, Wangwang) plus 12 street classics. Where to buy them in China or online."
+  title="Top 25 Chinese Snacks: Street & Packaged Picks | ChineseSnacks"
+  description="The best Chinese snacks to try in 2026 — 15 packaged favorites with real brands and prices, plus 12 street classics. Where to buy them in China or online."
 >
   <Nav />
 
@@ -144,7 +144,7 @@ const schemaItems = [
       <div>
         {streetClassics.map((s, i) => (
           <a
-            href={`/snacks/${s.id}`}
+            href={`/snacks/${s.id}/`}
             class="reveal group grid grid-cols-[2.5rem_1fr_auto] md:grid-cols-[3.5rem_1fr_auto_auto] items-center gap-4 py-5 px-2 border-b border-border hover:bg-accent transition-colors duration-300"
             style={`transition-delay: ${(i % 4) * 60}ms`}
           >

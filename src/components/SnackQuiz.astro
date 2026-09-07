@@ -116,7 +116,7 @@ h+='<div class="space-y-4 mb-8">';
 top.forEach(function(s,i){
 var badge=i===0?'<span class="text-xs px-1.5 py-0.5 rounded-full bg-accent text-ink font-black mr-2">Best Match</span>':"";
 var img=s.img?'<img src="'+s.img+'" alt="'+s.nEn+'" class="w-full h-full object-cover" />':'<span class="text-2xl">'+e4(s)+'</span>';
-h+='<a href="/snacks/'+s.id+'" class="flex gap-4 p-4 rounded-xl border border-border hover:border-accent/60 hover:shadow-sm transition-all group items-center">';
+h+='<a href="/snacks/'+s.id+'/" class="flex gap-4 p-4 rounded-xl border border-border hover:border-accent/60 hover:shadow-sm transition-all group items-center">';
 h+='<div class="w-16 h-16 rounded-lg bg-surface-alt flex-shrink-0 overflow-hidden flex items-center justify-center">'+img+'</div>';
 h+='<div class="flex-1 min-w-0">';
 h+='<div class="flex items-center gap-2 mb-0.5">'+badge+'<span class="font-bold text-ink">'+s.nEn+'</span></div>';

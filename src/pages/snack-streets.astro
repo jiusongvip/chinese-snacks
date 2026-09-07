@@ -5,13 +5,15 @@ import Footer from "../components/Footer.astro";
 import SnackMap from "../components/SnackMap.astro";
 ---
 
-<BaseLayout title="Chinese Snack Streets Directory | ChineseSnacks" description="Complete directory of China's best snack streets and night markets. Find where to eat in Beijing, Chengdu, Xi'an, Shanghai and more.">
+<BaseLayout title="Chinese Snack Streets Directory | ChineseSnacks" description="Complete directory of China's best snack streets and night markets. Find where to eat in Beijing, Chengdu, Xi'an, Shanghai, Guangzhou and more, with tips.">
   <Nav />
   <div class="min-h-[100dvh] pt-24">
     <div class="max-w-[1400px] mx-auto w-full pt-16 px-6">
       <p class="text-sm font-medium tracking-wide uppercase text-accent mb-3">Snack Streets</p>
       <h1 class="text-4xl md:text-6xl font-black tracking-tighter mb-4">China's Best Snack Streets</h1>
       <p class="text-lg text-ink-muted max-w-[55ch] mb-2">A curated directory of the best snack streets and night markets across Chinese cities.</p>
+      <h2 class="text-2xl md:text-3xl font-black tracking-tighter mt-12 mb-4">How to Use This Directory</h2>
+      <p class="text-ink-muted max-w-[65ch] mb-12">Tap a marker on the map to see each street's best eats, peak hours, and tourist-friendliness rating. Streets with lower star ratings are where locals actually eat — expect lower prices and longer local queues. Pair this directory with our <a href="/cities/" class="text-accent-dark font-semibold hover:underline">city guides</a> for full day-trip itineraries.</p>
     </div>
   </div>
   <SnackMap />

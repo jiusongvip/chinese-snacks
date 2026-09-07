@@ -28,7 +28,9 @@
 
 /* ---------- Savor-style motion ---------- */
 
-/* Hero entrance: staggered fade-up */
+/* Hero entrance: staggered fade-up.
+   NOTE: the LCP hero image container must NOT be animated — an animated
+   (opacity:0) LCP element delays the reported Largest Contentful Paint. */
 @keyframes heroFadeUp {
   from {
     opacity: 0;
@@ -42,6 +44,10 @@
 .hero-anim {
   opacity: 0;
   animation: heroFadeUp 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+.hero-anim-lcp {
+  opacity: 1;
+  animation: none;
 }
 
 /* Scroll reveal: sections fade up when entering the viewport */

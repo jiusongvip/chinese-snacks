@@ -12,7 +12,7 @@ const citySnacks = snacks.filter(s => s.bestCities.includes("xian"));
 const cityStreets = streets.filter(s => s.cityId === "xian");
 ---
 
-<BaseLayout title="Xi'an Snacks Guide | ChineseSnacks" description={city.seoDescription}>
+<BaseLayout title="Xi'an Snacks: Muslim Quarter Food Guide | ChineseSnacks" description={city.seoDescription}>
   <Nav />
   <CityGuide city={city} citySnacks={citySnacks} cityStreets={cityStreets} />
   <Footer />

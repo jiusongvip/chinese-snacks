@@ -1,7 +1,7 @@
 import http from 'http';
 import fs from 'fs';
 
-const snacks = JSON.parse(fs.readFileSync('d:/workspace/website/chinese-snacks/src/data/snacks.json', 'utf8'));
+const snacks = JSON.parse(fs.readFileSync('D:/workspaces/website/chinese-snacks/src/data/snacks.json', 'utf8'));
 
 const get = p =>
   new Promise((res, rej) => {

@@ -6,7 +6,7 @@ import posts from "../../data/blog.json";
 import authors from "../../data/authors.json";
 ---
 
-<BaseLayout title="Chinese Snacks Blog | ChineseSnacks" description="Practical guides, regional deep dives, and honest advice for eating street food in China. Updated regularly by our local food editors.">
+<BaseLayout title="Chinese Snacks Blog: Street Food Guides | ChineseSnacks" description="Practical guides, regional deep dives, and honest advice for eating street food in China. Updated regularly by our local food editors and field team.">
   <Nav />
   <div class="min-h-[100dvh] pt-24 pb-20 px-6">
     <div class="max-w-[1400px] mx-auto w-full pt-16">
@@ -15,7 +15,7 @@ import authors from "../../data/authors.json";
       <p class="text-lg text-ink-muted max-w-[55ch] mb-12">Practical guides, regional deep dives, and honest advice for eating street food in China.</p>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {posts.map(post => (
-          <a href={`/blog/${post.slug}`} class="group block bg-white rounded-xl border border-border overflow-hidden hover:shadow-md hover:border-accent/30 transition-all">
+          <a href={`/blog/${post.slug}/`} class="group block bg-white rounded-xl border border-border overflow-hidden hover:shadow-md hover:border-accent/30 transition-all">
             <div class="aspect-[3/2] bg-surface-alt overflow-hidden">
               <img src={post.image} alt={post.title} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-400" loading="lazy" />
             </div>

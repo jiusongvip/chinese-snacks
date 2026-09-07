@@ -11,8 +11,8 @@ const allTags = [...new Set(snacks.flatMap(s => s.tags))].sort();
 ---
 
 <BaseLayout
-  title="All Chinese Snacks — Complete Guide with Prices | ChineseSnacks"
-  description="Browse all Chinese street snacks with prices, taste descriptions, and where to eat them. Filter by city, flavor, and dietary needs."
+  title="All Chinese Snacks: Complete Price Guide | ChineseSnacks"
+  description="Browse all 22 Chinese street snacks with prices and where to eat them. Filter by city, flavor, spice level, and dietary needs like vegetarian or halal."
 >
   <Nav />
   <div class="min-h-[100dvh] pt-24 pb-20 px-6">
@@ -85,7 +85,7 @@ const allTags = [...new Set(snacks.flatMap(s => s.tags))].sort();
     cards.forEach(card => {
       const cityData = card.getAttribute("data-city") || "";
       const tagsData = card.getAttribute("data-tags") || "";
-      const nameEl = card.querySelector("h3");
+      const nameEl = card.querySelector("h2");
       const nameText = nameEl ? nameEl.textContent.toLowerCase() : "";
 
       // City filter
