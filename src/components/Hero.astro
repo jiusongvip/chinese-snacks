@@ -3,7 +3,7 @@ import snacks from "../data/snacks.json";
 import cities from "../data/cities.json";
 import posts from "../data/blog.json";
 ---
-<link rel="preload" as="image" href="/images/hero.webp" fetchpriority="high" />
+<link rel="preload" as="image" href="/images/hero-640.webp" imagesrcset="/images/hero-480.webp 480w, /images/hero-640.webp 640w, /images/hero.webp 800w" imagesizes="(min-width: 1024px) 560px, 412px" fetchpriority="high" />
 
 <section class="relative min-h-[100dvh] flex flex-col justify-center pt-28 pb-0 px-6 overflow-hidden">
   <!-- Decorative graphic circle -->
@@ -40,7 +40,7 @@ import posts from "../data/blog.json";
         <div class="hero-anim-lcp relative" style="animation-delay: 0.4s">
         <div class="absolute -top-5 -right-5 w-full h-full bg-accent rounded-[1.75rem] rotate-2" aria-hidden="true"></div>
         <div class="relative aspect-[4/3] rounded-[1.75rem] overflow-hidden border-4 border-surface shadow-2xl shadow-ink/15">
-          <img src="/images/hero.webp" alt="Chinese street food market at dusk with steaming dumplings and red lanterns" class="absolute inset-0 w-full h-full object-cover" width="800" height="600" loading="eager" fetchpriority="high" />
+          <img src="/images/hero.webp" srcset="/images/hero-480.webp 480w, /images/hero-640.webp 640w, /images/hero.webp 800w" sizes="(min-width: 1024px) 560px, 412px" alt="Chinese street food market at dusk with steaming dumplings and red lanterns" class="absolute inset-0 w-full h-full object-cover" width="800" height="600" loading="eager" fetchpriority="high" />
         </div>
       </div>
     </div>

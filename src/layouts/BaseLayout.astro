@@ -19,13 +19,22 @@ const siteName = "ChineseSnacks";
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Google tag (gtag.js) -->
-    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-S9C2H9ZQJD"></script>
+    <!-- Google tag (gtag.js) - deferred to idle to keep the main thread free -->
     <script is:inline>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-S9C2H9ZQJD');
+      (function () {
+        function load() {
+          var s = document.createElement('script');
+          s.src = 'https://www.googletagmanager.com/gtag/js?id=G-S9C2H9ZQJD';
+          s.async = true;
+          document.head.appendChild(s);
+        }
+        if ('requestIdleCallback' in window) { requestIdleCallback(load, { timeout: 4000 }); }
+        else { setTimeout(load, 3000); }
+      })();
     </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />

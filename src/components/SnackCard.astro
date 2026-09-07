@@ -43,7 +43,7 @@ const emoji = snack.tags.includes("dessert") ? emojiMap.dessert : snack.isSpicy 
 <a href={`/snacks/${snack.id}/`} class="group block bg-white rounded-xl border border-border overflow-hidden hover:shadow-md hover:border-accent/60 hover:-translate-y-0.5 transition-all duration-200 active:scale-[0.98]">
   <div class="aspect-[16/10] bg-surface-alt flex items-center justify-center relative overflow-hidden">
     {snack.image ? (
-      <img src={snack.image} alt={`${snack.nameEn} — ${snack.taste.substring(0, 60)}`} class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-400" width="640" height="400" loading="lazy" />
+      <img src={snack.image} srcset={`${snack.image.replace('.webp', '-400.webp')} 400w, ${snack.image} 640w`} sizes="(min-width: 1280px) 440px, (min-width: 768px) 45vw, calc(100vw - 48px)" alt={`${snack.nameEn} — ${snack.taste.substring(0, 60)}`} class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-400" width="640" height="400" loading="lazy" />
     ) : (
       <span class="text-5xl group-hover:scale-110 transition-transform duration-300">{emoji}</span>
     )}
