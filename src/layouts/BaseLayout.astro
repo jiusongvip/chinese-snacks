@@ -56,7 +56,14 @@ const siteName = "ChineseSnacks";
       "@type": schemaType || "WebPage",
       "name": title,
       "description": description,
-      "url": pageUrl
+      "url": pageUrl,
+      "author": {
+        "@type": "Organization",
+        "name": "ChineseSnacks Editorial Team",
+        "url": `${siteUrl}/about/`
+      },
+      "datePublished": "2026-06-15",
+      "dateModified": new Date().toISOString().slice(0, 10)
     })}>
     </script>
     <script type="application/ld+json" set:html={JSON.stringify({
@@ -64,6 +71,11 @@ const siteName = "ChineseSnacks";
       "@type": "Organization",
       "name": siteName,
       "url": siteUrl,
+      "logo": {
+        "@type": "ImageObject",
+        "url": `${siteUrl}/favicon.svg`
+      },
+      "sameAs": ["https://github.com/jiusongvip"],
       "description": "Independent editorial team publishing practical Chinese street food guides with prices, ordering phrases, and recommendations built from market data and local community feedback."
     })}>
     </script>

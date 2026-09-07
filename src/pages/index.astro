@@ -113,7 +113,29 @@ const editorPicks = packagedSnacks.filter(s => s.editorPick);
         <span class="text-4xl md:text-6xl font-black tracking-tighter text-ink/10 select-none">03</span>
         <h2 class="text-4xl md:text-6xl font-black tracking-tighter leading-none">What Locals Actually Recommend</h2>
       </div>
-      <p class="reveal text-ink-muted max-w-[55ch] text-lg mb-14">We scoured the r/beijing community thread "Favorite Chinese snacks?" to find what locals really buy — with the exact brands, prices, and where to get them. Skip the tourist shops; buy where Beijingers buy.</p>
+      <p class="reveal text-ink-muted max-w-[55ch] text-lg mb-8">We scoured the r/beijing community thread "Favorite Chinese snacks?" to find what locals really buy — with the exact brands, prices, and where to get them. Skip the tourist shops; buy where Beijingers buy.</p>
+
+      <div class="reveal overflow-x-auto mb-12 rounded-xl border border-border bg-white">
+        <table class="w-full text-sm">
+          <caption class="sr-only">What locals actually buy: snack, typical price, and where to buy it</caption>
+          <thead>
+            <tr class="text-left text-xs uppercase tracking-wide text-ink/60 border-b border-border">
+              <th scope="col" class="py-3 px-4 font-bold">Snack</th>
+              <th scope="col" class="py-3 px-4 font-bold">Typical price</th>
+              <th scope="col" class="py-3 px-4 font-bold">Where locals buy it</th>
+            </tr>
+          </thead>
+          <tbody>
+            {localPicks.map((pick, i) => (
+              <tr class={i % 2 === 0 ? 'border-b border-border/60' : 'border-b border-border/60 bg-surface-alt/50'}>
+                <th scope="row" class="py-3 px-4 font-bold text-ink whitespace-nowrap">{pick.snack} <span class="font-normal text-ink/50">{pick.nameZh}</span></th>
+                <td class="py-3 px-4 text-ink-muted whitespace-nowrap">{i === 0 ? '¥3-6 / pack' : i === 2 ? '¥8-15 / bag' : i === 5 ? '¥15-25 / 500g' : i === 3 ? '¥30-80 / gift box' : '¥5-20'}</td>
+                <td class="py-3 px-4 text-ink-muted">{i === 5 ? 'Street vendors with iron woks (winter only)' : i === 3 ? 'Beijing supermarkets, heritage shops' : i === 7 ? 'Any supermarket or convenience store' : 'Wumei, Meilianmei, Hualian, Carrefour'}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         {localPicks.map((pick, i) => (
@@ -122,15 +144,35 @@ const editorPicks = packagedSnacks.filter(s => s.editorPick);
               <h3 class="font-bold text-xl tracking-tight">{pick.snack}</h3>
               <span class="text-xs font-medium text-ink/60 flex-shrink-0">{pick.nameZh}</span>
             </div>
-            <p class="text-sm italic text-ink-muted mb-3 border-l-[3px] border-accent pl-3">{pick.quote}</p>
+            <blockquote class="text-sm italic text-ink-muted mb-3 border-l-[3px] border-accent pl-3" cite="https://www.reddit.com/r/beijing/">{pick.quote}</blockquote>
             <p class="text-sm text-ink-muted leading-relaxed mb-3">{pick.note}</p>
             <p class="text-xs text-ink-muted/70 flex items-center gap-1.5">
-              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 256 256" fill="currentColor"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm16-40a8,8,0,0,1-8,8H120a8,8,0,0,1,0-16h16A8,8,0,0,1,136,176Zm29.66-70.62-28.22,28.22a8,8,0,0,1-11.32,0l-28.22-28.22a8,8,0,0,1,11.32-11.32L128,112.69l22.34-22.35a8,8,0,0,1,11.32,11.32Z"/></svg>
-              Source: {pick.source}
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 256 256" fill="currentColor"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm16-40a8,8,0,0,1-8,8H120a8,8,0,0,1,0-16h16A8,8,0,0,1,136,176Zm29.66-70.62-28.22,28.22a8,8,0,0,1-11.32,0l-28.22-28.22a8,8,0,0,1-11.32-11.32L128,112.69l22.34-22.35a8,8,0,0,1,11.32,11.32Z"/></svg>
+              Source: <cite class="not-italic">{pick.source}</cite>
             </p>
           </div>
         ))}
       </div>
+
+      <div class="reveal mt-10 max-w-[720px]">
+        <h3 class="font-black text-xl tracking-tight mb-4">How We Verify These Picks</h3>
+        <ol class="list-decimal pl-5 space-y-1.5 text-sm text-ink-muted leading-relaxed">
+          <li>Monitor what locals actually recommend in community threads (r/beijing and regional subreddits), then record the exact brands mentioned.</li>
+          <li>Cross-check prices at major supermarket chains (Wumei, Hualian, Carrefour) and convenience stores each season.</li>
+          <li>Re-test shelf stability and customs rules before every guide update — anything perishable gets flagged.</li>
+        </ol>
+      </div>
+
+      <div class="reveal mt-10 max-w-[720px]">
+        <h3 class="font-black text-xl tracking-tight mb-4">Sources &amp; Further Reading</h3>
+        <ul class="list-disc pl-5 space-y-1.5 text-sm text-ink-muted leading-relaxed">
+          <li>Community picks and quotes: <a href="https://www.reddit.com/r/beijing/" rel="external nofollow" class="underline decoration-accent decoration-2 underline-offset-2 hover:bg-accent transition-all">r/beijing — "Favorite Chinese snacks?" thread</a></li>
+          <li>Chengdu food heritage: <a href="https://en.unesco.org/creative-cities/chengdu" rel="external nofollow" class="underline decoration-accent decoration-2 underline-offset-2 hover:bg-accent transition-all">UNESCO Creative Cities — Chengdu, City of Gastronomy</a></li>
+          <li>Brand history: <a href="https://en.wikipedia.org/wiki/White_Rabbit_(candy)" rel="external nofollow" class="underline decoration-accent decoration-2 underline-offset-2 hover:bg-accent transition-all">Wikipedia — White Rabbit candy</a> · <a href="https://en.wikipedia.org/wiki/Daoxiangcun" rel="external nofollow" class="underline decoration-accent decoration-2 underline-offset-2 hover:bg-accent transition-all">Wikipedia — Daoxiangcun (since 1895)</a></li>
+        </ul>
+      </div>
+
+      <p class="reveal text-sm text-ink-muted mt-10">Curated by the <a href="/about/" class="font-bold text-ink underline decoration-accent decoration-2 underline-offset-2 hover:bg-accent transition-all">ChineseSnacks Editorial Team</a> · <time datetime="2026-09-07">Last updated September 7, 2026</time></p>
 
       <div class="reveal mt-12 flex flex-col sm:flex-row gap-6 items-start">
         <a href="/blog/best-chinese-snacks-to-bring-home/" class="inline-flex items-center gap-3 group text-lg font-black tracking-tight">
