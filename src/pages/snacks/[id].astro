@@ -5,6 +5,7 @@ import Footer from "../../components/Footer.astro";
 import snacks from "../../data/snacks.json";
 import cities from "../../data/cities.json";
 import snackExtras from "../../data/snack-extras.json";
+import snackSeo from "../../data/snack-seo.json";
 
 export function getStaticPaths() {
   return snacks.map(s => ({ params: { id: s.id } }));
@@ -16,13 +17,14 @@ if (!snack) return Astro.redirect("/");
 
 const extras = snackExtras.find((e: any) => e.id === id);
 const compare = extras?.compare ? { ...extras.compare, withSnack: snacks.find((s: any) => s.id === extras.compare.withId) } : null;
+const seo = (snackSeo as Record<string, any>)[id] || null;
 
 const cityMap = Object.fromEntries(cities.map(c => [c.id, c]));
 const usdMin = (snack.priceMin / 7).toFixed(1);
 const usdMax = (snack.priceMax / 7).toFixed(1);
 const cityNames = snack.bestCities.map(cid => cityMap[cid]?.name || cid).join(", ");
 const metaSentence = (t: string) => t.split(/[.!?]/)[0].trim() + ".";
-const metaDesc = (() => {
+const autoDesc = (() => {
   const tail = ` From ¥${snack.priceMin}-¥${snack.priceMax} in ${cityNames}.`;
   const d = metaSentence(snack.description);
   const t = metaSentence(snack.taste);
@@ -59,9 +61,13 @@ const metaDesc = (() => {
   }
   return out;
 })();
-const pageTitle = `${snack.nameEn} (${snack.nameZh}) - Chinese Snack Guide | ChineseSnacks`.length <= 60
+// SEO overrides (src/data/snack-seo.json): search-matched title + snippet description.
+// Falls back to the generated values for any snack without an override.
+const metaDesc = seo?.description || autoDesc;
+const fallbackTitle = `${snack.nameEn} (${snack.nameZh}) - Chinese Snack Guide | ChineseSnacks`.length <= 60
   ? `${snack.nameEn} (${snack.nameZh}) - Chinese Snack Guide | ChineseSnacks`
   : `${snack.nameEn} - Chinese Snack Guide | ChineseSnacks`;
+const pageTitle = seo?.title || fallbackTitle;
 const difficultyColors: Record<string, string> = { easy: "bg-green-100 text-green-800", medium: "bg-yellow-100 text-yellow-800", hard: "bg-red-100 text-red-800" };
 
 const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
@@ -108,6 +114,41 @@ const difficultyNotes: Record<string, string> = {
          <div class="prose prose-lg max-w-none text-ink-muted leading-relaxed mb-8">
            <p class="text-lg">{snack.description}</p>
          </div>
+
+          {seo && (
+            <section class="bg-white rounded-xl border border-border p-6 mb-6" aria-labelledby="quick-answer">
+              <h2 id="quick-answer" class="flex items-center gap-2 text-xs font-bold tracking-widest uppercase text-accent-dark mb-3">
+                <span class="w-1.5 h-1.5 rounded-full bg-accent-dark"></span>Quick Answer
+              </h2>
+              <p class="text-ink text-base leading-relaxed mb-5">{seo.whatIsIt}</p>
+              <dl class="grid sm:grid-cols-2 gap-x-6 gap-y-4">
+                <div>
+                  <dt class="text-xs text-ink-muted uppercase tracking-wide mb-1">How to Say It</dt>
+                  <dd class="text-sm text-ink leading-relaxed">{seo.howToSay}</dd>
+                </div>
+                <div>
+                  <dt class="text-xs text-ink-muted uppercase tracking-wide mb-1">Also Spelled</dt>
+                  <dd class="text-sm text-ink leading-relaxed">{seo.alsoSpelled}</dd>
+                </div>
+                <div>
+                  <dt class="text-xs text-ink-muted uppercase tracking-wide mb-1">In English</dt>
+                  <dd class="text-sm text-ink leading-relaxed">{seo.inEnglish}</dd>
+                </div>
+                <div>
+                  <dt class="text-xs text-ink-muted uppercase tracking-wide mb-1">Calories</dt>
+                  <dd class="text-sm text-ink leading-relaxed">{seo.calories}</dd>
+                </div>
+                <div>
+                  <dt class="text-xs text-ink-muted uppercase tracking-wide mb-1">Origin</dt>
+                  <dd class="text-sm text-ink leading-relaxed">{seo.originShort}</dd>
+                </div>
+                <div>
+                  <dt class="text-xs text-ink-muted uppercase tracking-wide mb-1">Good for First-Timers?</dt>
+                  <dd class="text-sm text-ink leading-relaxed">{seo.firstTimer}</dd>
+                </div>
+              </dl>
+            </section>
+          )}
 
           <div class="bg-white rounded-xl border border-border p-6 mb-6">
             <h2 class="font-bold text-lg text-ink mb-2">Where to Find the Best {snack.nameEn}</h2>
