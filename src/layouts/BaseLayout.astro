@@ -8,7 +8,7 @@ interface Props {
   noindex?: boolean;
 }
 
-const { title, description, ogImage = "/images/hero.webp", canonicalURL, schemaType, noindex = false } = Astro.props;
+const { title, description, ogImage = "/images/hero-bbq.webp", canonicalURL, schemaType, noindex = false } = Astro.props;
 const siteUrl = Astro.site?.origin || "https://www.chinese-snacks.com";
 const pageUrl = canonicalURL
   ? `${siteUrl}${canonicalURL}`
