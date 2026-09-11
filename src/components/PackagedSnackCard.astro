@@ -72,6 +72,11 @@ function stars(rating: number): string {
     {snack.travelFriendly && <span class="text-[10px] px-2 py-0.5 rounded-full bg-blue-100 text-blue-700 font-medium">Bring-home safe</span>}
   </div>
 
-  <p class="text-[11px] text-ink-muted mb-1"><span class="font-semibold text-ink/70">Buy:</span> {snack.whereToBuy.map(b => buyLabels[b] || b).join(" / ")}</p>
-  <p class="text-[11px] text-ink-muted">{snack.priceOnline}</p>
+  <p class="text-[11px] text-ink-muted mb-2"><span class="font-semibold text-ink/70">Buy:</span> {snack.whereToBuy.map(b => buyLabels[b] || b).join(" / ")}</p>
+  <p class="text-[11px] text-ink-muted mb-3">{snack.priceOnline}</p>
+  {snack.travelFriendly ? (
+    <a href="/bring-home/" class="mt-auto inline-flex items-center gap-1 text-[11px] font-bold text-accent-dark hover:underline">Bring it home: customs &amp; packing guide &rarr;</a>
+  ) : (
+    <a href="/snack-streets/" class="mt-auto inline-flex items-center gap-1 text-[11px] font-bold text-accent-dark hover:underline">Find it fresh: China's snack streets &rarr;</a>
+  )}
 </div>

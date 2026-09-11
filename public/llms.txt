@@ -7,8 +7,9 @@ ChineseSnacks is a practical Chinese street food guide covering Beijing, Chengdu
 - [Homepage](https://www.chinese-snacks.com/): Complete overview of Chinese street snacks with quiz, seasonal calendar, and ordering phrases.
 - [All Snacks](https://www.chinese-snacks.com/snacks/): Directory of 20+ Chinese snacks with prices and locations.
 - [By City](https://www.chinese-snacks.com/cities/): Browse snacks by city - Beijing, Chengdu, Xi an, Shanghai, Guangzhou, Chongqing.
+- [Best Snacks Ranking](https://www.chinese-snacks.com/best-snacks/): Ranked Top 25 Chinese snacks - 15 packaged with brands and prices, plus 12 street classics.
 - [Snack Streets](https://www.chinese-snacks.com/snack-streets/): Interactive map of Chinas best snack streets and night markets.
-- [Ordering Phrases](https://www.chinese-snacks.com/phrases/): Essential Chinese phrases for ordering street food.
+- [Blog](https://www.chinese-snacks.com/blog/): In-depth field guides on night markets, regional flavors, ordering without Mandarin, and spotting tourist traps.
 - [Safety Guide](https://www.chinese-snacks.com/safety/): Practical tips for eating street food safely in China.
 - [Vegetarian Guide](https://www.chinese-snacks.com/vegetarian/): Complete guide to vegetarian and vegan Chinese street snacks.
 - [Bringing Snacks Home](https://www.chinese-snacks.com/bring-home/): Customs rules and packaging tips for bringing Chinese snacks home.

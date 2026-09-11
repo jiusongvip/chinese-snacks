@@ -15,7 +15,7 @@ const siteUrl = Astro.site?.origin || "https://www.chinese-snacks.com";
 const pageUrl = new URL(Astro.url.pathname, siteUrl).href;
 ---
 
-<BaseLayout title={(post.seoTitle || post.title) + " | ChineseSnacks"} description={post.summary} schemaType="Article">
+<BaseLayout title={post.seoTitle || post.title} description={post.summary} schemaType="Article">
   <Nav />
   <div class="min-h-[100dvh] pt-24 pb-20 px-6">
     <div class="max-w-[800px] mx-auto w-full pt-16">

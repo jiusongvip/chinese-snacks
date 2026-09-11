@@ -31,23 +31,27 @@ const streetClassics = streetIds.map(id => snacks.find(s => s.id === id)).filter
 const faqs = [
   {
     q: "What are the most popular Chinese snacks?",
-    a: "Two families dominate. On the street, jianbing (breakfast crepes), xiaolongbao (soup dumplings), and roujiamo (Chinese burgers) are the everyday classics travelers meet first. In supermarkets, White Rabbit candy, Weilong konjac strips, and Wangwang senbei rice crackers are the national favorites — the brands locals actually buy as gifts and souvenirs.",
+    a: `Two families dominate. On the street, <a href="/snacks/jianbing/">jianbing</a> (breakfast crepes), <a href="/snacks/xiaolongbao/">xiaolongbao</a> (soup dumplings), and <a href="/snacks/roujiamo/">roujiamo</a> (Chinese burgers) are the everyday classics travelers meet first. In supermarkets, White Rabbit candy, Weilong konjac strips, and Wangwang senbei rice crackers are the national favorites — the brands locals actually buy as gifts and souvenirs.`,
   },
   {
     q: "Can I buy Chinese snacks online outside China?",
-    a: "Yes. White Rabbit candy runs about $3-6 per bag on Amazon, and most major brands (Weilong, Wangwang, Huang Fei Hong) ship through Asian grocery platforms like Yami, Weee, and Sayweee in the US, and Oriental Mart in the UK. Prices overseas are typically 2-3x the China supermarket price, so stock up while you're in China.",
+    a: `Yes. White Rabbit candy runs about $3-6 per bag on Amazon, and most major brands (Weilong, Wangwang, Huang Fei Hong) ship through Asian grocery platforms like Yami, Weee, and Sayweee in the US, and Oriental Mart in the UK. Prices overseas are typically 2-3x the China supermarket price, so stock up while you're in China.`,
   },
   {
     q: "Which Chinese snacks are vegetarian?",
-    a: "Plenty: haw flakes, Wangwang senbei, sesame candy, latiao (spicy gluten strips), and White Rabbit candy (dairy-based, so lacto-vegetarian). But watch out — mooncakes and some pastry snacks hide lard or meat. Our vegetarian guide lists every safe pick, and which common 'vegetarian-looking' snacks to skip.",
+    a: `Plenty: haw flakes, Wangwang senbei, sesame candy, latiao (spicy gluten strips), <a href="/snacks/liangpi/">liangpi</a> (cold skin noodles), and White Rabbit candy (dairy-based, so lacto-vegetarian). But watch out — mooncakes and some pastry snacks hide lard or meat. Our <a href="/vegetarian/">vegetarian guide</a> lists every safe pick, and which common 'vegetarian-looking' snacks to skip.`,
   },
   {
     q: "How much do Chinese snacks cost?",
-    a: "Street snacks run ¥0.5-¥50: chuan chuan skewers from ¥0.5 each, jianbing ¥5-15, a full bowl of yangrou paomo up to ¥50. Packaged snacks in Chinese supermarkets cost ¥5-40 per pack; the same items cost $3-15 overseas. All our picks list both the street price and the online price.",
+    a: `Street snacks run ¥0.5-¥50: <a href="/snacks/chuanchuan/">chuan chuan</a> skewers from ¥0.5 each, jianbing ¥5-15, a full bowl of <a href="/snacks/yangrou-paomo/">yangrou paomo</a> up to ¥50. Packaged snacks in Chinese supermarkets cost ¥5-40 per pack; the same items cost $3-15 overseas. All our picks list both the street price and the online price.`,
   },
   {
     q: "What Chinese snacks can I bring back home?",
-    a: "Commercially sealed, packaged snacks are generally allowed into the US, UK, and Australia. Best bets: White Rabbit candy, haw flakes, Wangwang senbei, and vacuum-sealed pastries. Avoid fresh produce, meat, and homemade items. Full customs rules for each country are in our bring-home guide.",
+    a: `Commercially sealed, packaged snacks are generally allowed into the US, UK, and Australia. Best bets: White Rabbit candy, haw flakes, Wangwang senbei, and vacuum-sealed pastries. Avoid fresh produce, meat, and homemade items. Full customs rules for each country are in our <a href="/bring-home/">bring-home guide</a>.`,
+  },
+  {
+    q: "Where can I try these street snacks in China?",
+    a: `Every street classic in this ranking has a home base: <a href="/cities/chengdu/">Chengdu</a> for chuan chuan and bingfen, <a href="/cities/xian/">Xi'an</a> for roujiamo, <a href="/cities/shanghai/">Shanghai</a> for xiaolongbao. Our <a href="/snack-streets/">snack streets map</a> shows exactly which alleys and night markets to head for.`,
   },
 ];
 
@@ -64,8 +68,8 @@ const schemaItems = [
 ---
 
 <BaseLayout
-  title="Top 25 Chinese Snacks: Street & Packaged Picks | ChineseSnacks"
-  description="The best Chinese snacks to try in 2026 — 15 packaged favorites with real brands and prices, plus 12 street classics. Where to buy them in China or online."
+  title="Best Chinese Snacks 2026: Top 25 Street & Packaged Picks"
+  description="The 25 best Chinese snacks, ranked: 15 packaged favorites with real brands and prices, plus 12 street classics. What they taste like, what to pay, and where to buy them."
 >
   <Nav />
 
@@ -206,7 +210,7 @@ const schemaItems = [
                 {f.q}
                 <span class="text-accent-dark text-lg flex-shrink-0 group-open:rotate-45 transition-transform duration-200">+</span>
               </summary>
-              <p class="text-ink-muted text-sm leading-relaxed mt-3 pt-3 border-t border-border">{f.a}</p>
+              <p class="text-ink-muted text-sm leading-relaxed mt-3 pt-3 border-t border-border" set:html={f.a} />
             </details>
           ))}
         </div>
