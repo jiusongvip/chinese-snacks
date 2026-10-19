@@ -40,6 +40,10 @@
       {
         "q": "How much does a jianbing cost in Beijing?",
         "a": "RMB 6-10 near universities and residential areas, RMB 15-20 in tourist zones like Wangfujing. The student-area version is often better because the vendors rely on repeat customers rather than one-time tourist traffic."
+      },
+      {
+        "q": "Can I take jianbing home as a takeaway?",
+        "a": "No — jianbing is the least travel-friendly snack on this list. The crepe steam-burns itself inside a paper wrapper within ten minutes: the crispy cracker (bao cui) dissolves, and the mung bean batter turns from crisp to rubbery. If you want a Beijing griddle snack that survives the walk back to your hotel, congyoubing is the fallback — but check first whether the stall laminates it with lard, since any item containing animal fat is confiscated on arrival."
       }
     ],
     "relatedSnacks": [
@@ -89,6 +93,10 @@
       {
         "q": "Should I refrigerate tanghulu?",
         "a": "No. Refrigeration makes the sugar sweat and turn sticky. Eat it immediately after buying. The best tanghulu is from a vendor actively dipping fresh skewers, not selling pre-made ones."
+      },
+      {
+        "q": "Can I bring tanghulu home?",
+        "a": "No. The sugar shell is hygroscopic — it exists only because the syrup was boiled to the hard-crack stage and cooled fast. Inside a suitcase it pulls moisture from the air and dissolves into a sticky syrup within an hour, with the softening fruit bursting through underneath. The portable version of the same flavor is haw flakes: sealed packs of crystallized hawthorn (shan zha) sold in every Chinese supermarket, which clear customs and keep for months."
       }
     ],
     "relatedSnacks": [
@@ -139,6 +147,10 @@
       {
         "q": "Where is the best xiaolongbao in Shanghai?",
         "a": "Jia Jia Tang Bao and Fu Chun on Yunnan Road are the classic choices. Din Tai Fung (Taiwanese chain) is globally famous but the original Shanghai shops are better and cheaper."
+      },
+      {
+        "q": "Can I bring xiaolongbao home?",
+        "a": "No. The soup is aspic that melts at first heat; once it cools it sets into a solid block, and the thin wrapper — already split by the steam — tears open in the container. Add the pork filling, which is prohibited uncooked and unlabelled through customs, and a takeaway soup dumpling is the worst of both worlds. Buy frozen dumplings at a supermarket instead: they are wrapper-thicker, filling-first, and built for the freezer."
       }
     ],
     "relatedSnacks": [
@@ -189,6 +201,10 @@
       {
         "q": "What are the best ingredients to try?",
         "a": "Lotus root (cui, crunchy), tofu skin (dou pi, absorbs broth), quail eggs (an chun dan), beef (niu rou), and any leafy green vegetable. Avoid pre-cooked items that have been sitting out."
+      },
+      {
+        "q": "Can I get chuan chuan to take away?",
+        "a": "Not in any state worth eating. The skewers come out of a shared pot of beef-tallow broth, and that fat congeals as the pot cools — carry-out arrives coated in a waxy film with the chili heat muted underneath it. Skewers also keep steaming in a sealed bag, so leafy greens and tofu skin turn to mush before you reach your hotel. The flavor, unlike the dish, is packable: the same mala seasoning travels in sealed Sichuan snacks such as Lao Si Chuan beef jerky and Weilong's spicy konjac."
       }
     ],
     "relatedSnacks": [
@@ -238,6 +254,10 @@
       {
         "q": "How do I know if I am getting good roujiamo?",
         "a": "The shop should chop the meat fresh when you order. Pre-chopped meat sitting in a tray is stale. The bread should be hot from the oven, not reheated. A proper roujiamo drips slightly -- have napkins ready."
+      },
+      {
+        "q": "Can I order roujiamo to go?",
+        "a": "You can, but eat it within twenty minutes and walk, do not taxi. The mo flatbread is dense and dry by design — it holds structure only until the braised pork juice soaks through it, which is exactly what happens in a paper bag. The bread goes pasty outside and the meat cools into a solid block of fat. Since it is braised pork, it is also the kind of item customs will confiscate, so it is strictly an eat-it-on-the-street snack."
       }
     ],
     "relatedSnacks": [
@@ -287,6 +307,10 @@
       {
         "q": "How do I dip shengjian bao?",
         "a": "Black vinegar (cu) is the standard dip. Some locals add a tiny amount of chili oil. Never soy sauce -- it overpowers the pork. Dip the crispy bottom side for maximum flavor contrast."
+      },
+      {
+        "q": "Can I take shengjian bao away?",
+        "a": "Only if you will eat them standing next to the pan. The base is the entire point — a blister-crisp bottom fried in oil on a flat griddle — and that crispness steams off in any closed container in minutes. The wrapper is thicker than a xiaolongbao skin, so the dumpling survives shape-wise, but the bottom turns leather-soft and no amount of reheating gets the crackle back."
       }
     ],
     "relatedSnacks": [
@@ -337,6 +361,10 @@
       {
         "q": "What drink should I have with mala tang?",
         "a": "Cold soy milk (dou jiang) or sour plum drink (suan mei tang). Never water -- capsaicin is oil-soluble, not water-soluble. The fat in soy milk binds to capsaicin and washes it away."
+      },
+      {
+        "q": "Can I get mala tang delivered or take it away?",
+        "a": "Takeaway exists and is common, but the broth is the problem: it sets into a layer of congealed beef fat as it cools, and the leafy vegetables you chose from the display turn to sludge inside a sealed bag within an hour. Delivery within your own city works — the shop packs broth and solids separately. Repacking the dish for travel does not, and you could not seal it anyway, since you pick the ingredients yourself from the fridge."
       }
     ],
     "relatedSnacks": [
@@ -385,6 +413,10 @@
       {
         "q": "What vegetables are in baocai?",
         "a": "Typically cabbage, radish, carrot, and sometimes green beans or chili peppers. The brine contains Sichuan peppercorns, star anise, ginger, and salt. Each family has a slightly different spice mix."
+      },
+      {
+        "q": "Can I bring Sichuan pickles home?",
+        "a": "Of everything on this list, baocai is the one that genuinely travels — acetic acid is a preservative, and the vegetables are already fully pickled. The obstacle is packaging: a restaurant container leaks at cabin pressure and reads as unpackaged food to a customs officer. Look for the sealed jars and sachets of the same pickled vegetables in the condiment aisle of a Chinese supermarket instead, where the label states the contents."
       }
     ],
     "relatedSnacks": [
@@ -434,6 +466,10 @@
       {
         "q": "Can I eat liangpi if I am gluten-free?",
         "a": "No -- despite the gluten being washed out during production, trace amounts remain. And the dish is typically served with wheat-based roujiamo on the side."
+      },
+      {
+        "q": "Can I take liangpi to go?",
+        "a": "Not more than a few blocks. Liangpi is washed wheat starch steamed into sheets and sliced cold, so it relies on being freshly tossed: once it sits dressed, the sheets absorb the vinegar and go stiff and brittle rather than slippery. The chili oil and sesame paste also split instead of re-emulsifying. The components you can carry home are the seasonings — sealed chili crisp and Sichuan pepper salt are what give the noodles their flavor."
       }
     ],
     "relatedSnacks": [
@@ -483,6 +519,10 @@
       {
         "q": "Is dan dan mian a full meal?",
         "a": "No, it is a snack. The portion is small (about 200g of noodles). Two bowls make a light lunch. In Chengdu, dan dan mian is often eaten alongside other small plates."
+      },
+      {
+        "q": "Can I take dan dan mian away?",
+        "a": "It is a poor idea. Dan dan mian is a bowl built on contrast — springy fresh noodles, loose chili oil, crushed peanuts that stay crunchy — and every one of those elements dies in transit. The noodles absorb the sauce and bind into a single block, the preserved ya cai wilt, and the numbing edge of the Sichuan pepper is the first thing to fade once the dish is lukewarm. Eat it at the counter."
       }
     ],
     "relatedSnacks": [
@@ -533,6 +573,10 @@
       {
         "q": "Is bingfen available year-round?",
         "a": "Primarily a summer snack (May-September) because it is served ice-cold. Some Chengdu restaurants serve it year-round, but the experience is best on a hot Sichuan afternoon."
+      },
+      {
+        "q": "Can I bring bingfen home?",
+        "a": "No — it is almost entirely water held in a delicate agar set, so it melts into sweet liquid in a warm bag and re-sets as a rubbery lump that will not take the brown sugar syrup. The good news is that the jelly itself is shelf-stable before hydration: the same ice jelly powder (bing fen fen) is sold in packets in Chinese supermarkets and sets at home with nothing but water and sugar."
       }
     ],
     "relatedSnacks": [
@@ -583,6 +627,10 @@
       {
         "q": "How many skewers should I order?",
         "a": "Five skewers is a snack, ten is a meal. Order in multiples of five. The vendor will pile them on a metal tray and you eat them standing up, discarding the wire skewers in a designated bucket."
+      },
+      {
+        "q": "Can I take lamb skewers to go?",
+        "a": "Yes, but eat them before you leave the block. Cumin and chili cling to lamb fat, and that fat solidifies within about fifteen minutes off the grill, so a boxed skewer arrives with a congealed coating and a casing that has gone from snap to chew. It is also cooked lamb, which is what makes it a customs problem rather than a packing one: meat products are confiscated on arrival in the USA, UK and Australia regardless of how well they travelled."
       }
     ],
     "relatedSnacks": [
@@ -632,6 +680,10 @@
       {
         "q": "What are the vegetable shreds on top?",
         "a": "Typically cucumber, radish, soybean sprouts, and sometimes shredded omelet. They provide crunch and freshness against the rich, salty sauce. The raw garlic clove on the side is traditional -- bite it between mouthfuls."
+      },
+      {
+        "q": "Can I order zhajiang mian to take away?",
+        "a": "No — it is the classic example of a Beijing dish that only exists on the day. The fried fermented soybean paste sinks and greases the noodles, the hand-pulled noodles continue absorbing water and gum into a solid mass, and the raw vegetable shreds (cucumber, radish, soybean sprouts) wilt and discolor under the lid. Every component is designed to be tossed at the table, not in a plastic box."
       }
     ],
     "relatedSnacks": [
@@ -681,6 +733,10 @@
       {
         "q": "How spicy is mapo tofu, really?",
         "a": "Authentic mapo tofu is genuinely hot, but the heat is balanced by the fermented flavors of doubanjiang and black beans, so it never feels one-dimensional. Restaurants almost always adjust spice level on request — ask for 'wei la' (mild) or 'bu la' (not spicy). Many travelers order it with a bowl of steamed rice and a cold drink; the rice absorbs the oil and makes the heat manageable even for first-timers."
+      },
+      {
+        "q": "Can I get mapo tofu to take away?",
+        "a": "You can, and it is one of the few Sichuan dishes that photographs acceptably on the way home — but tofu is the weak point. Soft tofu expels water as it cools, so the sauce separates into a red oil layer floating above a watery base, and the mala numbness from the ground Sichuan pepper fades faster than anything else in the dish. Reheat gently without boiling and it comes back close; a second trip in a bag does the damage."
       }
     ],
     "relatedSnacks": [
@@ -731,6 +787,10 @@
       {
         "q": "Is xiaomian a breakfast food?",
         "a": "Yes. It is the breakfast that powers Chongqing famously steep streets. The preparation takes under 3 minutes and the bowl should be finished in under 5. Many locals order two bowls before starting their day."
+      },
+      {
+        "q": "Can I take xiaomian to go?",
+        "a": "Rarely worth it. Chongqing xiaomian is a two-minute bowl of alkaline noodles tossed in rendered lard, chili oil and vinegar, intended to be finished while scalding. In a container the noodles drink the fat and the sauce goes flat, while the vinegar's bright top note evaporates first — you get a sticky, one-dimensional bowl of heat with none of the lift. Locals finish a bowl in under five minutes on purpose; take the same time or skip it."
       }
     ],
     "relatedSnacks": [
@@ -780,6 +840,10 @@
       {
         "q": "When should I eat cheong fun?",
         "a": "Fresh and hot, ideally within 5 minutes. It congeals as it cools and loses the prized silky texture. At dim sum, listen for the squeak of the steaming cart -- claim a plate immediately."
+      },
+      {
+        "q": "Can I take cheong fun home?",
+        "a": "No. The silky, almost translucent sheet comes from steaming rice milk on cloth over boiling water to order, and it is meant to be eaten within minutes. Twenty minutes later the sheet has firmed to rubber, the edges have fused together, and the sweet soy sauce has pooled uselessly at the bottom of the plate. Har gow at least keeps its shape; cheong fun does not keep its texture."
       }
     ],
     "relatedSnacks": [
@@ -828,6 +892,10 @@
       {
         "q": "How should I eat an egg tart?",
         "a": "Warm, within 10 minutes of leaving the oven. The center should wobble like jelly. Bite carefully -- the filling is molten inside even when the exterior looks cool. Buy three: one immediately, one for the walk, one for later."
+      },
+      {
+        "q": "Can I bring Portuguese-style egg tarts home?",
+        "a": "Yes — egg tarts are the most suitcase-friendly item in Guangzhou's snack lineup, and the flaky Chinese-style pastry is what saves them. Buy from the afternoon batch, cool them completely before boxing (a warm tart steams its own crust), and carry them in a rigid box rather than a bag. They keep a day at room temperature and come back better with a couple of minutes in a hot oven. What they do not survive is a week, since pastry shops rarely bake with preservatives."
       }
     ],
     "relatedSnacks": [
@@ -877,6 +945,10 @@
       {
         "q": "Is hongyou chaoshou a snack or a full meal?",
         "a": "In Chengdu it sits between the two: one order of ten small wontons is a snack or a light lunch, and locals often pair it with dan dan noodles or a cold dish. At around ¥12-25, ordering two different things is cheap enough that you should try chaoshou plus something else — the classic combination is chaoshou with a bowl of dandan noodles for the full Chengdu noodle experience."
+      },
+      {
+        "q": "Can I take hongyou chaoshou away?",
+        "a": "No. Chaoshou wrappers are the thinnest of all Chengdu dumpling skins, and they keep drinking the broth the moment they stop being served — within fifteen minutes the wontons swell and merge into one mass while the chili oil clouds and sinks. The dish's whole identity is the snap of a fresh thin wrapper against hot oil, which is exactly what a box destroys. Order qingtang (clear-soup) chaoshou only if you intend to eat them there."
       }
     ],
     "relatedSnacks": [
@@ -926,6 +998,10 @@
       {
         "q": "What is the difference between yangrou paomo and niu rou paomo?",
         "a": "Yangrou paomo uses lamb (羊肉) and niu rou paomo uses beef (牛肉) in the same preparation — torn flatbread cooked in the respective meat broth. Lamb is the classic and richer choice; beef is milder and preferred by many first-timers. There is also a third regional variant, paomo with pig intestines ('hulu tou' 葫芦头), served only outside the Muslim Quarter. Ask for 'niu rou pao mo' if you want the beef version."
+      },
+      {
+        "q": "Can I get yangrou paomo to go?",
+        "a": "No, and the shop will usually refuse. Paomo is torn flatbread soaked in lamb broth at the counter, and the bread keeps drinking after service: by the time you reach a table the hand-torn pieces you spent twenty minutes tearing have become porridge, and the broth has gone cloudy and lukewarm. The torn-bread ritual is the dish, so there is nothing to pack separately — eat it in Xi'an."
       }
     ],
     "relatedSnacks": [
@@ -975,6 +1051,10 @@
       {
         "q": "How is congyoubing different from jianbing?",
         "a": "Two completely different things despite the similar name. Congyoubing is a thick, coiled, pan-fried flatbread laminated with scallions and lard — crispy outside, chewy inside, eaten as-is. Jianbing is a thin crepe made from mung bean batter on a round griddle, with an egg cracked on top and folded around a crispy cracker. Roughly: congyoubing is a pancake you tear, jianbing is a wrap you fold. Both are breakfast staples, but jianbing belongs to Beijing and congyoubing to Shanghai."
+      },
+      {
+        "q": "Can I bring scallion pancakes home?",
+        "a": "Yes, and it is the most robust hot snack on this list: a plain laminated pancake of dough, scallions and fat carries no filling and no sauce. Cool it completely, then slice it and freeze the discs between sheets of parchment; re-crisp in a dry pan over medium heat for a couple of minutes a side and most of the shatter comes back. Check on the lard question first — the traditional Shanghai recipe laminates with rendered pork fat, and anything containing animal fat will be stopped by customs."
       }
     ],
     "relatedSnacks": [
@@ -1024,6 +1104,10 @@
       {
         "q": "How much does wonton noodles cost in Guangzhou?",
         "a": "A proper bowl at a place like Mak's Noodle costs ¥25-35; cheaper shops on side streets charge ¥12-18. The portion is deliberately small — Cantonese wonton noodles are a snack or light meal, and locals order extra wontons or a side of greens. The price difference between a 100-year-old shop and a street stall mostly reflects the broth: aged shops simmer theirs for hours and often serve it with a spoonful of shrimp roe on top."
+      },
+      {
+        "q": "Can I take wonton noodles away?",
+        "a": "No — it is the strictest rule in Cantonese noodle shops, and good ones will not box it. The freshly boiled alkaline noodles are rinsed, shaken dry and instantly coated in a thin layer of lard to keep them separate; once they sit in broth that protection washes off and they bind into a solid mass. The wonton skins dissolve at their edges, and the clear broth that took six to eight hours of simmering is just cold liquid around congealed fat by the time you get home."
       }
     ],
     "relatedSnacks": [
@@ -1073,6 +1157,10 @@
       {
         "q": "What is the difference between har gow and other steamed dumplings?",
         "a": "Har gow is the only classic dim sum dumpling with a fully translucent wrapper and a whole-shrimp filling. Xiao long bao have thicker wheat wrappers with hot soup inside and are from Shanghai. Siu mai (shao mai) are open-topped with pork and mushroom, also wheat-based. Har gow's defining traits — 13 pleats, starch wrapper, whole shrimp with bamboo shoots — make it the purest test of Cantonese dim sum skill, which is why it is ordered first at every dim sum table."
+      },
+      {
+        "q": "Can I order har gow to take away?",
+        "a": "Dim sum houses will box them, but the translucent skin — wheat and tapioca starch, thin enough to show the pink shrimp through it — turns thick and gluey once it cools and sits in its own steam. The shrimp filling tightens and pushes liquid out, and the pleats fuse together. Har gow is also the dish Cantonese restaurants are most vocal about eating at the table: a cold one arrives with a polite note that the kitchen considers it finished."
       }
     ],
     "relatedSnacks": [
